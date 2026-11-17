@@ -347,7 +347,7 @@
   }
 
   /* ---------- floating contact ---------- */
-  var FL = "https://www.freelancer.com/u/AwaisChaudhry";
+  var FL = "https://www.freelancer.com/affiliates/email/11081971/";
   var fab = document.createElement("div"); fab.className = "fab";
   fab.innerHTML = '<div class="fab-panel" id="fab-panel" hidden role="dialog" aria-label="Contact ZAWN Technologies">' +
     '<h3>Let’s talk about your project</h3><p>Pick whatever is easiest for you. We reply within one business day.</p>' +
