@@ -184,6 +184,13 @@
     "custom-business": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5a1.5 1.5 0 011.5-1.5h4A1.5 1.5 0 0115.5 5v2M3 12.5h18"/>',
     "stripe-payment": '<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/>',
     "raspberry-pi": '<rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="1.6"/><path d="M13 9h4M13 13h4M7 15h10"/>',
+    "trading-bot": '<path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/>',
+    "telegram-discord": '<path d="M21 4L3 11l6 2.5M21 4l-3 16-9-6.5M21 4L9 13.5V19l3-3.5"/>',
+    "chrome-extension": '<path d="M10 4h4v3a2 2 0 104 0V4h2v6h-3a2 2 0 100 4h3v6h-6v-3a2 2 0 10-4 0v3H4v-6h3a2 2 0 100-4H4V4h6z"/>',
+    "ai-agent": '<rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9.5 13h.01M14.5 13h.01M9.5 16.5h5"/>',
+    "web-scraping": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>',
+    "shopify": '<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/>',
+    "dashboard": '<rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7 16v-3M12 16V8M17 16v-5"/>',
     "mvp": '<path d="M5 19c0-4 1.5-7 7-12 5.5 5 7 8 7 12"/><path d="M12 7v6M9 19l3-3 3 3"/>'
   };
   Array.prototype.forEach.call(document.querySelectorAll("a.row"), function (row) {
