@@ -1,0 +1,1 @@
+{"name": "ZAWN Technologies", "short_name": "ZAWN", "icons": [{"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png"}], "theme_color": "#08090D", "background_color": "#08090D", "display": "standalone", "start_url": "/"}
