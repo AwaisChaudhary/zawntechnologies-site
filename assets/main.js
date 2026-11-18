@@ -191,12 +191,31 @@
     "web-scraping": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>',
     "shopify": '<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 016 0V8"/>',
     "dashboard": '<rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7 16v-3M12 16V8M17 16v-5"/>',
+    "machine-learning": '<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l2.8 8.3M16 7.5l-2.8 8.3M8.5 6h7"/>',
+    "generative-ai": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 16l5-5 4 4 3-3 6 6"/><path d="M16 5.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>',
+    "voice-ai": '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/>',
+    "ios-app": '<rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5h3"/>',
+    "android-app": '<path d="M6 10a6 6 0 0112 0v7H6z"/><path d="M9 7.5L7.5 5M15 7.5L16.5 5M9.5 11h.01M14.5 11h.01"/>',
+    "flutter-app": '<path d="M14 3L5 12l3 3 9-9zM14 11l-4 4 4 4h4l-4-4 4-4z"/>',
+    "react-native": '<ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/>',
+    "nextjs-react": '<path d="M4 6h16M4 6v12h16V6M8 10l-2 2 2 2M16 10l2 2-2 2M13 9l-2 6"/>',
+    "website-development": '<rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19M7 13h6M7 16h10"/>',
+    "desktop-app": '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+    "drupal": '<path d="M12 3c2 3 7 5.5 7 10a7 7 0 01-14 0c0-4.5 5-7 7-10z"/>',
+    "python-development": '<path d="M12 3c-4 0-4 2-4 3v2h4v1H6c-2 0-3 1.5-3 4s1 4 3 4h2v-3c0-1.5 1-2.5 2.5-2.5h4c1.5 0 2.5-1 2.5-2.5V6c0-1.5-1.5-3-5.5-3z"/><path d="M12 21c4 0 4-2 4-3v-2h-4v-1h6c2 0 3-1.5 3-4"/>',
+    "nodejs-development": '<path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3z"/><path d="M12 8v8M9 10.5v3"/>',
+    "api-integration": '<path d="M8 9l-4 3 4 3M16 9l4 3-4 3"/><circle cx="12" cy="12" r="1.5"/>',
+    "embedded-firmware": '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/>',
+    "linux-server": '<rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"/>',
+    "ui-ux-design": '<path d="M12 3a9 9 0 100 18c1.5 0 2-1 2-2s-1-1.5-1-2.5 1-1.5 2-1.5h2a4 4 0 004-4c0-4.5-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/>',
+    "qa-testing": '<path d="M9 3h6M10 3v5l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/><path d="M7.5 14h9"/>',
+    "app-maintenance": '<path d="M14.5 6.5a4 4 0 00-5.4 5.1L3.5 17.2a1.8 1.8 0 002.5 2.5l5.6-5.6a4 4 0 005.1-5.4l-2.6 2.6-2.3-.5-.5-2.3z"/>',
     "mvp": '<path d="M5 19c0-4 1.5-7 7-12 5.5 5 7 8 7 12"/><path d="M12 7v6M9 19l3-3 3 3"/>'
   };
   Array.prototype.forEach.call(document.querySelectorAll("a.row"), function (row) {
     var href = row.getAttribute("href") || "", key = null;
     for (var k in IC) if (href.indexOf(k) === 0) key = k;
-    if (!key) return;
+    if (!key) key = "web-saas";
     var s = document.createElement("span");
     s.className = "ico"; s.setAttribute("aria-hidden", "true");
     s.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' + IC[key] + "</svg>";
