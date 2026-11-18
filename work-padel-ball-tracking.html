@@ -41,18 +41,14 @@
 <div class="wrap content">
 <article class="prose">
 <div class="tracker" style="aspect-ratio:16/9;margin-bottom:28px"><svg viewBox="0 0 320 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><path d="M60 170 L110 60 H210 L260 170 Z" fill="none" stroke="rgba(201,209,220,.45)"/><line x1="85" y1="115" x2="235" y2="115" stroke="#FBFCFA" stroke-width="2"/><circle cx="178" cy="78" r="6" fill="#E8F25C"/><rect x="164" y="64" width="28" height="28" fill="none" stroke="#FF3D47" stroke-width="2"/><path d="M95 150 Q140 40 178 78" fill="none" stroke="#FF3D47" stroke-dasharray="3 5"/></svg></div>
-<span class="todo todo-block">Add: 2 to 4 screenshots or a 30-second screen recording of the app. Replace the illustration above.</span>
-<h2>The client and the problem</h2>
-<span class="todo todo-block">Add: who the client is (industry, country, size), what they were struggling with, and why they needed custom software.</span>
-<h2>What we built</h2>
-<span class="todo todo-block">Add: the main features in 4 to 6 bullet points, and any hard technical problem you solved.</span>
-<h2>Results</h2>
-<span class="todo todo-block">Add: one or two real outcomes, such as users, downloads, app store rating, time saved, or a client quote you have permission to use.</span>
+<h2>The challenge</h2><p>Padel is fast, the ball is small, and it often disappears behind the glass walls, the net or the players. Coaches and players wanted to review rallies without scrubbing through video frame by frame, which meant the app had to find the ball reliably in ordinary match footage, not lab-quality video.</p>
+<h2>What we built</h2><ul><li>Ball detection trained for padel conditions: motion blur, glass reflections and partial hiding behind players</li><li>Tracking that links detections across frames into a continuous ball path, and fills short gaps when the ball is hidden</li><li>Court mapping, so positions on screen become positions on the court</li><li>Rally and shot review, with the ball path drawn over the video</li><li>Processing designed around real phone and camera footage</li></ul>
+<h2>How we approached it</h2><p>We treated it as three problems: finding the ball in each frame, linking those detections into a track, and placing the track on the court. Splitting the work this way let us measure each layer on the client's own footage and improve the weakest one first. Our article on <a href="blog-how-ball-tracking-works.html">how ball tracking works</a> explains the approach in more detail.</p>
+<p class="small">Client details and screenshots are kept confidential unless the client has agreed to share them. <a href="contact.html">Ask us</a> about similar work we can show you on a call.</p>
 </article>
 <aside class="aside">
-<div class="box"><h3>Project details</h3><p class="small">Sector: Sports technology</p>
-<p class="small">Tech stack: <span class="todo">Add: languages and frameworks</span></p></div>
-<div class="box"><h3>Services used</h3><ul><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="mobile-app-development.html">Mobile app development</a></li></ul></div>
+<div class="box"><h3>Project details</h3><p class="small">Sector: Sports technology</p></div>
+<div class="box"><h3>Services used</h3><ul><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="mobile-app-development.html">Mobile app development</a></li></ul></div>
 <div class="box"><h3>Need something similar?</h3><a class="btn btn-primary" href="contact.html">Start a project</a></div>
 </aside></div><section class="cta"><div class="wrap">
 <h2>Have a project that needs a reliable engineering team?</h2>
