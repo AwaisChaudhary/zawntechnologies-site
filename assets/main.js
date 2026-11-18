@@ -399,3 +399,37 @@
     });
   });
 })();
+
+/* ---------- app cost calculator ---------- */
+(function () {
+  var f = document.getElementById("calc-form");
+  if (!f) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return "$" + Math.round(n / 500) * 500 >= 1000 ? "$" + (Math.round(n / 500) * 500).toLocaleString("en-US") : "$" + Math.round(n).toLocaleString("en-US"); };
+  function calc() {
+    var lo = 0, hi = 0, picked = [];
+    var p = f.querySelector('input[name="plat"]:checked');
+    if (p) { lo += +p.dataset.lo; hi += +p.dataset.hi; picked.push(p.nextElementSibling.textContent); }
+    Array.prototype.forEach.call(f.querySelectorAll('input[name="feat"]:checked'), function (c) {
+      lo += +c.dataset.lo; hi += +c.dataset.hi; picked.push(c.nextElementSibling.textContent);
+    });
+    var n = Math.max(0, Math.min(10, parseInt($("c-int").value, 10) || 0));
+    lo += n * 30; hi += n * 70;
+    var d = parseFloat($("c-design").value) || 1;
+    lo = Math.round(lo * d * 1.2 / 10) * 10; hi = Math.round(hi * d * 1.2 / 10) * 10;
+    $("c-hours").textContent = lo.toLocaleString("en-US") + " to " + hi.toLocaleString("en-US");
+    $("c-cost").textContent = fmt(lo * 50) + " to " + fmt(hi * 50);
+    var wlo = Math.max(2, Math.round(lo / 60)), whi = Math.max(3, Math.round(hi / 60));
+    $("c-weeks").textContent = wlo + " to " + whi + " weeks";
+    var summary = "Cost calculator estimate: " + $("c-hours").textContent + " hours (" + $("c-cost").textContent + "), " + $("c-weeks").textContent +
+      ".\nPlatform and features: " + picked.join(", ") + (n ? ". Integrations: " + n : "") + ".\n\nAbout my project: ";
+    try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
+  }
+  f.addEventListener("input", calc); f.addEventListener("change", calc); calc();
+})();
+/* prefill contact form from calculator */
+(function () {
+  var t = document.querySelector("#contact-form textarea");
+  if (!t || t.value) return;
+  try { var s = localStorage.getItem("zawn-estimate"); if (s) { t.value = s; localStorage.removeItem("zawn-estimate"); } } catch (e) {}
+})();
