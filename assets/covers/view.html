@@ -1,3 +1,3 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Cover</title>
-<style>html,body{margin:0;height:100%;background:#08090D;overflow:hidden}div{position:fixed;inset:0;background:center/cover no-repeat}</style></head>
-<body><div id="c"></div><script>var n=(location.hash||'#padel-ball-tracking').slice(1).replace(/[^a-z-]/g,'');document.getElementById('c').style.backgroundImage='url(wide-'+n+'.jpg)';</script></body></html>
+<style>html,body{margin:0;height:100%;background:#08090D;overflow:hidden}div{position:fixed;inset:0;background:center/cover no-repeat}div.f{background-size:contain}</style></head>
+<body><div id="c"></div><script>var h=(location.hash||'#padel-ball-tracking').slice(1).replace(/[^a-z-]/g,''),c=document.getElementById('c');if(h.indexOf('f-')===0){c.className='f';c.style.backgroundImage='url('+h.slice(2)+'.jpg)';}else{c.style.backgroundImage='url(wide-'+h+'.jpg)';}addEventListener('hashchange',function(){location.reload()});</script></body></html>
