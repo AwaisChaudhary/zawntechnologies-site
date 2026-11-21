@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /send.php
+Disallow: /assets/covers/
 
 Sitemap: https://www.zawntechnologies.com/sitemap.xml
