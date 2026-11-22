@@ -42,3 +42,8 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
    - Internal links checked: none broken.
 - Next tool idea (not before 29 Nov): "Bubble or custom code?" decision helper.
 - IndexNow pending (WebFetch permission prompt unanswered in unattended run): ai-chatbot-cost-calculator, blog-ai-chatbot-cost-2026, ai-chatbot-development, contact, blog.
+
+## 2026-11-22 (evening): blog post, MVP scope
+- New post: blog-mvp-what-to-build-first.html ("MVP development: what to build first and what to leave out"), target phrase "what to include in an MVP" / "MVP development". Quick answer lede, question H2s, include table, 3 FAQs in JSON-LD, "What to read next" links.
+- Linked from mvp-development and web-saas-development Related reading boxes; added to blog.html and sitemap.xml.
+- IndexNow pending (WebFetch permission prompt unanswered again in unattended run): blog-mvp-what-to-build-first, blog, mvp-development, web-saas-development, ai-chatbot-cost-calculator, blog-ai-chatbot-cost-2026, ai-chatbot-development, contact.
