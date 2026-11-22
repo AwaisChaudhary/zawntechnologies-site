@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>How RAG Works: AI That Knows Your Company Docs | ZAWN</title>
+<meta name="description" content="How RAG works, step by step: giving an AI assistant your company documents with chunking, embeddings, vector search and citations, plus RAG vs fine-tuning.">
+<link rel="canonical" href="https://www.zawntechnologies.com/blog-how-rag-works.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How RAG Works: AI That Knows Your Company Docs | ZAWN">
+<meta property="og:description" content="How RAG works, step by step: giving an AI assistant your company documents with chunking, embeddings, vector search and citations, plus RAG vs fine-tuning.">
+<meta property="og:url" content="https://www.zawntechnologies.com/blog-how-rag-works.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=20261118c">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO"}, "address": {"@type": "PostalAddress", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.zawntechnologies.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "How RAG works: giving an AI assistant your company documents", "item": "https://www.zawntechnologies.com/blog-how-rag-works.html"}]}, {"@type": "BlogPosting", "headline": "How RAG works: giving an AI assistant your company documents", "description": "How RAG works, step by step: giving an AI assistant your company documents with chunking, embeddings, vector search and citations, plus RAG vs fine-tuning.", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "author": {"@type": "Person", "name": "Awais Chaudhry"}, "publisher": {"@id": "https://www.zawntechnologies.com/#org"}, "mainEntityOfPage": "https://www.zawntechnologies.com/blog-how-rag-works.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is RAG the same as training an AI on my documents?", "acceptedAnswer": {"@type": "Answer", "text": "No. RAG leaves the model unchanged and searches your documents each time a question is asked, then gives the relevant passages to the model. That makes updates instant, lets answers cite sources, and allows per-document access control, which training cannot do."}}, {"@type": "Question", "name": "Can a RAG assistant still make things up?", "acceptedAnswer": {"@type": "Answer", "text": "It can, but much less often than a general chatbot. Most wrong answers come from the right passage not being retrieved or from conflicting source documents. Clean sources, hybrid search, re-ranking, citations and an instruction to say \"I don't know\" keep errors low."}}, {"@type": "Question", "name": "Can my documents stay private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can use an LLM provider plan that does not train on your data, keep the vector index on your own servers, apply permissions at retrieval time, or run an open-source model fully on your own infrastructure if data must never leave it."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html" aria-current=page>Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / How RAG works: giving an AI assistant your company documents</nav>
+<h1>How RAG works: giving an AI assistant your company documents</h1><p class="meta">By Awais Chaudhry, 22 November 2026</p></div></section>
+<div class="wrap content"><article class="prose"><p>Most businesses that try a general AI chatbot hit the same wall within a day: it writes fluent answers, but it does not know your prices, your policies, your product manuals or last month's process change. Retrieval-augmented generation, usually shortened to RAG, is the standard way to fix that. Instead of retraining a model on your data, you let the assistant look things up in your own documents at the moment a question is asked, and answer from what it finds. This guide explains how RAG works step by step, what it is good and bad at, and what to decide before you build one.</p>
+<h2>What is RAG, in plain English?</h2>
+<p>A large language model (LLM) such as GPT, Claude or Gemini has general knowledge from its training, but nothing about your company. RAG adds a search step in front of the model. When a user asks a question, the system first retrieves the most relevant passages from your documents, then gives those passages to the model together with the question and an instruction like "answer using only the sources below, and cite them". The model writes the answer; your documents supply the facts.</p>
+<p>A useful way to think about it: the model is a skilled writer who has never worked at your company, and RAG hands that writer the right pages of the company handbook before every answer.</p>
+<h2>How RAG works, step by step</h2>
+<p>A RAG system has two halves. The first runs ahead of time to prepare your documents. The second runs every time someone asks a question.</p>
+<h3>1. Collect and clean the documents</h3>
+<p>Sources are usually a mix of PDFs, Word files, help-centre articles, Google Drive or SharePoint folders, Notion or Confluence pages, support tickets and database records. Each has to be converted to clean text. This step decides quality more than any other: scanned PDFs need OCR, tables need to keep their structure, headers and footers repeated on every page need removing, and outdated or duplicate versions need filtering out. If the source says two different things, the assistant will too.</p>
+<h3>2. Split the text into chunks</h3>
+<p>Whole documents are too long to search precisely, so the text is split into chunks, typically a few paragraphs each, often with a small overlap so a sentence is not cut off from its context. Good chunking follows the document's own structure (sections, headings, FAQ entries) rather than a fixed character count, and each chunk keeps metadata such as the document title, section, date, department and access level.</p>
+<h3>3. Turn each chunk into an embedding</h3>
+<p>An embedding model converts each chunk into a long list of numbers, a vector, that represents its meaning. Chunks about similar things end up close together, even when they use different words, so "cancel my plan" can match a passage about "ending a subscription".</p>
+<h3>4. Store the vectors in a searchable index</h3>
+<p>The vectors and their metadata go into a vector database or a vector-enabled store, such as PostgreSQL with pgvector, Pinecone, Weaviate, Qdrant or a search engine with vector support. For many business projects, pgvector inside an existing PostgreSQL database is enough and keeps the setup simple.</p>
+<h3>5. Retrieve the best passages for each question</h3>
+<p>When a question arrives, it is turned into a vector with the same embedding model, and the index returns the closest chunks. Strong systems do more than this single step:</p>
+<ul><li><strong>Hybrid search</strong> combines vector similarity with classic keyword search, which matters for product codes, part numbers, names and exact phrases that embeddings handle poorly.</li>
+<li><strong>Metadata filters</strong> limit results to the right product, region, language or date range, and to documents the user is allowed to see.</li>
+<li><strong>Re-ranking</strong> uses a second model to reorder the top results by how well they actually answer the question.</li>
+<li><strong>Query rewriting</strong> turns a vague follow-up such as "what about for annual plans?" into a full standalone question using the conversation so far.</li></ul>
+<h3>6. Generate a grounded answer with citations</h3>
+<p>The best few passages are placed into the prompt with the question and clear rules: answer only from the sources, say "I don't know" when the sources do not cover it, and cite which document each statement came from. Showing those citations to the user, with links to the original file, is one of the most effective ways to build trust and catch mistakes.</p>
+<h2>RAG vs fine-tuning: which do you need?</h2>
+<p>People often ask whether they should "train the AI on our documents". In most cases the answer is RAG, not fine-tuning.</p>
+<ul><li><strong>Use RAG</strong> when the goal is answering from facts that change: policies, prices, manuals, contracts, tickets. Updating knowledge is as simple as re-indexing a document, answers can cite their source, and access control can be enforced per document.</li>
+<li><strong>Use fine-tuning</strong> when the goal is changing how the model behaves: a fixed output format, a house writing style, or a narrow classification task. Fine-tuning is a poor way to store facts, because the model cannot tell you where an answer came from and you have to retrain to update it.</li>
+<li><strong>Combine them</strong> occasionally, for example a fine-tuned model for tone and format that still retrieves facts through RAG. Most business assistants never need this.</li></ul>
+<p>Very large context windows have not removed the need for RAG either. Pasting thousands of pages into every request is slow and expensive, and models still answer more reliably from a short, relevant set of passages than from a huge pile of text.</p>
+<h2>Where RAG assistants go wrong</h2>
+<p>RAG reduces made-up answers a great deal, but it does not remove them. Most failures come from a handful of causes:</p>
+<ul><li><strong>Retrieval misses.</strong> If the right passage is not retrieved, the model cannot use it. This is the most common failure, and it is fixed with better chunking, hybrid search and re-ranking, not a bigger model.</li>
+<li><strong>Messy or conflicting sources.</strong> Old versions of a policy sitting next to the new one produce confident wrong answers. Clean up and date your sources.</li>
+<li><strong>Tables and scanned documents.</strong> Price lists and spec sheets lose meaning when flattened to text. They often need special handling or a structured database lookup instead.</li>
+<li><strong>Questions that need calculation or live data.</strong> "How many orders did we ship last week?" is not a document question. That is a job for a database query or an <a href="ai-agent-development.html">AI agent</a> with tools, which can sit alongside RAG.</li>
+<li><strong>Permissions.</strong> If HR files and client contracts go into one index without access rules, the assistant can leak them to the wrong person. Filters must apply at retrieval time, based on who is asking.</li></ul>
+<h2>How to measure whether it works</h2>
+<p>Do not judge a RAG assistant by a few impressive demos. Before launch, write a test set of real questions, ideally taken from support emails or staff chat, with the correct answer and source for each. Then measure separately whether the right passages were retrieved and whether the final answer was correct, complete and cited properly. Splitting the two tells you whether to fix search or fix the prompt. Run the same test set after every change, and keep logging real questions and thumbs-up or thumbs-down feedback once users are on it.</p>
+<h2>Security and privacy checklist</h2>
+<ul><li>Choose an LLM provider and plan whose terms do not use your data for training, or host an open-source model yourself if your data cannot leave your servers.</li>
+<li>Apply document-level permissions during retrieval, not only in the user interface.</li>
+<li>Strip or mask personal data that the assistant does not need.</li>
+<li>Treat document text as untrusted input: a document can contain instructions aimed at the model, so the system prompt and tool permissions must not be overridable by retrieved content.</li>
+<li>Log questions and answers, with retention rules that match your privacy policy.</li></ul>
+<h2>What does a RAG assistant cost to build?</h2>
+<p>The main cost drivers are the number and messiness of your sources, how many systems need connectors (Drive, SharePoint, a CRM, a help desk), access-control rules, where the assistant lives (website widget, Slack or Teams, inside your own app), and how much evaluation and tuning is needed. Running costs come from LLM and embedding API usage plus hosting the index, and they scale with how many questions people ask. We break down build and running costs in our guide to <a href="blog-ai-chatbot-cost-2026.html">what an AI chatbot costs in 2026</a>, and you can get a rough range for the full product with our <a href="app-cost-calculator.html">app cost calculator</a>.</p>
+<h2>A sensible way to start</h2>
+<ol><li>Pick one use case with a clear owner, such as answering staff questions about internal procedures or customer questions about one product line.</li>
+<li>Gather and clean the documents for that use case only.</li>
+<li>Write 50 to 100 real test questions with correct answers.</li>
+<li>Build a first version, measure it against the test set, and improve retrieval until results are good enough for the risk involved.</li>
+<li>Launch to a small group, with citations visible and a way to flag bad answers, then expand sources and users.</li></ol>
+<h2>How we help</h2>
+<p>Our AI work includes an AI image generation app and a Unity business assistant avatar that talks with customers. For RAG projects we handle the whole pipeline: document ingestion and cleaning, embeddings and vector search, the LLM layer, permissions, evaluation and the interface. See our <a href="ai-llm-integration.html">AI and LLM integration</a> and <a href="ai-chatbot-development.html">AI chatbot development</a> services, or <a href="generative-ai-development.html">generative AI development</a> if the assistant is part of a larger product. Our backends are usually built with <a href="python-development.html">Python</a> and FastAPI.</p>
+<h2>Questions about RAG</h2>
+<div class="faq"><details><summary>Is RAG the same as training an AI on my documents?</summary><p>No. RAG leaves the model unchanged and searches your documents each time a question is asked, then gives the relevant passages to the model. That makes updates instant, lets answers cite sources, and allows per-document access control, which training cannot do.</p></details><details><summary>Can a RAG assistant still make things up?</summary><p>It can, but much less often than a general chatbot. Most wrong answers come from the right passage not being retrieved or from conflicting source documents. Clean sources, hybrid search, re-ranking, citations and an instruction to say "I don't know" keep errors low.</p></details><details><summary>Can my documents stay private?</summary><p>Yes. You can use an LLM provider plan that does not train on your data, keep the vector index on your own servers, apply permissions at retrieval time, or run an open-source model fully on your own infrastructure if data must never leave it.</p></details></div>
+<h2>Plan your company AI assistant</h2>
+<p>Tell us which documents you want the assistant to use, who will ask it questions, and where it should live. We reply within one business day with questions, a suggested architecture and a milestone estimate at $50 per hour. <a href="contact.html">Start a project</a>, or <a href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank">hire us on Freelancer</a>, where we are a Preferred Freelancer with a 4.9 average from 356 reviews and clients pay 0% commission through this link.</p></article>
+<aside class="aside"><div class="box"><h3>Building an AI assistant?</h3><p class="small">Get an architecture and estimate for an assistant that answers from your own documents.</p><a class="btn btn-primary" href="contact.html">Start a project</a></div></aside></div>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 46 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261118c" defer></script>
+</body>
+</html>
