@@ -27,3 +27,17 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - Awais approved these pings for all runs. An empty/binary response means accepted. If WebFetch is unavailable or blocked, skip silently (don't retry) and list the pages under "IndexNow pending" in this log.
 - Key file /ee537df6f31cad594ce005b07ad269ca.txt must stay in the repo root (never delete or rename it).
 - 22 Nov: pinged the 5 newest blog posts.
+
+## 2026-11-22: new free tool, AI chatbot cost calculator + description batch
+1. New tool (rule c, first of this week): ai-chatbot-cost-calculator.html.
+   - Pick bot type (answer bot / document-trained / action-taking agent), extras (channels, human handover, languages, voice, analytics, logged-in users, self-hosted model), number of systems, content state and conversations per month.
+   - Shows build hours, cost at $50/h, timeline, monthly running cost (model usage + hosting, rough) and monthly maintenance. Base ranges match blog-ai-chatbot-cost-2026 exactly (80-160 / 200-400 / 400-900 h). Prefills the contact form like the app calculator.
+   - Follows the AI-answers rule: "Quick answer" lede with numbers, question H2s, table, 5 FAQs in FAQPage JSON-LD, "What to do next" links.
+   - JS appended to assets/main.js (guarded IIFE on #cb-form); no CSS change (reuses .calc classes). Asset version bumped to ?v=20261122a on all pages.
+   - Linked from: footer Company list (all pages), homepage services intro, ai-chatbot-development Related reading box, blog-ai-chatbot-cost-2026 (closing section + aside; dateModified 2026-11-22). Added to sitemap.xml (priority 0.9).
+   - Why: "AI chatbot cost" searches have clear buyer intent; a working tool earns links and AI-answer citations and sends visitors to contact with their estimate filled in.
+2. Meta descriptions (rule e): rewrote too-short descriptions on blog.html, contact.html, unity-game-development, tree-service-estimating-app (now 151-159 chars).
+   - Still left: index.html title (74 chars); long descriptions on business-automation, chrome-extension-development, desktop-app-development, ios-app-development, website-development, work.html and three work-* case studies.
+   - Sitemap lastmod set to today only for pages with content changes (footer link/version bump alone not counted).
+   - Internal links checked: none broken.
+- Next tool idea (not before 29 Nov): "Bubble or custom code?" decision helper.

@@ -452,3 +452,42 @@
   if (!t || t.value) return;
   try { var s = localStorage.getItem("zawn-estimate"); if (s) { t.value = s; localStorage.removeItem("zawn-estimate"); } } catch (e) {}
 })();
+/* ---------- AI chatbot cost calculator ---------- */
+(function () {
+  var f = document.getElementById("cb-form");
+  if (!f) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var money = function (n) { var r = n >= 1000 ? Math.round(n / 500) * 500 : Math.round(n / 10) * 10; return "$" + r.toLocaleString("en-US"); };
+  var perConv = { answer: [0.005, 0.02], docs: [0.01, 0.04], agent: [0.02, 0.08] };
+  var maint = { answer: [2, 4], docs: [4, 8], agent: [8, 16] };
+  function calc() {
+    var lo = 0, hi = 0, picked = [];
+    var t = f.querySelector('input[name="cbtype"]:checked');
+    var type = t ? t.value : "docs";
+    if (t) { lo += +t.dataset.lo; hi += +t.dataset.hi; picked.push(t.nextElementSibling.textContent.split(":")[0]); }
+    var voice = false;
+    Array.prototype.forEach.call(f.querySelectorAll('input[name="cbadd"]:checked'), function (c) {
+      lo += +c.dataset.lo; hi += +c.dataset.hi; picked.push(c.nextElementSibling.textContent);
+      if (c.value === "voice") voice = true;
+    });
+    var n = Math.max(0, Math.min(10, parseInt($("cb-int").value, 10) || 0));
+    lo += n * 25; hi += n * 60;
+    var m = parseFloat($("cb-content").value) || 1;
+    lo = Math.round(lo * m / 10) * 10; hi = Math.round(hi * m / 10) * 10;
+    $("cb-hours").textContent = lo.toLocaleString("en-US") + " to " + hi.toLocaleString("en-US");
+    $("cb-cost").textContent = money(lo * 50) + " to " + money(hi * 50);
+    var wlo = Math.max(2, Math.round(lo / 60)), whi = Math.max(3, Math.round(hi / 60));
+    $("cb-weeks").textContent = wlo + " to " + whi + " weeks";
+    var conv = Math.max(0, Math.min(1000000, parseInt($("cb-conv").value, 10) || 0));
+    var pc = perConv[type] || perConv.docs;
+    var clo = pc[0] + (voice ? 0.03 : 0), chi = pc[1] + (voice ? 0.1 : 0);
+    var rlo = 20 + conv * clo, rhi = 100 + conv * chi;
+    $("cb-run").textContent = money(rlo) + " to " + money(rhi);
+    var mh = maint[type] || maint.docs;
+    $("cb-maint").textContent = money(mh[0] * 50) + " to " + money(mh[1] * 50);
+    var summary = "AI chatbot calculator estimate: " + $("cb-hours").textContent + " hours (" + $("cb-cost").textContent + "), " + $("cb-weeks").textContent +
+      ".\nBot and extras: " + picked.join(", ") + (n ? ". Systems to connect: " + n : "") + ". About " + conv.toLocaleString("en-US") + " conversations a month.\n\nAbout my project: ";
+    try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
+  }
+  f.addEventListener("input", calc); f.addEventListener("change", calc); calc();
+})();
