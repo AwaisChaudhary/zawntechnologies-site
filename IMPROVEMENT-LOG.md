@@ -20,3 +20,10 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 2. Technical SEO (rule e). Shortened 25 title tags that were over 60 characters (mostly "| ZAWN Technologies" -> "| ZAWN", keywords kept; og/twitter titles kept in sync). Blog titles only had their suffix shortened. Rewrote too-short meta descriptions (now 140-160 chars) on blockchain-web3-development, cloud-devops, iot-embedded-development, web-saas-development.
    - Left for a later run: index.html title (74 chars, left alone to be cautious with the homepage); short descriptions on blog.html, contact.html, unity-game-development, tree-service-estimating-app; long descriptions on business-automation, chrome-extension-development, desktop-app-development, ios-app-development, website-development, work.html and three work-* case studies.
    - All internal links checked: none broken. All pages are in sitemap.xml; lastmod set to 2026-11-21 for changed pages.
+
+## STANDING RULE (22 Nov 2026 16:05 PKT, Awais: "You don't need my approval, just do it"): IndexNow after every push
+- After every push that adds or changes pages (blog posts included), ping IndexNow for each new/changed page (up to 10 per run) with WebFetch:
+  https://api.indexnow.org/indexnow?url=https%3A%2F%2Fwww.zawntechnologies.com%2F<file>.html&key=ee537df6f31cad594ce005b07ad269ca
+- Awais approved these pings for all runs. An empty/binary response means accepted. If WebFetch is unavailable or blocked, skip silently (don't retry) and list the pages under "IndexNow pending" in this log.
+- Key file /ee537df6f31cad594ce005b07ad269ca.txt must stay in the repo root (never delete or rename it).
+- 22 Nov: pinged the 5 newest blog posts.
