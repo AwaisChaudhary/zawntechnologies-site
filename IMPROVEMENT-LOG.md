@@ -41,3 +41,4 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
    - Sitemap lastmod set to today only for pages with content changes (footer link/version bump alone not counted).
    - Internal links checked: none broken.
 - Next tool idea (not before 29 Nov): "Bubble or custom code?" decision helper.
+- IndexNow pending (WebFetch permission prompt unanswered in unattended run): ai-chatbot-cost-calculator, blog-ai-chatbot-cost-2026, ai-chatbot-development, contact, blog.
