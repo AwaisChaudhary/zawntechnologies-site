@@ -504,3 +504,6 @@
     if (f) f.addEventListener("change", function () { if (!used && window.gtag) { used = true; gtag("event", "calculator_used", { calculator: id }); } });
   });
 })();
+
+/* Anti-spam: record when the form was loaded; send.php rejects instant submits */
+(function(){try{var t=Math.floor(Date.now()/1000);document.querySelectorAll('input[name="form_ts"]').forEach(function(i){i.value=String(t);});}catch(e){}})();

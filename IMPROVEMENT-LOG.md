@@ -74,3 +74,8 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - New post: blog-business-automation-ideas.html ("Business automation ideas that save a small team 10 hours a week"), target phrase "business automation ideas" / "automation ideas for small business". Quick answer lede, how-to-find-tasks method, 12 ideas as H3s, time-saver table, no-code vs custom, cost table (5-20 / 20-60 / 40-120 / 120-300 h), mistakes list, 3 FAQs in JSON-LD, "What to read next" links.
 - Linked from business-automation (new Related reading box) and custom-business-software (Related reading); added to blog.html and sitemap.xml.
 - IndexNow pending (no WebFetch tool in unattended run): blog-business-automation-ideas, blog, business-automation, custom-business-software.
+
+## 2026-11-24 03:30 PKT (main session): contact-form spam protection
+- A bot submitted the contact form (name "DerrickBoows", gibberish details) despite the existing "website" honeypot, so send.php is not enforcing it or the bot leaves it empty.
+- Added hidden field form_ts to both forms (index.html quick form, contact.html); main.js fills it with the page-load Unix time. main.js version bumped to ?v=20261124hp on all pages.
+- send.php (server-only) must check: honeypot "website" empty, form_ts present and submission >= 4 s after load, and project details not gibberish. Snippet given to Awais to paste at the top of send.php; rejected submissions redirect to ?sent=1 so bots see "success".
