@@ -47,3 +47,8 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - New post: blog-mvp-what-to-build-first.html ("MVP development: what to build first and what to leave out"), target phrase "what to include in an MVP" / "MVP development". Quick answer lede, question H2s, include table, 3 FAQs in JSON-LD, "What to read next" links.
 - Linked from mvp-development and web-saas-development Related reading boxes; added to blog.html and sitemap.xml.
 - IndexNow pending (WebFetch permission prompt unanswered again in unattended run): blog-mvp-what-to-build-first, blog, mvp-development, web-saas-development, ai-chatbot-cost-calculator, blog-ai-chatbot-cost-2026, ai-chatbot-development, contact.
+
+## 2026-11-23: blog post, Stripe subscriptions
+- New post: blog-stripe-subscription-billing-mistakes.html ("Stripe subscriptions: common billing mistakes and how to avoid them"), target phrase "Stripe subscription billing mistakes" / "Stripe subscriptions webhooks". Quick answer lede, 12 mistakes as H3s, webhook events table, cost table (30-60 / 60-120 / 120-250 h), checklist, 3 FAQs in JSON-LD, "What to read next" links.
+- Linked from stripe-payment-integration (new Related reading box) and web-saas-development (Related reading); added to blog.html and sitemap.xml.
+- IndexNow pending (no WebFetch tool in unattended run): blog-stripe-subscription-billing-mistakes, blog, stripe-payment-integration, web-saas-development, plus earlier pending pages.
