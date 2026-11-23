@@ -69,3 +69,8 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - IndexNow FLUSHED via Chrome for all 72 sitemap URLs (HTTP 200). Unattended runs still cannot ping; keep logging "IndexNow pending" and the main session flushes.
 - Found: the site has NO analytics (no GA4/gtag on any page), so leads and traffic are invisible. Asked Awais whether to add GA4 (new property in his GA account) or Cloudflare Web Analytics.
 - 18:58 PKT: GA4 added (property 565611872, stream 16398394361, G-8QFZRL758B) on all 75 pages. Events: generate_lead (contact form success, ?sent=1), contact_email_click, calculator_used. main.js cache version bumped.
+
+## 2026-11-23 (evening): blog post, business automation ideas
+- New post: blog-business-automation-ideas.html ("Business automation ideas that save a small team 10 hours a week"), target phrase "business automation ideas" / "automation ideas for small business". Quick answer lede, how-to-find-tasks method, 12 ideas as H3s, time-saver table, no-code vs custom, cost table (5-20 / 20-60 / 40-120 / 120-300 h), mistakes list, 3 FAQs in JSON-LD, "What to read next" links.
+- Linked from business-automation (new Related reading box) and custom-business-software (Related reading); added to blog.html and sitemap.xml.
+- IndexNow pending (no WebFetch tool in unattended run): blog-business-automation-ideas, blog, business-automation, custom-business-software.
