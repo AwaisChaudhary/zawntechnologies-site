@@ -52,3 +52,15 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - New post: blog-stripe-subscription-billing-mistakes.html ("Stripe subscriptions: common billing mistakes and how to avoid them"), target phrase "Stripe subscription billing mistakes" / "Stripe subscriptions webhooks". Quick answer lede, 12 mistakes as H3s, webhook events table, cost table (30-60 / 60-120 / 120-250 h), checklist, 3 FAQs in JSON-LD, "What to read next" links.
 - Linked from stripe-payment-integration (new Related reading box) and web-saas-development (Related reading); added to blog.html and sitemap.xml.
 - IndexNow pending (no WebFetch tool in unattended run): blog-stripe-subscription-billing-mistakes, blog, stripe-payment-integration, web-saas-development, plus earlier pending pages.
+
+## 2026-11-23: Node.js service page strengthened + long meta descriptions fixed
+1. Thin service page (rule b): nodejs-development.html was the thinnest service page (~716 words, 3 one-line FAQs).
+   - Added a "Quick answer" lede with cost and time, a question H2 "How much does a Node.js backend cost and how long does it take?" with a 5-row planning table at $50/h (review 16-40 h, small API 40-120 h, real-time 60-160 h, MVP backend 150-300 h, larger backend 400-900 h), a "What you get" list, a 4-step "How we work" timeline and a "What to do next" block.
+   - FAQs: rewrote the 3 short answers to be specific and added 3 (taking over an existing backend, hosting, Node.js vs Python). FAQPage JSON-LD updated to match all 6.
+   - Aside: new Related reading box (MVP, Stripe billing, app cost posts); Related services now also links web-saas-development and nextjs-react-development.
+   - Why: gives Google and AI answers a specific, quotable answer for "Node.js backend cost" and moves visitors to the calculator, posts and contact.
+2. Meta descriptions (rule e): shortened the over-160 descriptions left from earlier runs (business-automation, chrome-extension-development, desktop-app-development, ios-app-development, website-development, work-padel-ball-tracking, work-soft-skills-kids-app, work-unity-business-assistant-avatar), now 148-158 chars; og/twitter/JSON-LD copies kept in sync.
+   - Still left: index.html title (74 chars, left alone on purpose); privacy/terms descriptions are short but low value.
+   - Internal links checked: none broken. Sitemap lastmod 2026-11-23 for the 9 changed pages. No CSS/JS change.
+- Next ideas: strengthen qa-testing, blockchain-web3-development or cloud-devops the same way; next tool not before 29 Nov ("Bubble or custom code?" helper).
+- IndexNow pending (no WebFetch tool in unattended run): nodejs-development and the 8 pages above, plus earlier pending pages.
