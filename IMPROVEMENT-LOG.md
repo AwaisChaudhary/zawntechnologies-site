@@ -64,3 +64,7 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
    - Internal links checked: none broken. Sitemap lastmod 2026-11-23 for the 9 changed pages. No CSS/JS change.
 - Next ideas: strengthen qa-testing, blockchain-web3-development or cloud-devops the same way; next tool not before 29 Nov ("Bubble or custom code?" helper).
 - IndexNow pending (no WebFetch tool in unattended run): nodejs-development and the 8 pages above, plus earlier pending pages.
+
+## 2026-11-23 18:55 PKT (main session)
+- IndexNow FLUSHED via Chrome for all 72 sitemap URLs (HTTP 200). Unattended runs still cannot ping; keep logging "IndexNow pending" and the main session flushes.
+- Found: the site has NO analytics (no GA4/gtag on any page), so leads and traffic are invisible. Asked Awais whether to add GA4 (new property in his GA account) or Cloudflare Web Analytics.
