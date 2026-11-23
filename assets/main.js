@@ -410,7 +410,7 @@
   Array.prototype.forEach.call(document.querySelectorAll("#contact-form, .js-form"), function (form) {
     var note = form.querySelector("#form-note, .form-note");
     if (!note) return;
-    if (/[?&]sent=1/.test(location.search)) { note.textContent = "Message sent. We reply within one business day."; note.hidden = false; }
+    if (/[?&]sent=1/.test(location.search)) { note.textContent = "Message sent. We reply within one business day."; note.hidden = false; if (window.gtag) gtag("event", "generate_lead", { method: "contact_form" }); }
     if (/[?&]error=1/.test(location.search)) { note.textContent = "The message did not send. Check that name, email and project details are filled in, or email us directly."; note.hidden = false; }
     form.addEventListener("submit", function (e) {
       if (!form.checkValidity()) return;
@@ -490,4 +490,17 @@
     try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
   }
   f.addEventListener("input", calc); f.addEventListener("change", calc); calc();
+})();
+
+/* analytics: email clicks and calculator use count as lead signals */
+(function () {
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (a && window.gtag) gtag("event", "contact_email_click", { link_url: a.getAttribute("href") });
+  });
+  var used = false;
+  ["calc-form", "chat-form"].forEach(function (id) {
+    var f = document.getElementById(id);
+    if (f) f.addEventListener("change", function () { if (!used && window.gtag) { used = true; gtag("event", "calculator_used", { calculator: id }); } });
+  });
 })();

@@ -68,3 +68,4 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 ## 2026-11-23 18:55 PKT (main session)
 - IndexNow FLUSHED via Chrome for all 72 sitemap URLs (HTTP 200). Unattended runs still cannot ping; keep logging "IndexNow pending" and the main session flushes.
 - Found: the site has NO analytics (no GA4/gtag on any page), so leads and traffic are invisible. Asked Awais whether to add GA4 (new property in his GA account) or Cloudflare Web Analytics.
+- 18:58 PKT: GA4 added (property 565611872, stream 16398394361, G-8QFZRL758B) on all 75 pages. Events: generate_lead (contact form success, ?sent=1), contact_email_click, calculator_used. main.js cache version bumped.
