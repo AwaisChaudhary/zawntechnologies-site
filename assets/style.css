@@ -518,3 +518,7 @@ section[id],[id="talk"]{scroll-margin-top:80px}
 .calc-prose{max-width:760px;margin-top:72px;color:var(--fg-2)}
 @media (max-width:1020px){.calc{grid-template-columns:1fr}.calc-result{position:static}}
 @media (max-width:600px){.opt-grid,.calc-row{grid-template-columns:1fr}}
+/* footer: all-services row (SEO internal links) */
+.site-footer .f-all{margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.site-footer .f-all h4{margin-bottom:12px}
+.site-footer .f-all p{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;font-size:.88rem}

@@ -91,3 +91,18 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - Sitemap lastmod 2026-11-24 for the 4 changed pages. No CSS/JS change.
 - Next ideas: blockchain-web3-development, desktop-app-development, drupal-development, linux-server-administration are the next thinnest; next tool not before 29 Nov ("Bubble or custom code?" helper).
 - IndexNow pending (no WebFetch tool in unattended run): cloud-devops, qa-testing, linux-server-administration, app-maintenance-support, plus earlier pending pages.
+
+## 2026-11-25 02:00 PKT (main session): senior SEO pass
+Findings (GSC + audit):
+- Google had only 3 pages indexed of 77 in the sitemap (sitemap read OK 25 Nov, 77 discovered). Most pages "URL is unknown to Google" / "Discovered – currently not indexed": a new-domain crawl/trust problem, not a technical block.
+- Only brand queries ("zawn") in GSC: 49 impressions / 5 clicks in 28 days. GA4: 10 users in 7 days, 0 leads.
+- Technical base is sound: http→https and non-www→www 301s, canonicals on every page, valid JSON-LD everywhere, no broken links, fast HTML (~0.4 s load).
+- Weak spots: ~19 service pages only linked from services.html (2–7 inlinks); thin About (287 words); Organization sameAs missing directory profiles; homepage title 74 chars.
+Done:
+1. GSC "Request indexing" for 8 money pages (ai-chatbot-development, mobile-app-development, mvp-development, ai-chatbot-cost-calculator, app-cost-calculator, web-saas-development, flutter-app-development, ai-agent-development, custom-business-software); daily quota hit at services.html. CONTINUE ~10/day.
+2. New page whatsapp-chatbot-development.html (1,284 words: quick answer, cost table, official-API section, 6 FAQs + FAQPage JSON-LD). Added to services hub (now 47 services), footer, sitemap, chatbot page related services. Reason: highest-demand service in live job boards (WhatsApp AI bots, LATAM/Brazil).
+3. Sitewide footer "More services" row linking the 19 under-linked services → every service page now has 80+ internal links. CSS appended; style.css ?v=20261125seo.
+4. Organization JSON-LD sitewide: sameAs + Clutch, GoodFirms, Contra; addressLocality Lahore; numberOfEmployees 25; founder alumniOf (Lancaster, COMSATS); knowsAbout. Calculators' publisher now references #org.
+5. about.html rewritten for E-E-A-T (815 words): verifiable track record with profile links, real project examples, founder bio, team, process; Person node for founder.
+6. Titles: homepage → "AI & Mobile App Development Company | ZAWN Technologies"; blog-app-development-cost-2026 shortened to 54 chars.
+Next: keep requesting indexing (~10/day); deepen money pages (ai-chatbot, mobile-app, mvp, web-saas, flutter) to 1,000+ words like nodejs; expand work-* case studies (problem/approach/stack/result); backlinks via directories + GitHub/LinkedIn/dev.to; Google Business Profile (needs Awais verification).
