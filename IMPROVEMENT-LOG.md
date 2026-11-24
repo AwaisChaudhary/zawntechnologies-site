@@ -115,3 +115,10 @@ Depth and proof on money pages beats more pages. Work top to bottom, 1-2 items p
 3. Free tool (max 1/week): WhatsApp chatbot cost estimator, then "Bubble or custom code?" helper.
 Blog runs: next topics first: "How much does a WhatsApp chatbot cost in 2026?", "WhatsApp Business API vs WhatsApp Business app", "Flutter app development cost in 2026", "How to build a ball-tracking app for padel or tennis", "AI agent vs chatbot", "MVP vs prototype vs proof of concept". Link each to the matching service page (whatsapp-chatbot-development, flutter-app-development, sports-analytics-app-development, ai-agent-development, mvp-development).
 Main session: requests Google indexing for ~10 pages/day in Search Console (quota); keep pinging IndexNow after each push.
+
+## 2026-11-25 03:45 PKT — senior SEO pass (main session)
+- GSC 28d: 5 clicks, 49 impressions, avg pos 10.8 (homepage = all clicks). Sitemap read 25 Nov, 77 URLs, fine. Old non-www / extensionless URLs 301 to www .html (checked).
+- Keyword Planner (US+UK+UAE+PK): "software house in pakistan" 1k–10k LOW comp; "app development company", "mobile app development company", "app development cost" 1k–10k; "mobile app developer" 100k–1M.
+- Homepage title -> "AI & App Development Company in Lahore, Pakistan | ZAWN" (closes the 74-char backlog item); description leads with "Software house in Lahore, Pakistan".
+- Google Fonts made non-blocking on all 79 pages.
+- Next for scheduled runs: a dedicated "software house in Pakistan" landing (rates, time zones, how we work, real reviews) — only facts we can verify.
