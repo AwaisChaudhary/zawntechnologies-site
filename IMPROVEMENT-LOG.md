@@ -106,3 +106,12 @@ Done:
 5. about.html rewritten for E-E-A-T (815 words): verifiable track record with profile links, real project examples, founder bio, team, process; Person node for founder.
 6. Titles: homepage → "AI & Mobile App Development Company | ZAWN Technologies"; blog-app-development-cost-2026 shortened to 54 chars.
 Next: keep requesting indexing (~10/day); deepen money pages (ai-chatbot, mobile-app, mvp, web-saas, flutter) to 1,000+ words like nodejs; expand work-* case studies (problem/approach/stack/result); backlinks via directories + GitHub/LinkedIn/dev.to; Google Business Profile (needs Awais verification).
+
+## PRIORITY BACKLOG for daily improvement runs (set 25 Nov 2026 after the senior SEO pass)
+Full plan: doc "ZAWN Technologies SEO Strategy" https://claude.ai/artifact/2nHan12X6MtEQQuJD4DMER
+Depth and proof on money pages beats more pages. Work top to bottom, 1-2 items per run, skip what is done:
+1. Deepen to 1,000+ words using nodejs-development.html as the model (quick answer with hours/cost at $50/h, cost table, what you get, 4-step process, 5-6 FAQs mirrored in JSON-LD, what to do next): ai-chatbot-development, mvp-development, flutter-app-development, mobile-app-development, web-saas-development, ai-agent-development, custom-business-software, computer-vision-development, sports-analytics-app-development, bubble-development, business-automation.
+2. Expand case studies (work-*.html, ~250 words) to 700-900 words: problem, constraints, approach, stack, what was hard, what was delivered, link to the matching service page. Only facts already on the site. Order: padel ball tracking, tree work estimation, farm management, soft skills kids app, AI image generation, Unity avatar.
+3. Free tool (max 1/week): WhatsApp chatbot cost estimator, then "Bubble or custom code?" helper.
+Blog runs: next topics first: "How much does a WhatsApp chatbot cost in 2026?", "WhatsApp Business API vs WhatsApp Business app", "Flutter app development cost in 2026", "How to build a ball-tracking app for padel or tennis", "AI agent vs chatbot", "MVP vs prototype vs proof of concept". Link each to the matching service page (whatsapp-chatbot-development, flutter-app-development, sports-analytics-app-development, ai-agent-development, mvp-development).
+Main session: requests Google indexing for ~10 pages/day in Search Console (quota); keep pinging IndexNow after each push.
