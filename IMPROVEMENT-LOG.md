@@ -79,3 +79,15 @@ ChatGPT now sends about 90% of visitors on Awais's GTA site NeonCoast: it links 
 - A bot submitted the contact form (name "DerrickBoows", gibberish details) despite the existing "website" honeypot, so send.php is not enforcing it or the bot leaves it empty.
 - Added hidden field form_ts to both forms (index.html quick form, contact.html); main.js fills it with the page-load Unix time. main.js version bumped to ?v=20261124hp on all pages.
 - send.php (server-only) must check: honeypot "website" empty, form_ts present and submission >= 4 s after load, and project details not gibberish. Snippet given to Awais to paste at the top of send.php; rejected submissions redirect to ?sent=1 so bots see "success".
+
+## 2026-11-24: cloud-devops and qa-testing service pages strengthened
+1. Thin service pages (rule b): cloud-devops.html (~335 words) and qa-testing.html (~344 words) were two of the three thinnest service pages, each with 3 one-line FAQs.
+   - Both: "Quick answer" lede with cost and time, a question H2 on cost and timeline with a planning table at $50/h, "What you get" list, a 4-step "How we work" list, and a "What to do next" block.
+   - cloud-devops table: cost review 12-30 h, CI/CD 16-40 h, Docker 16-48 h, monitoring 16-40 h, Terraform 40-120 h, migration 60-200 h, Kubernetes 80-200 h. FAQs 3 -> 7 (review cost, which cloud, migration downtime, access needed; existing 3 rewritten).
+   - qa-testing table: MVP test pass 20-60 h, API suite 24-80 h, web E2E 40-120 h, mobile Appium 60-160 h, load test 16-40 h, regression 8-24 h per release. FAQs 3 -> 6 (testing cost, flaky tests after design changes, real devices; existing 3 rewritten).
+   - FAQPage JSON-LD updated to match on both pages. New Related reading boxes (Python vs Node, app cost, MVP / Stripe billing, MVP, app cost). Related services now cross-link cloud-devops <-> qa-testing, plus linux-server-administration and app-maintenance-support now link to cloud-devops.
+   - Why: gives Google and AI answers quotable cost/time answers for "DevOps services cost" and "software testing cost", and moves visitors to posts, the calculator and contact.
+2. Internal-link audit (rule a): every blog post already links to 3+ service pages and is linked from 2+ service pages; no change needed. Internal links checked: none broken.
+- Sitemap lastmod 2026-11-24 for the 4 changed pages. No CSS/JS change.
+- Next ideas: blockchain-web3-development, desktop-app-development, drupal-development, linux-server-administration are the next thinnest; next tool not before 29 Nov ("Bubble or custom code?" helper).
+- IndexNow pending (no WebFetch tool in unattended run): cloud-devops, qa-testing, linux-server-administration, app-maintenance-support, plus earlier pending pages.
