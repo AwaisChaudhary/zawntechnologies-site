@@ -522,3 +522,8 @@ section[id],[id="talk"]{scroll-margin-top:80px}
 .site-footer .f-all{margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
 .site-footer .f-all h4{margin-bottom:12px}
 .site-footer .f-all p{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;font-size:.88rem}
+.wa-float{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:8px;background:#25d366;color:#05261b;font-weight:700;font-size:.95rem;padding:12px 18px 12px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none;transition:transform .15s ease}
+.wa-float:hover{transform:translateY(-2px);color:#05261b}
+@media (max-width:640px){.wa-float span{display:none}.wa-float{padding:14px}}
+@media print{.wa-float{display:none}}
+.fab .wa-float{position:static;box-shadow:0 10px 30px -8px rgba(37,211,102,.7)}

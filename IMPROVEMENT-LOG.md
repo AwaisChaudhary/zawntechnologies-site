@@ -130,3 +130,8 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - Sitemap lastmod 2026-11-25 for both. No CSS/JS change. Rendered at 1280/390: no errors, no overflow.
 - Next backlog: flutter-app-development, mobile-app-development, web-saas-development, ai-agent-development (all ~420-530 words). Next tool not before 29 Nov.
 - IndexNow pending (no WebFetch tool in unattended run): ai-chatbot-development, mvp-development.
+
+## 25 Nov 2026 (evening): WhatsApp contact button
+- GA4 realtime showed 11 new visitors in 30 min, all landing on the homepage, with no lead events. Likely clients clicking the portfolio link in proposals.
+- Added a site-wide WhatsApp button (wa.me/923314459242, pre-filled message naming the page), stacked above the "Let's talk" button. It fires the GA4 event `whatsapp_click`.
+- TODO: mark `generate_lead`, `whatsapp_click` and `contact_email_click` as GA4 key events (needs owner approval in GA4 admin).
