@@ -47,15 +47,18 @@ for p in sorted(root.rglob("*.html")):
     elif prev: date = today
     else: date = old_dates.get(url, today) if old_dates.get(url, today) < today else today  # first run: keep what we had
     state[rel] = [h, date]
-    pages.append((url, date))
+    imgs = list(dict.fromkeys(re.findall(r'<img src="(/assets/img/[^"?]+)', src)))[:5]
+    pages.append((url, date, imgs))
 for k in list(state):
     if not (root / k).exists(): del state[k]
 pages.sort(key=lambda x: (x[0] != domain + "/", x[0]))
-xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-    f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in pages) + "</urlset>\n"
+has_img = any(p[2] for p in pages)
+ns = ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' if has_img else ""
+xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"{ns}>\n' + "".join(
+    f"  <url><loc>{u}</loc><lastmod>{d}</lastmod>" + "".join(f"<image:image><image:loc>{domain}{i}</image:loc></image:image>" for i in im) + "</url>\n" for u, d, im in pages) + "</urlset>\n"
 (root / "sitemap.xml").write_text(xml)
 state_f.write_text(json.dumps(state, indent=0, sort_keys=True))
-added = set(u for u, _ in pages) - set(old_locs); dropped = set(old_locs) - set(u for u, _ in pages)
-print(f"seo_post: {len(pages)} URLs in sitemap (+{len(added)} -{len(dropped)}); changed today: {sum(1 for _, d in pages if d == today)}")
+added = set(p[0] for p in pages) - set(old_locs); dropped = set(old_locs) - set(p[0] for p in pages)
+print(f"seo_post: {len(pages)} URLs in sitemap (+{len(added)} -{len(dropped)}); changed today: {sum(1 for p in pages if p[1] == today)}, with images: {sum(1 for p in pages if p[2])}")
 if added: print("  added:", sorted(added)[:8])
 if dropped: print("  dropped:", sorted(dropped)[:8])
