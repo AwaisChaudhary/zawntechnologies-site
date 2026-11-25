@@ -527,3 +527,7 @@ section[id],[id="talk"]{scroll-margin-top:80px}
 @media (max-width:640px){.wa-float span{display:none}.wa-float{padding:14px}}
 @media print{.wa-float{display:none}}
 .fab .wa-float{position:static;box-shadow:0 10px 30px -8px rgba(37,211,102,.7)}
+
+/* calculator currency switch */
+.calc-cur{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.85rem;color:var(--muted)}
+.calc-cur select{flex:1;max-width:230px;font:inherit;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;background:rgba(8,9,13,.6);color:var(--fg)}

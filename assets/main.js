@@ -424,7 +424,13 @@
   var f = document.getElementById("calc-form");
   if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
-  var fmt = function (n) { return "$" + Math.round(n / 500) * 500 >= 1000 ? "$" + (Math.round(n / 500) * 500).toLocaleString("en-US") : "$" + Math.round(n).toLocaleString("en-US"); };
+  /* approximate rates, late November 2026; our rate is $50/hour */
+  var FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-GB"], EUR: [0.91, "\u20ac", 500, "en-IE"], AED: [3.67, "AED ", 1000, "en-US"], PKR: [277, "Rs ", 100000, "en-IN"], INR: [94, "\u20b9", 10000, "en-IN"] };
+  var cur = $("c-cur");
+  var fmt = function (n, code) {
+    var r = FX[code] || FX.USD, v = n * r[0], step = v >= r[2] * 2 ? r[2] : 1;
+    return r[1] + (Math.round(v / step) * step).toLocaleString(r[3]);
+  };
   function calc() {
     var lo = 0, hi = 0, picked = [];
     var p = f.querySelector('input[name="plat"]:checked');
@@ -437,14 +443,18 @@
     var d = parseFloat($("c-design").value) || 1;
     lo = Math.round(lo * d * 1.2 / 10) * 10; hi = Math.round(hi * d * 1.2 / 10) * 10;
     $("c-hours").textContent = lo.toLocaleString("en-US") + " to " + hi.toLocaleString("en-US");
-    $("c-cost").textContent = fmt(lo * 50) + " to " + fmt(hi * 50);
+    var code = cur && FX[cur.value] ? cur.value : "USD", usd = fmt(lo * 50, "USD") + " to " + fmt(hi * 50, "USD");
+    $("c-cost").textContent = fmt(lo * 50, code) + " to " + fmt(hi * 50, code);
+    if ($("c-fx")) $("c-fx").textContent = code === "USD" ? "" : " Approximate conversion from " + usd + " at late-November 2026 exchange rates.";
     var wlo = Math.max(2, Math.round(lo / 60)), whi = Math.max(3, Math.round(hi / 60));
     $("c-weeks").textContent = wlo + " to " + whi + " weeks";
-    var summary = "Cost calculator estimate: " + $("c-hours").textContent + " hours (" + $("c-cost").textContent + "), " + $("c-weeks").textContent +
+    var summary = "Cost calculator estimate: " + $("c-hours").textContent + " hours (" + usd + "), " + $("c-weeks").textContent +
       ".\nPlatform and features: " + picked.join(", ") + (n ? ". Integrations: " + n : "") + ".\n\nAbout my project: ";
     try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
   }
-  f.addEventListener("input", calc); f.addEventListener("change", calc); calc();
+  f.addEventListener("input", calc); f.addEventListener("change", calc);
+  if (cur) cur.addEventListener("change", function () { calc(); if (window.gtag) gtag("event", "calculator_currency", { currency: cur.value }); });
+  calc();
 })();
 /* prefill contact form from calculator */
 (function () {
