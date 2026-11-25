@@ -122,3 +122,11 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - Homepage title -> "AI & App Development Company in Lahore, Pakistan | ZAWN" (closes the 74-char backlog item); description leads with "Software house in Lahore, Pakistan".
 - Google Fonts made non-blocking on all 79 pages.
 - Next for scheduled runs: a dedicated "software house in Pakistan" landing (rates, time zones, how we work, real reviews) — only facts we can verify.
+
+## 2026-11-25: ai-chatbot-development and mvp-development deepened (backlog item 1)
+- ai-chatbot-development.html: ~510 -> ~1,500 words, modelled on nodejs-development. Quick answer with hours/cost at $50/h; cost and timeline table (review 16-40 h, answer bot 80-160 h, document-trained 200-400 h, action agent 400-900 h, each extra integration 25-60 h; same ranges as the chatbot calculator and blog post); running-cost paragraph (1-4 cents/conversation + $20-100/month hosting); "What you get"; 4-step process; FAQs 3 -> 7 (hallucination/RAG, team updates content, builder vs custom, data ownership; existing 3 rewritten with numbers); "What to do next". FAQPage JSON-LD mirrors the 7 FAQs. Related services + AI agent, Voice AI.
+- mvp-development.html: ~480 -> ~1,400 words. Quick answer; table (scoping + prototype 20-60 h, focused MVP 250-450 h, business MVP 500-900 h, AI/CV MVP 900-1,600 h; matches blog-app-development-cost-2026 and blog-mvp-what-to-build-first); "What you get"; 4-step process; FAQs 3 -> 7 (what goes in v1, Bubble vs code, mobile or web first, ownership); "What to do next" links to calculator and 5 posts. JSON-LD mirrored. Related services + Flutter, UI/UX, maintenance.
+- Why: these are top money pages and were thin; quotable cost/time answers target "AI chatbot development cost" and "MVP development cost" searches and AI answers, and move visitors to the calculators and contact.
+- Sitemap lastmod 2026-11-25 for both. No CSS/JS change. Rendered at 1280/390: no errors, no overflow.
+- Next backlog: flutter-app-development, mobile-app-development, web-saas-development, ai-agent-development (all ~420-530 words). Next tool not before 29 Nov.
+- IndexNow pending (no WebFetch tool in unattended run): ai-chatbot-development, mvp-development.
