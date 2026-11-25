@@ -134,4 +134,4 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 ## 25 Nov 2026 (evening): WhatsApp contact button
 - GA4 realtime showed 11 new visitors in 30 min, all landing on the homepage, with no lead events. Likely clients clicking the portfolio link in proposals.
 - Added a site-wide WhatsApp button (wa.me/923314459242, pre-filled message naming the page), stacked above the "Let's talk" button. It fires the GA4 event `whatsapp_click`.
-- TODO: mark `generate_lead`, `whatsapp_click` and `contact_email_click` as GA4 key events (needs owner approval in GA4 admin).
+- generate_lead marked as GA4 key event (owner approved 25 Nov). TODO: star `whatsapp_click` and `contact_email_click` in GA4 Admin > Events > Recent events once they first appear (approved).
