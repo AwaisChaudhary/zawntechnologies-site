@@ -1,0 +1,330 @@
+{
+"about.html": [
+"09e4a4448bd9d594",
+"2026-11-25"
+],
+"ai-agent-development.html": [
+"981ee31ee8b52cb9",
+"2026-11-21"
+],
+"ai-chatbot-cost-calculator.html": [
+"7217d98118c8fc48",
+"2026-11-25"
+],
+"ai-chatbot-development.html": [
+"e239939fd76b3bdf",
+"2026-11-25"
+],
+"ai-llm-integration.html": [
+"d6e454327638de23",
+"2026-11-21"
+],
+"android-app-development.html": [
+"4280943372687bbe",
+"2026-11-25"
+],
+"api-integration.html": [
+"eb2cfe0774522d83",
+"2026-11-18"
+],
+"app-cost-calculator.html": [
+"fd72e1c554264296",
+"2026-11-25"
+],
+"app-maintenance-support.html": [
+"d473b6cc0504d33c",
+"2026-11-24"
+],
+"blockchain-web3-development.html": [
+"280b90c3026f342a",
+"2026-11-21"
+],
+"blog-ai-chatbot-cost-2026.html": [
+"392dbfdfc647f3b5",
+"2026-11-22"
+],
+"blog-app-development-cost-2026.html": [
+"cb5a44955f2c6256",
+"2026-11-25"
+],
+"blog-bubble-vs-custom-code.html": [
+"af69868c443383f3",
+"2026-11-19"
+],
+"blog-build-voice-assistant.html": [
+"505f5f4c72952d18",
+"2026-11-24"
+],
+"blog-business-automation-ideas.html": [
+"614e56867ecac65f",
+"2026-11-23"
+],
+"blog-flutter-vs-react-native-2026.html": [
+"c0a1a4e51c0bc9d5",
+"2026-11-20"
+],
+"blog-generative-ai-app-development.html": [
+"bf1880f756a9e9c8",
+"2026-11-25"
+],
+"blog-hire-software-developers-pakistan.html": [
+"7c3f1cd747aca32e",
+"2026-11-21"
+],
+"blog-how-ball-tracking-works.html": [
+"7874cc3e851bd0c7",
+"2026-11-21"
+],
+"blog-how-rag-works.html": [
+"27a5b4737f282a36",
+"2026-11-22"
+],
+"blog-ios-or-android-first.html": [
+"300319be072d7b7d",
+"2026-11-20"
+],
+"blog-machine-learning-development-cost.html": [
+"558f70590af28dd5",
+"2026-11-21"
+],
+"blog-mvp-what-to-build-first.html": [
+"9d159496bf8370dd",
+"2026-11-22"
+],
+"blog-python-vs-nodejs-backend.html": [
+"ebcfe6ea450ab44d",
+"2026-11-24"
+],
+"blog-sports-motion-analysis-app.html": [
+"df193e90b7008e34",
+"2026-11-21"
+],
+"blog-stripe-subscription-billing-mistakes.html": [
+"073aac93b2b55ebe",
+"2026-11-23"
+],
+"blog-whatsapp-chatbot-cost-2026.html": [
+"ee1e3afe39546ba0",
+"2026-11-25"
+],
+"blog.html": [
+"c049b25bd093e71b",
+"2026-11-25"
+],
+"bubble-development.html": [
+"ab494958e39007b1",
+"2026-11-21"
+],
+"business-automation.html": [
+"538ac2cee65dee3c",
+"2026-11-23"
+],
+"chrome-extension-development.html": [
+"5496645500197fbc",
+"2026-11-23"
+],
+"cloud-devops.html": [
+"bac2ccc20076aca6",
+"2026-11-24"
+],
+"computer-vision-development.html": [
+"d6b08e5a99177ab5",
+"2026-11-21"
+],
+"contact.html": [
+"49a32b73838b93c2",
+"2026-11-22"
+],
+"custom-business-software.html": [
+"0b9f63e287fc22f9",
+"2026-11-23"
+],
+"dashboard-development.html": [
+"8b85d5368cf1cfd3",
+"2026-11-21"
+],
+"desktop-app-development.html": [
+"7f0d4732ecbcc8da",
+"2026-11-23"
+],
+"drupal-development.html": [
+"ae34a0a37faa1337",
+"2026-11-18"
+],
+"embedded-firmware-development.html": [
+"e6841a53958e5f7f",
+"2026-11-18"
+],
+"farm-management-software.html": [
+"c39600881942c939",
+"2026-11-21"
+],
+"flutter-app-development.html": [
+"316ecba420dcfbce",
+"2026-11-18"
+],
+"generative-ai-development.html": [
+"c10a1b8cca4e2a62",
+"2026-11-18"
+],
+"index.html": [
+"299643ed297fab17",
+"2026-11-25"
+],
+"ios-app-development.html": [
+"ac49f88d6c55f471",
+"2026-11-23"
+],
+"iot-embedded-development.html": [
+"00a7260313cd6b3b",
+"2026-11-21"
+],
+"linux-server-administration.html": [
+"65e9e851c1493713",
+"2026-11-24"
+],
+"machine-learning-development.html": [
+"b82ecfc6b4c00a6e",
+"2026-11-18"
+],
+"mobile-app-development.html": [
+"93c7bdfe70859509",
+"2026-11-21"
+],
+"mvp-development.html": [
+"3ebcec3a9b0ca3f2",
+"2026-11-25"
+],
+"nextjs-react-development.html": [
+"fe96842f343354ac",
+"2026-11-25"
+],
+"nodejs-development.html": [
+"d4ed267056f78a45",
+"2026-11-23"
+],
+"php-laravel-development.html": [
+"a136c1dc623a0091",
+"2026-11-25"
+],
+"privacy.html": [
+"231f682330d67803",
+"2026-11-17"
+],
+"python-development.html": [
+"c53fbbe4b2c2ea8b",
+"2026-11-18"
+],
+"qa-testing.html": [
+"c4c674b41a7b0ce3",
+"2026-11-24"
+],
+"raspberry-pi-development.html": [
+"df74e6ee4915cdb2",
+"2026-11-21"
+],
+"react-native-development.html": [
+"0ce553d441428de9",
+"2026-11-18"
+],
+"services.html": [
+"01f834fd2d487236",
+"2026-11-25"
+],
+"shopify-development.html": [
+"9618cc33b5a4b9b2",
+"2026-11-25"
+],
+"software-house-lahore.html": [
+"27c52cd86ced32ce",
+"2026-11-25"
+],
+"sports-analytics-app-development.html": [
+"86b00297ee7da0a7",
+"2026-11-21"
+],
+"stripe-payment-integration.html": [
+"2ec5e784e1633bf0",
+"2026-11-21"
+],
+"telegram-discord-bot-development.html": [
+"a4e0cbf96fde3707",
+"2026-11-18"
+],
+"terms.html": [
+"974ae697271eb563",
+"2026-11-17"
+],
+"trading-bot-development.html": [
+"423bd4bf29b358c0",
+"2026-11-18"
+],
+"tree-service-estimating-app.html": [
+"216113eaeb8ee924",
+"2026-11-22"
+],
+"ui-ux-design.html": [
+"97ddb1944ef084f2",
+"2026-11-18"
+],
+"unity-game-development.html": [
+"9c5de28c6eceb92a",
+"2026-11-22"
+],
+"voice-ai-development.html": [
+"b77f7ad23dd030bc",
+"2026-11-21"
+],
+"web-saas-development.html": [
+"21b882d595997171",
+"2026-11-21"
+],
+"web-scraping-services.html": [
+"0dcf8aecccb563a1",
+"2026-11-18"
+],
+"website-cost-calculator.html": [
+"daff7f6864608cb5",
+"2026-11-25"
+],
+"website-development.html": [
+"0aee4fed339925ca",
+"2026-11-23"
+],
+"whatsapp-chatbot-development.html": [
+"402c92b41f585817",
+"2026-11-25"
+],
+"wordpress-development.html": [
+"243b7ea4e7ec73b2",
+"2026-11-21"
+],
+"work-ai-image-generation-app.html": [
+"4f56db33fedac2be",
+"2026-11-17"
+],
+"work-farm-management-app.html": [
+"5f983b0495c7dfb9",
+"2026-11-17"
+],
+"work-padel-ball-tracking.html": [
+"1e61c7e272019d54",
+"2026-11-23"
+],
+"work-soft-skills-kids-app.html": [
+"021be666f6485572",
+"2026-11-23"
+],
+"work-tree-work-estimation-app.html": [
+"31deb88cc64219ef",
+"2026-11-17"
+],
+"work-unity-business-assistant-avatar.html": [
+"b93c39a8b222a47b",
+"2026-11-23"
+],
+"work.html": [
+"3738f6bcac4db167",
+"2026-11-17"
+]
+}
