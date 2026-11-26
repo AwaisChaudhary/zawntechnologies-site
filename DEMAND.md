@@ -1,4 +1,10 @@
 # ZAWN demand queue
+
+## NEW CATEGORY EXPANSION (Awais 26 Nov: when traffic plateaus, open new categories backed by Trends/searches; don't wait for input)
+Evidence = Google autocomplete 26 Nov 18:10 PKT. Each is a CATEGORY: build a hub page first, then 1-2 child pages per run. Skip if it already exists.
+- E1 OPEN AI agent development services section + 'AI agent framework' comparison guide ('ai agent development company|services|framework').
+- E2 OPEN Website development cost in Pakistan (PKR) calculator/guide ('website development cost in pakistan', 'website rate in pakistan').
+- E3 OPEN Chatbot development cost estimator (honest 0/h ranges).
 ## RADAR 25 Nov 06:45 PKT (Google autocomplete, US + Keyword Planner 25 Nov)
 Z1. DONE 25 Nov /app-cost-calculator.html "App development cost in Pakistan" section (USD+PKR table, 2 FAQs in JSON-LD). Was OPEN 'app development cost in pakistan' (autocomplete #4) -> pricing section/landing: PKR + USD ranges, from our own rates only.
 Z2. DONE 25 Nov: 'Hire X developers in Pakistan' H2 + 2 FAQs (JSON-LD) on php-laravel-development, nextjs-react-development, android-app-development, shopify-development. Was OPEN 'hire laravel / react / android / php / shopify developers in pakistan' -> each service page gets a 'Hire X developers in Pakistan' H2 + FAQ (pages exist: php-laravel, nextjs-react, android, shopify).
