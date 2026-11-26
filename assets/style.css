@@ -531,3 +531,18 @@ section[id],[id="talk"]{scroll-margin-top:80px}
 /* calculator currency switch */
 .calc-cur{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.85rem;color:var(--muted)}
 .calc-cur select{flex:1;max-width:230px;font:inherit;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;background:rgba(8,9,13,.6);color:var(--fg)}
+/* bot architecture flow diagram (bot cluster pages) */
+.prose .flow{max-width:none}
+.flow{list-style:none;margin:1.4em 0 .6em;padding:0;display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:26px}
+.prose .flow li{position:relative;margin:0;padding:14px 14px 13px;border:1px solid var(--line-2);border-radius:var(--r-s);background:var(--bg-2);font-size:.88rem;line-height:1.45;color:var(--fg-2)}
+.prose .flow li::before{content:none;left:auto;top:auto;width:0;height:0}
+.flow li b{display:block;margin-bottom:4px;font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.02em;text-transform:uppercase;color:var(--fg)}
+.flow li.hot{border-color:var(--red);box-shadow:0 0 24px rgba(255,61,71,.18)}
+.flow li:not(:last-child)::after{content:"";position:absolute;top:50%;right:-21px;width:16px;height:2px;background:var(--red)}
+.prose .flow li:not(:last-child)::before{content:"";position:absolute;left:auto;top:calc(50% - 5px);right:-23px;border:5px solid transparent;border-left:6px solid var(--red);border-right:0}
+.flow-note{font-size:.88rem;color:var(--fg-2);margin:.2em 0 1.6em}
+@media (max-width:760px){
+  .flow{grid-template-columns:1fr;gap:22px}
+  .flow li:not(:last-child)::after{top:auto;bottom:-17px;right:auto;left:24px;width:2px;height:12px}
+  .prose .flow li:not(:last-child)::before{top:auto;bottom:-22px;right:auto;left:20px;border:5px solid transparent;border-top:6px solid var(--red);border-bottom:0}
+}
