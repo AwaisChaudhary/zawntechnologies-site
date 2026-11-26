@@ -149,3 +149,11 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - Sitemap lastmod 2026-11-26 for the 6 pages. Rendered 1280/390: no errors, no overflow; PKR switch tested ($3,000-5,500 -> Rs 8-15 lakh; custom store Rs 25-47 lakh). JSON-LD parses, links resolve.
 - Next: PKR switch on ai-chatbot-cost-calculator (JS); hire sections for react-native/ui-ux if SERP shows demand; backlog item 1 (flutter/mobile/web-saas deepen to 1,000+ words).
 - IndexNow pending: the 6 pages above.
+
+## 2026-11-26 pm (improvement run, demand-first): chatbot calculator in rupees + React Native hire section
+1. DEMAND Z7 remainder / Z12: ai-chatbot-cost-calculator.html gets the "Show in" currency switch (USD, GBP, EUR, AED, PKR, INR) for build cost, running cost and maintenance; new H2 "AI chatbot development cost in Pakistan" with USD + PKR table (Rs 11-22 lakh / 28-55 lakh / 55 lakh-1.25 crore at Rs 277/$), running cost in rupees and quote-comparison advice; 2 FAQs (cost in Pakistan; estimate in rupees/pounds) mirrored in JSON-LD (now 7). Meta/og description now names the currencies (142 chars). Contact-form summary stays in USD.
+2. DEMAND Z10 / Z11: react-native-development.html gets "Hire React Native developers in Pakistan" H2 (Bahria Town team, 3 typical jobs with planning hours at $50/h matching the Flutter page and calculators, contact form + Freelancer.com affiliate link, 4.9 from 356 reviews, links to app calculator, software-house-lahore, hiring post) and 2 FAQs in JSON-LD (now 5).
+- main.js: exchange rates moved to one shared window.ZAWN_FX table used by all three calculators (one place to refresh rates); chatbot money() rounds small values to 2 significant figures. ?v=20261126cb on all 87 pages. node --check OK. seo_post.py run (lastmod changed only for the 2 pages). Rendered 1280/390 for both pages + app/website calculators: no errors, no overflow; PKR/GBP outputs checked ($12,500-25,500 -> Rs 35-71 lakh).
+- Evidence: WebSearch 26 Nov 'hire react native developers in pakistan' = Upwork per-city pages, Arc, Twine, Contra, Clutch; 'AI chatbot development cost in Pakistan PKR' = Clutch lists + generic US articles, no rupee answer.
+- Next: Z13 Hire H2 on ui-ux-design; backlog item 1 (deepen flutter/mobile/web-saas to 1,000+ words).
+- IndexNow pending: ai-chatbot-cost-calculator, react-native-development.

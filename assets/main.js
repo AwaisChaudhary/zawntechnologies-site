@@ -419,13 +419,15 @@
   });
 })();
 
+/* shared currency table for the calculators: approximate rates, late November 2026; our rate is $50/hour */
+window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-GB"], EUR: [0.91, "\u20ac", 500, "en-IE"], AED: [3.67, "AED ", 1000, "en-US"], PKR: [277, "Rs ", 100000, "en-IN"], INR: [94, "\u20b9", 10000, "en-IN"] };
 /* ---------- app cost calculator ---------- */
 (function () {
   var f = document.getElementById("calc-form");
   if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
   /* approximate rates, late November 2026; our rate is $50/hour */
-  var FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-GB"], EUR: [0.91, "\u20ac", 500, "en-IE"], AED: [3.67, "AED ", 1000, "en-US"], PKR: [277, "Rs ", 100000, "en-IN"], INR: [94, "\u20b9", 10000, "en-IN"] };
+  var FX = window.ZAWN_FX;
   var cur = $("c-cur");
   var fmt = function (n, code) {
     var r = FX[code] || FX.USD, v = n * r[0], step = v >= r[2] * 2 ? r[2] : 1;
@@ -467,7 +469,12 @@
   var f = document.getElementById("cb-form");
   if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
-  var money = function (n) { var r = n >= 1000 ? Math.round(n / 500) * 500 : Math.round(n / 10) * 10; return "$" + r.toLocaleString("en-US"); };
+  var FX = window.ZAWN_FX, cur = $("cb-cur"), code = "USD";
+  var money = function (n, c) {
+    var r = FX[c || code] || FX.USD, v = n * r[0];
+    var step = v >= r[2] * 2 ? r[2] : Math.pow(10, Math.max(0, Math.floor(Math.log(Math.max(v, 1)) / Math.LN10) - 1));
+    return r[1] + (Math.round(v / step) * step).toLocaleString(r[3]);
+  };
   var perConv = { answer: [0.005, 0.02], docs: [0.01, 0.04], agent: [0.02, 0.08] };
   var maint = { answer: [2, 4], docs: [4, 8], agent: [8, 16] };
   function calc() {
@@ -485,7 +492,10 @@
     var m = parseFloat($("cb-content").value) || 1;
     lo = Math.round(lo * m / 10) * 10; hi = Math.round(hi * m / 10) * 10;
     $("cb-hours").textContent = lo.toLocaleString("en-US") + " to " + hi.toLocaleString("en-US");
+    code = cur && FX[cur.value] ? cur.value : "USD";
+    var usd = money(lo * 50, "USD") + " to " + money(hi * 50, "USD");
     $("cb-cost").textContent = money(lo * 50) + " to " + money(hi * 50);
+    if ($("cb-fx")) $("cb-fx").textContent = code === "USD" ? "" : " Approximate conversion from " + usd + " at late-November 2026 exchange rates.";
     var wlo = Math.max(2, Math.round(lo / 60)), whi = Math.max(3, Math.round(hi / 60));
     $("cb-weeks").textContent = wlo + " to " + whi + " weeks";
     var conv = Math.max(0, Math.min(1000000, parseInt($("cb-conv").value, 10) || 0));
@@ -495,11 +505,13 @@
     $("cb-run").textContent = money(rlo) + " to " + money(rhi);
     var mh = maint[type] || maint.docs;
     $("cb-maint").textContent = money(mh[0] * 50) + " to " + money(mh[1] * 50);
-    var summary = "AI chatbot calculator estimate: " + $("cb-hours").textContent + " hours (" + $("cb-cost").textContent + "), " + $("cb-weeks").textContent +
+    var summary = "AI chatbot calculator estimate: " + $("cb-hours").textContent + " hours (" + usd + "), " + $("cb-weeks").textContent +
       ".\nBot and extras: " + picked.join(", ") + (n ? ". Systems to connect: " + n : "") + ". About " + conv.toLocaleString("en-US") + " conversations a month.\n\nAbout my project: ";
     try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
   }
-  f.addEventListener("input", calc); f.addEventListener("change", calc); calc();
+  f.addEventListener("input", calc); f.addEventListener("change", calc);
+  if (cur) cur.addEventListener("change", function () { calc(); if (window.gtag) gtag("event", "calculator_currency", { currency: cur.value, calculator: "ai-chatbot" }); });
+  calc();
 })();
 
 /* analytics: email clicks and calculator use count as lead signals */
