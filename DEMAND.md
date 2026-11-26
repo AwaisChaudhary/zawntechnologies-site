@@ -1,5 +1,10 @@
 # ZAWN demand queue
 
+## EVENING RADAR 26 Nov 18:45 PKT (Google autocomplete US + Trends past 24h)
+- R1 OPEN Trends BREAKOUT 'what is poc in software development' (24h): honest guide 'Proof of concept vs prototype vs MVP' (blog task or guide page), linked from MVP/app-cost pages.
+- R2 OPEN 'app development cost calculator' + country variants (UK, Australia, Philippines, Malaysia in autocomplete): add currency selector (GBP/AUD/PHP/MYR) to app-cost-calculator, ZAWN rates stay $50/h.
+- R3 OPEN 'hire laravel/react/android/php/shopify developers in pakistan' (all in autocomplete) — confirm each service page has its 'Hire X developers in Pakistan' H2+FAQ.
+
 ## NEW CATEGORY EXPANSION (Awais 26 Nov: when traffic plateaus, open new categories backed by Trends/searches; don't wait for input)
 Evidence = Google autocomplete 26 Nov 18:10 PKT. Each is a CATEGORY: build a hub page first, then 1-2 child pages per run. Skip if it already exists.
 - E1 OPEN AI agent development services section + 'AI agent framework' comparison guide ('ai agent development company|services|framework').
