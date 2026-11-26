@@ -420,7 +420,7 @@
 })();
 
 /* shared currency table for the calculators: approximate rates, late November 2026; our rate is $50/hour */
-window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-GB"], EUR: [0.91, "\u20ac", 500, "en-IE"], AED: [3.67, "AED ", 1000, "en-US"], PKR: [277, "Rs ", 100000, "en-IN"], INR: [94, "\u20b9", 10000, "en-IN"] };
+window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-GB"], EUR: [0.91, "\u20ac", 500, "en-IE"], AED: [3.67, "AED ", 1000, "en-US"], PKR: [277, "Rs ", 100000, "en-IN"], INR: [94, "\u20b9", 10000, "en-IN"], AUD: [1.51, "A$", 500, "en-AU"], PHP: [63.7, "\u20b1", 10000, "en-PH"], MYR: [4.12, "RM", 1000, "en-MY"] };
 /* ---------- app cost calculator ---------- */
 (function () {
   var f = document.getElementById("calc-form");

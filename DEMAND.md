@@ -1,15 +1,15 @@
 # ZAWN demand queue
 
 ## EVENING RADAR 26 Nov 18:45 PKT (Google autocomplete US + Trends past 24h)
-- R1 OPEN Trends BREAKOUT 'what is poc in software development' (24h): honest guide 'Proof of concept vs prototype vs MVP' (blog task or guide page), linked from MVP/app-cost pages.
-- R2 OPEN 'app development cost calculator' + country variants (UK, Australia, Philippines, Malaysia in autocomplete): add currency selector (GBP/AUD/PHP/MYR) to app-cost-calculator, ZAWN rates stay $50/h.
-- R3 OPEN 'hire laravel/react/android/php/shopify developers in pakistan' (all in autocomplete) — confirm each service page has its 'Hire X developers in Pakistan' H2+FAQ.
+- R1 OPEN (for the BLOG task; improvement runs don't write posts. SERP 26 Nov crowded: Medium, DZone, UXPin, dev.to, BairesDev, Intellectsoft) Trends BREAKOUT 'what is poc in software development' (24h): honest guide 'Proof of concept vs prototype vs MVP' (blog task or guide page), linked from MVP/app-cost pages.
+- R2 DONE 26 Nov (night): AUD, PHP, MYR added to the shared currency switch on /app-cost-calculator.html, /website-cost-calculator.html, /ai-chatbot-cost-calculator.html (A$1.51, ₱63.7, RM4.12 per $; sources: BSP via taxcalculator.com.ph 26 Nov, Bernama via Malay Mail 24 Nov, AUD derived cross). SERP 'app development cost calculator australia' = local AU agency calculators (Elegant Media, Airtasker, Oneflare, Digital8) in AUD. Was OPEN 'app development cost calculator' + country variants (UK, Australia, Philippines, Malaysia in autocomplete): add currency selector (GBP/AUD/PHP/MYR) to app-cost-calculator, ZAWN rates stay $50/h.
+- R3 DONE 26 Nov (night): checked, all 4 pages (php-laravel, nextjs-react, android, shopify) have the Hire H2 + FAQ. Was OPEN 'hire laravel/react/android/php/shopify developers in pakistan' (all in autocomplete) — confirm each service page has its 'Hire X developers in Pakistan' H2+FAQ.
 
 ## NEW CATEGORY EXPANSION (Awais 26 Nov: when traffic plateaus, open new categories backed by Trends/searches; don't wait for input)
 Evidence = Google autocomplete 26 Nov 18:10 PKT. Each is a CATEGORY: build a hub page first, then 1-2 child pages per run. Skip if it already exists.
 - E1 OPEN AI agent development services section + 'AI agent framework' comparison guide ('ai agent development company|services|framework').
-- E2 OPEN Website development cost in Pakistan (PKR) calculator/guide ('website development cost in pakistan', 'website rate in pakistan').
-- E3 OPEN Chatbot development cost estimator (honest 0/h ranges).
+- E2 DONE 26 Nov via Z7 (/website-cost-calculator.html PKR switch + 'Website development cost in Pakistan' table). Was OPEN Website development cost in Pakistan (PKR) calculator/guide ('website development cost in pakistan', 'website rate in pakistan').
+- E3 DONE (exists: /ai-chatbot-cost-calculator.html with PKR + other currencies). Was OPEN Chatbot development cost estimator (honest 0/h ranges).
 ## RADAR 25 Nov 06:45 PKT (Google autocomplete, US + Keyword Planner 25 Nov)
 Z1. DONE 25 Nov /app-cost-calculator.html "App development cost in Pakistan" section (USD+PKR table, 2 FAQs in JSON-LD). Was OPEN 'app development cost in pakistan' (autocomplete #4) -> pricing section/landing: PKR + USD ranges, from our own rates only.
 Z2. DONE 25 Nov: 'Hire X developers in Pakistan' H2 + 2 FAQs (JSON-LD) on php-laravel-development, nextjs-react-development, android-app-development, shopify-development. Was OPEN 'hire laravel / react / android / php / shopify developers in pakistan' -> each service page gets a 'Hire X developers in Pakistan' H2 + FAQ (pages exist: php-laravel, nextjs-react, android, shopify).
@@ -30,4 +30,4 @@ Z10. DONE 26 Nov (pm): /react-native-development.html Hire H2 + 2 FAQs; /ai-chat
 ## RADAR 26 Nov pm (improvement run, WebSearch)
 Z11. Evidence 26 Nov: 'hire react native developers in pakistan' SERP = Upwork /pk/ + a page per city (Karachi, Islamabad, Faisalabad, Gilgit, Lahore), Arc, Twine, Contra, cryptojobslist, Clutch list: no agency answer page. DONE via Z10.
 Z12. Evidence 26 Nov: 'AI chatbot development cost in Pakistan PKR' SERP = 6 Clutch 'Top Chatbot Companies in Pakistan' pages, Upwork, generic US cost articles (Space-O, SolGuruz, Radixweb); no rupee answer. DONE via Z10.
-Z13. OPEN: 'hire UI UX designer pakistan' SERP = Upwork /pk/ (ui, ux, app, web designers, per city), Dribbble, Twine, Toptal. -> Hire H2 + 2 FAQs on /ui-ux-design.html next run.
+Z13. DONE 26 Nov (night): /ui-ux-design.html 'Hire UI/UX designers in Pakistan' H2 + 2 FAQs (JSON-LD). Re-checked SERP 26 Nov: Upwork /hire/ui-designers/pk/ + lahore/gilgit/multan pages, Dribbble, Twine only. Was OPEN: 'hire UI UX designer pakistan' SERP = Upwork /pk/ (ui, ux, app, web designers, per city), Dribbble, Twine, Toptal. -> Hire H2 + 2 FAQs on /ui-ux-design.html next run.
