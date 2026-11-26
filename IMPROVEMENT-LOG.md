@@ -169,3 +169,7 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - Removed Pakistan pricing: "App/Website/AI chatbot development cost in Pakistan" sections, their FAQs (visible + FAQPage JSON-LD) and the PKR currency option from app-cost-calculator, website-cost-calculator, ai-chatbot-cost-calculator; meta descriptions updated; currency FAQ reworded (GBP/EUR/AED/INR/AUD/PHP/MYR remain). Checked: JSON-LD parses, currency switch works, no overflow at 390px.
 - Location: "Bahria Town, Lahore" -> "Lahore, Pakistan" on 12 service pages (python, react-native, wordpress, shopify, ios, ui-ux, nodejs, nextjs-react, android, php-laravel, flutter, ai-chatbot-cost-calculator).
 - Queued BOT cluster B1-B9 at top of DEMAND.md with autocomplete evidence.
+
+## 2026-11-26 23:10 PKT (main chat, owner request)
+- US dollars only: removed the currency switch and the "Can I see the estimate in other currencies" FAQ (visible + JSON-LD) from app-, website- and ai-chatbot-cost-calculator; meta/og descriptions now say US dollars. JS already guards a missing switch; numbers update (tested 1280/390, no errors, no overflow).
+- Owner rule: no betting / prediction-market work; bot cluster B3 is crypto arbitrage only.
