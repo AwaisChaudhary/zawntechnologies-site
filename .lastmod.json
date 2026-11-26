@@ -3,6 +3,10 @@
 "09e4a4448bd9d594",
 "2026-11-25"
 ],
+"accounting-practice-management-software.html": [
+"5f82ab75ba248c07",
+"2026-11-26"
+],
 "ai-agent-development.html": [
 "981ee31ee8b52cb9",
 "2026-11-21"
@@ -14,6 +18,10 @@
 "ai-chatbot-development.html": [
 "e239939fd76b3bdf",
 "2026-11-25"
+],
+"ai-dental-receptionist.html": [
+"14bd56275302cfcb",
+"2026-11-26"
 ],
 "ai-llm-integration.html": [
 "d6e454327638de23",
@@ -91,6 +99,10 @@
 "9d159496bf8370dd",
 "2026-11-22"
 ],
+"blog-nextjs-vs-wordpress.html": [
+"fe50e8404b8d603a",
+"2026-11-26"
+],
 "blog-python-vs-nodejs-backend.html": [
 "ebcfe6ea450ab44d",
 "2026-11-24"
@@ -108,8 +120,8 @@
 "2026-11-25"
 ],
 "blog.html": [
-"c049b25bd093e71b",
-"2026-11-25"
+"6bfa152fec574e28",
+"2026-11-26"
 ],
 "bubble-development.html": [
 "ab494958e39007b1",
@@ -160,20 +172,24 @@
 "2026-11-21"
 ],
 "flutter-app-development.html": [
-"316ecba420dcfbce",
-"2026-11-18"
+"3eedf359fb0ad65e",
+"2026-11-26"
 ],
 "generative-ai-development.html": [
 "c10a1b8cca4e2a62",
 "2026-11-18"
+],
+"hoa-management-software.html": [
+"46dd0cc3878c3aad",
+"2026-11-26"
 ],
 "index.html": [
 "299643ed297fab17",
 "2026-11-25"
 ],
 "ios-app-development.html": [
-"ac49f88d6c55f471",
-"2026-11-23"
+"5d77372377c5ad1b",
+"2026-11-26"
 ],
 "iot-embedded-development.html": [
 "00a7260313cd6b3b",
@@ -196,12 +212,12 @@
 "2026-11-25"
 ],
 "nextjs-react-development.html": [
-"fe96842f343354ac",
-"2026-11-25"
+"bf782f38b7b27e7e",
+"2026-11-26"
 ],
 "nodejs-development.html": [
-"d4ed267056f78a45",
-"2026-11-23"
+"1df19bb131ee0aa0",
+"2026-11-26"
 ],
 "php-laravel-development.html": [
 "a136c1dc623a0091",
@@ -212,8 +228,8 @@
 "2026-11-17"
 ],
 "python-development.html": [
-"c53fbbe4b2c2ea8b",
-"2026-11-18"
+"93d0d4d416b6b962",
+"2026-11-26"
 ],
 "qa-testing.html": [
 "c4c674b41a7b0ce3",
@@ -284,8 +300,8 @@
 "2026-11-18"
 ],
 "website-cost-calculator.html": [
-"daff7f6864608cb5",
-"2026-11-25"
+"e88f4d4fa6fc1c1a",
+"2026-11-26"
 ],
 "website-development.html": [
 "0aee4fed339925ca",
@@ -296,8 +312,8 @@
 "2026-11-25"
 ],
 "wordpress-development.html": [
-"243b7ea4e7ec73b2",
-"2026-11-21"
+"a4389e2c839fdb82",
+"2026-11-26"
 ],
 "work-ai-image-generation-app.html": [
 "4f56db33fedac2be",
