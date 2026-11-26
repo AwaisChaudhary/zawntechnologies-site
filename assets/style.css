@@ -546,3 +546,9 @@ section[id],[id="talk"]{scroll-margin-top:80px}
   .flow li:not(:last-child)::after{top:auto;bottom:-17px;right:auto;left:24px;width:2px;height:12px}
   .prose .flow li:not(:last-child)::before{top:auto;bottom:-22px;right:auto;left:20px;border:5px solid transparent;border-top:6px solid var(--red);border-bottom:0}
 }
+/* arbitrage spread check */
+.arb-calc{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start;margin:20px 0}
+.arb-calc .calc-result{position:static;padding:22px}
+.arb-calc .calc-dl div:nth-child(3){border-left:0}
+.arb-calc .calc-dl div:nth-child(n+3){border-top:1px solid var(--line)}
+@media (max-width:1020px){.arb-calc{grid-template-columns:1fr}}

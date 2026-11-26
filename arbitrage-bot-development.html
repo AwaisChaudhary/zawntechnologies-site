@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>Crypto Arbitrage Bot Development &amp; Spread Check | ZAWN</title>
+<meta name="description" content="Crypto arbitrage bot development: cross-exchange, triangular and funding-rate bots with fee and slippage maths, risk limits and a free spread check tool.">
+<link rel="canonical" href="https://www.zawntechnologies.com/arbitrage-bot-development.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crypto Arbitrage Bot Development &amp; Spread Check | ZAWN">
+<meta property="og:description" content="Crypto arbitrage bot development: cross-exchange, triangular and funding-rate bots with fee and slippage maths, risk limits and a free spread check tool.">
+<meta property="og:url" content="https://www.zawntechnologies.com/arbitrage-bot-development.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="assets/style.css?v=20261127arb">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Lancaster University"}, {"@type": "CollegeOrUniversity", "name": "COMSATS Institute of Information Technology"}], "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry"]}, "numberOfEmployees": {"@type": "QuantitativeValue", "value": 25}, "knowsAbout": ["Artificial intelligence", "AI chatbots", "Computer vision", "Mobile app development", "Flutter", "Web development", "SaaS", "IoT", "Embedded systems", "Unity"], "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://clutch.co/profile/zawn-technologies", "https://www.goodfirms.co/company/zawn-technologies", "https://contra.com/awais_karamat_nfj1a6m1", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zawntechnologies.com/services.html"}, {"@type": "ListItem", "position": 3, "name": "Bot development", "item": "https://www.zawntechnologies.com/bot-development.html"}, {"@type": "ListItem", "position": 4, "name": "Crypto arbitrage bot development", "item": "https://www.zawntechnologies.com/arbitrage-bot-development.html"}]}, {"@type": "Service", "name": "Crypto arbitrage bot development", "serviceType": "Crypto arbitrage bot development", "description": "Crypto arbitrage bot development: cross-exchange, triangular and funding-rate bots with fee and slippage maths, risk limits and a free spread check tool.", "provider": {"@id": "https://www.zawntechnologies.com/#org"}, "areaServed": "Worldwide", "url": "https://www.zawntechnologies.com/arbitrage-bot-development.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a crypto arbitrage bot cost to build?", "acceptedAnswer": {"@type": "Answer", "text": "At $50 per hour, a scanner that only sends Telegram alerts is usually 40 to 80 hours ($2,000 to $4,000). A triangular bot on one exchange is about 100 to 180 hours ($5,000 to $9,000), and a cross-exchange bot that places orders automatically 150 to 300 hours ($7,500 to $15,000)."}}, {"@type": "Question", "name": "Is crypto arbitrage still profitable?", "acceptedAnswer": {"@type": "Answer", "text": "We cannot promise that, and nobody honestly can. Visible gaps on major pairs are usually smaller than fees and slippage, and large firms compete for them. A bot only automates the rules you define; we help you measure the real net spread on paper before any money is at risk."}}, {"@type": "Question", "name": "What is the difference between cross-exchange and triangular arbitrage?", "acceptedAnswer": {"@type": "Answer", "text": "Cross-exchange arbitrage buys on one exchange and sells on another, so you need balances on both. Triangular arbitrage trades three pairs on one exchange, for example USDT to BTC to ETH and back to USDT, so it pays three trading fees but needs no transfers."}}, {"@type": "Question", "name": "Do you move coins between exchanges during a trade?", "acceptedAnswer": {"@type": "Answer", "text": "No. Withdrawals take minutes or longer, so working bots keep pre-funded balances on each exchange and rebalance separately. The bot tracks those balances and stops when one side runs low."}}, {"@type": "Question", "name": "Do you build DEX, MEV or flash-loan arbitrage bots?", "acceptedAnswer": {"@type": "Answer", "text": "We can monitor DEX prices against centralised exchanges, but we do not build MEV, sandwich, front-running or other bots that profit by trading ahead of other users."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "An alert-only scanner is often two to three weeks. An automated cross-exchange bot usually takes six to ten weeks including paper trading and a small live start, because fills, fees and balances must be checked on each exchange."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFZRL758B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8QFZRL758B');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html" aria-current=page>Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / <a href="bot-development.html">Bot development</a> / Crypto arbitrage bots</nav>
+<h1>Crypto arbitrage bot development, with the fee maths done first</h1><p class="lede">We build cross-exchange, triangular and funding-rate arbitrage bots for the rules you define, and we start by checking whether the price gaps you see survive trading fees, slippage and transfer costs. Use the spread check below before you spend anything.</p></div></section>
+<div class="wrap content">
+<article class="prose">
+<h2>The honest starting point</h2>
+<p>An arbitrage bot looks for a price difference for the same coin between two exchanges, or between three trading pairs on one exchange, and trades only when the difference is larger than all the costs. Those costs are the part most people underestimate: two or three trading fees, slippage on each leg, and the cost of moving funds back into balance. On liquid pairs the visible gap is often smaller than the costs, and professional firms compete for what is left.</p>
+<p>We build the bot you specify and measure its real net result on paper first. We never promise profits; crypto trading carries a real risk of loss.</p>
+
+<h2>Arbitrage bots we build</h2>
+<ul>
+<li><strong>Cross-exchange arbitrage</strong>: compares order books for the same pair on two or more exchanges (for example Binance, Bybit, Kraken, OKX, Coinbase Advanced) and buys on the cheaper one while selling on the dearer one, using balances already on each exchange.</li>
+<li><strong>Triangular arbitrage</strong>: watches loops of three pairs on one exchange, such as USDT &rarr; BTC &rarr; ETH &rarr; USDT, and acts only when the loop returns more than it started with after three fees.</li>
+<li><strong>Funding-rate (spot&ndash;perpetual) bots</strong>: hold a spot position and an opposite perpetual futures position to collect funding payments, with checks for funding turning negative and margin on the futures leg.</li>
+<li><strong>Arbitrage scanners</strong>: no orders at all, just a live feed of gaps after fees with Telegram or dashboard alerts, so you can study the opportunity before automating it.</li>
+<li><strong>Rebalancing and reporting tools</strong>: track balances across exchanges, flag when one side runs low and report realised profit or loss after every fee.</li>
+</ul>
+
+<h2>How a cross-exchange arbitrage bot works</h2>
+<ol class="flow" style="--n:5" aria-label="Arbitrage bot architecture, in five parts">
+<li><b>Order books</b>Live WebSocket depth from each exchange, kept in sync</li>
+<li class="hot"><b>Gap finder</b>Best buy vs best sell, sized to the depth actually available</li>
+<li><b>Cost check</b>Fees, expected slippage, minimum size and your threshold</li>
+<li><b>Execution</b>Both legs sent together; a failed leg is hedged or closed by rule</li>
+<li><b>Balances</b>Inventory per exchange, rebalancing alerts, trade log and P&amp;L</li>
+</ol>
+<p class="flow-note">The cost check runs before every trade. If the gap is smaller than fees plus slippage plus your safety margin, the bot does nothing.</p>
+
+<h2>Free spread check: does the gap survive costs?</h2>
+<p>Enter a price gap you have seen. This is simple arithmetic for one trade, not a forecast: real fills depend on order-book depth and speed, and prices move while orders travel.</p>
+<div class="arb-calc" id="arb-calc">
+<form class="calc-form" id="arb-form" onsubmit="return false"><fieldset><legend>One cross-exchange trade</legend>
+<div class="calc-row">
+<label for="arb-buy">Buy price on exchange A ($)<input id="arb-buy" type="number" min="0" step="any" value="100000"></label>
+<label for="arb-sell">Sell price on exchange B ($)<input id="arb-sell" type="number" min="0" step="any" value="100150"></label>
+<label for="arb-size">Trade size ($)<input id="arb-size" type="number" min="0" step="any" value="5000"></label>
+<label for="arb-xfer">Rebalancing cost per trade ($)<input id="arb-xfer" type="number" min="0" step="any" value="0"></label>
+<label for="arb-fa">Taker fee on exchange A (%)<input id="arb-fa" type="number" min="0" step="any" value="0.1"></label>
+<label for="arb-fb">Taker fee on exchange B (%)<input id="arb-fb" type="number" min="0" step="any" value="0.1"></label>
+<label for="arb-slip">Expected slippage, both legs together (%)<input id="arb-slip" type="number" min="0" step="any" value="0.05"></label>
+</div></fieldset></form>
+<div class="calc-result" aria-live="polite">
+<p class="eyebrow">Net result for this trade</p>
+<div class="calc-big" id="arb-net">$0</div>
+<dl class="calc-dl"><div><dt>Gross gap</dt><dd id="arb-gross">0%</dd></div><div><dt>Total costs</dt><dd id="arb-cost">$0</dd></div><div><dt>Break-even gap</dt><dd id="arb-be">0%</dd></div><div><dt>Net after costs</dt><dd id="arb-pct">0%</dd></div></dl>
+<p class="small" id="arb-verdict"></p>
+</div>
+</div>
+<p class="small">With the example numbers, a 0.15% gap looks attractive but costs about 0.25%, so the trade loses money. Fee tiers, BNB-style fee discounts and maker orders change the answer, which is why we measure your real fees during paper trading.</p>
+
+<h2>Features we build in</h2>
+<ul><li>Depth-aware sizing: the bot only counts the volume actually available at the quoted prices</li><li>Configurable minimum net spread and maximum trade size per pair</li><li>Leg-failure rules: if one side fills and the other does not, the bot hedges or closes by your rule and alerts you</li><li>Balance tracking per exchange with low-balance stops and rebalancing alerts</li><li>Paper trading against live order books, logging every missed and taken opportunity</li><li>Kill switch, daily loss limit and Telegram commands such as /status and /pause</li><li>API keys trade-only, withdrawals disabled, IP allow-listing where supported</li></ul>
+
+<h2>Tech stack</h2>
+<p>Python (asyncio, ccxt and ccxt.pro for WebSocket order books) or Node.js where an existing codebase or throughput calls for it; exchange-specific code for futures and funding rates; Redis for live state; PostgreSQL or TimescaleDB for opportunity and trade history; Docker on a cloud server in a region close to the exchanges you use.</p>
+
+<h2>Arbitrage bot cost: planning ranges at $50/hour</h2>
+<table><thead><tr><th>Project</th><th>Typical hours</th><th>Typical cost</th></tr></thead><tbody>
+<tr><td>Arbitrage scanner with Telegram alerts, 2&ndash;4 exchanges, no orders</td><td>40&ndash;80 h</td><td>$2,000&ndash;$4,000</td></tr>
+<tr><td>Triangular arbitrage bot, one exchange</td><td>100&ndash;180 h</td><td>$5,000&ndash;$9,000</td></tr>
+<tr><td>Funding-rate (spot&ndash;perpetual) bot, one or two exchanges</td><td>120&ndash;220 h</td><td>$6,000&ndash;$11,000</td></tr>
+<tr><td>Cross-exchange bot with pre-funded balances and automatic execution</td><td>150&ndash;300 h</td><td>$7,500&ndash;$15,000</td></tr>
+<tr><td>Multi-exchange system with dashboard, rebalancing and reporting</td><td>300+ h</td><td>$15,000+</td></tr>
+</tbody></table>
+<p>Running costs are a cloud server (often $10 to $60 a month) plus any paid data. Many clients start with the scanner: it shows how often real, after-cost gaps appear before they pay for automatic trading. See also <a href="blog-trading-bot-cost-2026.html">how much a trading bot costs to build in 2026</a>.</p>
+
+<h2>How we work</h2>
+<ol><li><strong>Rules and costs.</strong> You tell us the exchanges, pairs and thresholds; we collect your real fee tiers and minimum order sizes.</li><li><strong>Scanner first.</strong> We log gaps after costs on live order books for a week or two, so the data decides whether to automate.</li><li><strong>Paper trading.</strong> The trading code runs against live books without real orders.</li><li><strong>Small live start.</strong> Small sizes, tight limits, on your own exchange accounts and server.</li><li><strong>Handover.</strong> Source code in your repository, a runbook, and optional support when exchanges change their APIs.</li></ol>
+
+<h2>Risks and compliance</h2>
+<ul><li>Gaps close in milliseconds, one leg can fail, exchanges can pause withdrawals or go offline, and funding rates can flip. Limits reduce losses; they cannot remove the risk.</li><li>Funds sit on several exchanges at once, so you carry each exchange's counterparty risk.</li><li>You are responsible for each exchange's terms of service and the laws and tax rules where you live. Running the bot for other people's money may be a regulated activity: take legal advice first.</li><li>We do not build MEV, sandwich, front-running, wash-trading or other market-manipulation bots, and we do not build betting or prediction-market bots.</li></ul>
+
+<h2>Hire a bot developer for this</h2>
+<p>You work directly with our engineers in Lahore, Pakistan, building software for clients worldwide since 2014. Start with the <a href="contact.html">contact form</a>, or hire us on <a href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank">Freelancer.com</a>, where we are a Preferred Freelancer with a 4.9 average from 356 reviews. Every bot we offer is listed on the <a href="bot-development.html">bot development</a> page.</p>
+<h2>Questions clients ask</h2><div class="faq">
+<details><summary>How much does a crypto arbitrage bot cost to build?</summary><p>At $50 per hour, a scanner that only sends Telegram alerts is usually 40 to 80 hours ($2,000 to $4,000). A triangular bot on one exchange is about 100 to 180 hours ($5,000 to $9,000), and a cross-exchange bot that places orders automatically 150 to 300 hours ($7,500 to $15,000).</p></details>
+<details><summary>Is crypto arbitrage still profitable?</summary><p>We cannot promise that, and nobody honestly can. Visible gaps on major pairs are usually smaller than fees and slippage, and large firms compete for them. A bot only automates the rules you define; we help you measure the real net spread on paper before any money is at risk.</p></details>
+<details><summary>What is the difference between cross-exchange and triangular arbitrage?</summary><p>Cross-exchange arbitrage buys on one exchange and sells on another, so you need balances on both. Triangular arbitrage trades three pairs on one exchange, for example USDT to BTC to ETH and back to USDT, so it pays three trading fees but needs no transfers.</p></details>
+<details><summary>Do you move coins between exchanges during a trade?</summary><p>No. Withdrawals take minutes or longer, so working bots keep pre-funded balances on each exchange and rebalance separately. The bot tracks those balances and stops when one side runs low.</p></details>
+<details><summary>Do you build DEX, MEV or flash-loan arbitrage bots?</summary><p>We can monitor DEX prices against centralised exchanges, but we do not build MEV, sandwich, front-running or other bots that profit by trading ahead of other users.</p></details>
+<details><summary>How long does it take?</summary><p>An alert-only scanner is often two to three weeks. An automated cross-exchange bot usually takes six to ten weeks including paper trading and a small live start, because fills, fees and balances must be checked on each exchange.</p></details>
+</div>
+</article>
+<aside class="aside">
+<div class="box"><h3>Talk to an engineer</h3><p class="small">Send the exchanges, pairs and the gaps you have seen. Reply within one business day.</p><a class="btn btn-primary" href="contact.html">Start a project</a></div>
+<div class="box"><h3>Tools we use</h3><ul class="tags"><li>Python</li><li>ccxt</li><li>asyncio</li><li>WebSockets</li><li>Node.js</li><li>Redis</li><li>PostgreSQL</li><li>TimescaleDB</li><li>Docker</li><li>Telegram API</li></ul></div>
+<div class="box"><h3>Bot services</h3><ul><li><a href="bot-development.html">All bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="trading-bot-development.html">Trading bots: MT5 and TradingView</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="cloud-devops.html">Cloud and DevOps</a></li></ul></div>
+<div class="box"><h3>Related reading</h3><ul><li><a href="blog-trading-bot-cost-2026.html">How much does a trading bot cost to build in 2026?</a></li><li><a href="blog-python-vs-nodejs-backend.html">Python vs Node.js for the backend</a></li></ul></div>
+</aside>
+</div>
+<section class="cta"><div class="wrap">
+<h2>Have a project that needs a reliable engineering team?</h2>
+<div><p>Tell us what you want to build. You will get a reply within one business day, with questions or a rough estimate.</p>
+<a class="btn btn-primary" href="contact.html">Start a project</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="whatsapp-chatbot-development.html">WhatsApp chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="bot-development.html">Bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 51 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="website-cost-calculator.html">Website cost calculator</a></li><li><a href="ai-chatbot-cost-calculator.html">AI chatbot cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="f-all"><h4>More services</h4><p><a href="mvp-development.html">MVP development</a><a href="ui-ux-design.html">UI/UX design</a><a href="business-automation.html">Business automation</a><a href="stripe-payment-integration.html">Stripe and payments</a><a href="web-scraping-services.html">Web scraping</a><a href="shopify-development.html">Shopify</a><a href="wordpress-development.html">WordPress</a><a href="bubble-development.html">Bubble.io</a><a href="chrome-extension-development.html">Chrome extensions</a><a href="desktop-app-development.html">Desktop apps</a><a href="drupal-development.html">Drupal</a><a href="unity-game-development.html">Unity and 3D</a><a href="blockchain-web3-development.html">Blockchain and Web3</a><a href="cloud-devops.html">Cloud and DevOps</a><a href="linux-server-administration.html">Linux servers</a><a href="qa-testing.html">QA and testing</a><a href="app-maintenance-support.html">App maintenance</a><a href="farm-management-software.html">Farm management software</a><a href="tree-service-estimating-app.html">Tree service estimating apps</a></p></div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261127arb" defer></script>
+</body>
+</html>

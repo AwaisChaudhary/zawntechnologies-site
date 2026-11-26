@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>MT5 Expert Advisor Development for Prop Firms | ZAWN</title>
+<meta name="description" content="MT5 Expert Advisor development in MQL5: your strategy coded with prop-firm guards for daily loss and drawdown, tested in Strategy Tester, at $50 per hour.">
+<link rel="canonical" href="https://www.zawntechnologies.com/mt5-expert-advisor-development.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MT5 Expert Advisor Development for Prop Firms | ZAWN">
+<meta property="og:description" content="MT5 Expert Advisor development in MQL5: your strategy coded with prop-firm guards for daily loss and drawdown, tested in Strategy Tester, at $50 per hour.">
+<meta property="og:url" content="https://www.zawntechnologies.com/mt5-expert-advisor-development.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="assets/style.css?v=20261127arb">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Lancaster University"}, {"@type": "CollegeOrUniversity", "name": "COMSATS Institute of Information Technology"}], "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry"]}, "numberOfEmployees": {"@type": "QuantitativeValue", "value": 25}, "knowsAbout": ["Artificial intelligence", "AI chatbots", "Computer vision", "Mobile app development", "Flutter", "Web development", "SaaS", "IoT", "Embedded systems", "Unity"], "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://clutch.co/profile/zawn-technologies", "https://www.goodfirms.co/company/zawn-technologies", "https://contra.com/awais_karamat_nfj1a6m1", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zawntechnologies.com/services.html"}, {"@type": "ListItem", "position": 3, "name": "Bot development", "item": "https://www.zawntechnologies.com/bot-development.html"}, {"@type": "ListItem", "position": 4, "name": "MT5 Expert Advisor development", "item": "https://www.zawntechnologies.com/mt5-expert-advisor-development.html"}]}, {"@type": "Service", "name": "MT5 Expert Advisor development", "serviceType": "MT5 Expert Advisor development", "description": "MT5 Expert Advisor development in MQL5: your strategy coded with prop-firm guards for daily loss and drawdown, tested in Strategy Tester, at $50 per hour.", "provider": {"@id": "https://www.zawntechnologies.com/#org"}, "areaServed": "Worldwide", "url": "https://www.zawntechnologies.com/mt5-expert-advisor-development.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does an MT5 Expert Advisor cost?", "acceptedAnswer": {"@type": "Answer", "text": "At $50 per hour, a simple EA from clear rules is usually 30 to 60 hours ($1,500 to $3,000). An EA with prop-firm guards and a full settings panel is about 50 to 80 hours ($2,500 to $4,000), and converting a TradingView or MT4 strategy to MT5 is often 15 to 40 hours ($750 to $2,000)."}}, {"@type": "Question", "name": "Can you build an EA that passes a prop firm challenge?", "acceptedAnswer": {"@type": "Answer", "text": "Nobody can honestly guarantee that. We code your strategy and add guards so the EA stops before it breaks the firm's daily loss, drawdown or lot rules as you configure them. Whether the strategy reaches the profit target depends on the strategy and the market."}}, {"@type": "Question", "name": "Are Expert Advisors allowed by prop firms?", "acceptedAnswer": {"@type": "Answer", "text": "Many firms allow EAs, but rules differ and change: some ban high-frequency trading, tick scalping, latency arbitrage, copy trading across accounts or third-party EAs. Check your firm's current rules before we start; we do not build EAs designed to get around them."}}, {"@type": "Question", "name": "Can you convert my TradingView or MT4 strategy to MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We rewrite Pine Script or MQL4 logic in MQL5 and compare signals bar by bar against the original on the same data, so you can see that the conversion matches."}}, {"@type": "Question", "name": "Will I get the source code?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You receive the .mq5 source as well as the compiled .ex5 file, and the code is yours. We sign an NDA on request."}}, {"@type": "Question", "name": "Does the EA run when my computer is off?", "acceptedAnswer": {"@type": "Answer", "text": "Only if it runs on a server. Most clients use a Windows VPS or the MetaQuotes built-in VPS close to their broker's server, usually around $10 to $30 a month."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFZRL758B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8QFZRL758B');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html" aria-current=page>Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / <a href="bot-development.html">Bot development</a> / MT5 Expert Advisors</nav>
+<h1>MT5 Expert Advisor development, with prop-firm rules built in</h1><p class="lede">We code your trading rules into a MetaTrader 5 Expert Advisor in MQL5, add guards for daily loss, maximum drawdown and lot size, and test it in the Strategy Tester and on demo before it touches a live or funded account.</p></div></section>
+<div class="wrap content">
+<article class="prose">
+<h2>What an Expert Advisor can and cannot do</h2>
+<p>An Expert Advisor (EA) is a program that runs inside MetaTrader 5 and trades by the rules written into it, on every tick, without hesitation. It does not make a losing strategy profitable, and it cannot know the future. We build and test the rules you give us, tell you plainly when a backtest looks unrealistic, and never promise returns. Forex and CFD trading carries a high risk of loss.</p>
+
+<h2>What we build in MQL5</h2>
+<ul>
+<li><strong>Expert Advisors from your rules</strong>: indicator, price-action or session-based entries and exits, with fixed, percentage-risk or ATR-based position sizing.</li>
+<li><strong>Prop-firm guards</strong>: daily loss and maximum drawdown limits, lot and open-trade caps, trading-hour and news-window filters, and close-before-weekend rules, all set in the inputs.</li>
+<li><strong>Trade managers</strong>: break-even, trailing stops, partial closes and basket take-profit for trades you open by hand.</li>
+<li><strong>Conversions</strong>: TradingView Pine Script or MT4 (MQL4) strategies rewritten for MT5 and checked signal by signal.</li>
+<li><strong>Custom indicators and dashboards</strong>: on-chart panels showing daily P&amp;L, distance to your loss limits and the EA's state.</li>
+<li><strong>Alerts</strong>: Telegram or push notifications for entries, exits, errors and limit hits.</li>
+</ul>
+
+<h2>How an Expert Advisor with prop-firm guards works</h2>
+<ol class="flow" style="--n:5" aria-label="MT5 Expert Advisor structure, in five parts">
+<li><b>Market data</b>Ticks and bars for each symbol and timeframe you trade</li>
+<li><b>Signal</b>Your entry, exit and position-size rules</li>
+<li class="hot"><b>Rule guard</b>Daily loss, max drawdown, lot cap, hours and news filter</li>
+<li><b>Execution</b>Orders with stop levels, slippage, requotes and retries handled</li>
+<li><b>Logs and alerts</b>Journal, on-chart panel and Telegram messages</li>
+</ol>
+<p class="flow-note">The rule guard checks equity on every tick. When a limit is close, the EA stops opening trades; when it is reached, it closes positions by your rule.</p>
+
+<h2>Prop-firm rules your EA should check</h2>
+<table><thead><tr><th>Rule</th><th>What the EA does</th><th>Detail to confirm with your firm</th></tr></thead><tbody>
+<tr><td>Daily loss limit</td><td>Tracks equity from the day's start and stops before the limit</td><td>Measured from balance or equity, and when the day resets (server time)</td></tr>
+<tr><td>Maximum drawdown</td><td>Stops trading and closes positions near the floor</td><td>Static from the starting balance, or trailing the highest balance or equity</td></tr>
+<tr><td>Lot and exposure caps</td><td>Limits lot size, open trades and total exposure per symbol</td><td>Any maximum lot or margin rule in the firm's terms</td></tr>
+<tr><td>News and weekend rules</td><td>Pauses around listed news times and can close before the weekend</td><td>Which events count and how long the window is</td></tr>
+<tr><td>Consistency rules</td><td>Reports the share of profit from the best day so you can see it</td><td>How the firm calculates it; usually best handled by you, not forced by code</td></tr>
+</tbody></table>
+<p>Rules differ between firms and change over time, so we put each limit in the EA's inputs rather than hard-coding one firm's numbers. Strategies a firm prohibits, such as latency arbitrage or copying trades across accounts, are not something we build around.</p>
+
+<h2>Testing before real money</h2>
+<ul><li>MT5 Strategy Tester runs on real ticks where your broker provides them, with your spread and commission</li><li>An out-of-sample period the strategy was not tuned on, so the result is not just curve fitting</li><li>Forward testing on a demo account, compared trade by trade with the tester</li><li>Small live or funded-account start with the guards set tighter than the firm's limits</li></ul>
+
+<h2>Tech stack</h2>
+<p>MQL5 (and MQL4 for MT4 work) with the standard trade classes; MT5 Strategy Tester and optimisation; WebRequest for Telegram alerts; Python with the MetaTrader5 package for research, data export or external dashboards; a Windows VPS or MetaQuotes VPS near your broker's server.</p>
+
+<h2>MT5 EA cost: planning ranges at $50/hour</h2>
+<table><thead><tr><th>Project</th><th>Typical hours</th><th>Typical cost</th></tr></thead><tbody>
+<tr><td>Trade manager or utility (break-even, trailing, partial close)</td><td>15&ndash;35 h</td><td>$750&ndash;$1,750</td></tr>
+<tr><td>Convert a TradingView or MT4 strategy to MT5</td><td>15&ndash;40 h</td><td>$750&ndash;$2,000</td></tr>
+<tr><td>Expert Advisor from clear rules, one symbol</td><td>30&ndash;60 h</td><td>$1,500&ndash;$3,000</td></tr>
+<tr><td>EA with prop-firm guards, settings panel and Telegram alerts</td><td>50&ndash;80 h</td><td>$2,500&ndash;$4,000</td></tr>
+<tr><td>Multi-symbol portfolio EA with on-chart dashboard</td><td>80&ndash;160 h</td><td>$4,000&ndash;$8,000</td></tr>
+</tbody></table>
+<p>Clear rules keep the cost down: if every "it depends" is answered before coding, there is less to change later. More detail is in <a href="blog-trading-bot-cost-2026.html">how much a trading bot costs to build in 2026</a>.</p>
+
+<h2>How we work</h2>
+<ol><li><strong>Rules spec.</strong> You describe the strategy; we write it back as a precise spec, including the prop-firm limits you want enforced.</li><li><strong>Build and tester run.</strong> We code the EA and share Strategy Tester reports with your broker's data.</li><li><strong>Demo forward test.</strong> The EA runs on a demo account until its trades match the tester closely enough for you.</li><li><strong>Live start.</strong> You install it on your VPS and account; we help set the inputs.</li><li><strong>Handover.</strong> .mq5 source, .ex5 file, an inputs guide, and optional support for changes.</li></ol>
+
+<h2>Risks and compliance</h2>
+<ul><li>Leveraged forex and CFD trading can lose money quickly. Spreads widen, brokers requote and VPS connections drop; guards reduce the damage but cannot remove the risk.</li><li>You are responsible for your broker's and prop firm's terms and the laws where you live. Selling an EA or signals to others may need a licence in some countries.</li><li>Martingale and grid EAs can hide large drawdowns; if you want one, we build it with a hard loss cap and say plainly what the tester shows.</li><li>We do not build EAs meant to exploit platform or firm loopholes, such as latency arbitrage or hidden copy trading across accounts.</li></ul>
+
+<h2>Hire a bot developer for this</h2>
+<p>You work directly with our engineers in Lahore, Pakistan, building software for clients worldwide since 2014. Start with the <a href="contact.html">contact form</a>, or hire us on <a href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank">Freelancer.com</a>, where we are a Preferred Freelancer with a 4.9 average from 356 reviews. Every bot we offer is listed on the <a href="bot-development.html">bot development</a> page.</p>
+<h2>Questions clients ask</h2><div class="faq">
+<details><summary>How much does an MT5 Expert Advisor cost?</summary><p>At $50 per hour, a simple EA from clear rules is usually 30 to 60 hours ($1,500 to $3,000). An EA with prop-firm guards and a full settings panel is about 50 to 80 hours ($2,500 to $4,000), and converting a TradingView or MT4 strategy to MT5 is often 15 to 40 hours ($750 to $2,000).</p></details>
+<details><summary>Can you build an EA that passes a prop firm challenge?</summary><p>Nobody can honestly guarantee that. We code your strategy and add guards so the EA stops before it breaks the firm's daily loss, drawdown or lot rules as you configure them. Whether the strategy reaches the profit target depends on the strategy and the market.</p></details>
+<details><summary>Are Expert Advisors allowed by prop firms?</summary><p>Many firms allow EAs, but rules differ and change: some ban high-frequency trading, tick scalping, latency arbitrage, copy trading across accounts or third-party EAs. Check your firm's current rules before we start; we do not build EAs designed to get around them.</p></details>
+<details><summary>Can you convert my TradingView or MT4 strategy to MT5?</summary><p>Yes. We rewrite Pine Script or MQL4 logic in MQL5 and compare signals bar by bar against the original on the same data, so you can see that the conversion matches.</p></details>
+<details><summary>Will I get the source code?</summary><p>Yes. You receive the .mq5 source as well as the compiled .ex5 file, and the code is yours. We sign an NDA on request.</p></details>
+<details><summary>Does the EA run when my computer is off?</summary><p>Only if it runs on a server. Most clients use a Windows VPS or the MetaQuotes built-in VPS close to their broker's server, usually around $10 to $30 a month.</p></details>
+</div>
+</article>
+<aside class="aside">
+<div class="box"><h3>Talk to an engineer</h3><p class="small">Send your strategy rules, broker and any prop-firm limits. Reply within one business day.</p><a class="btn btn-primary" href="contact.html">Start a project</a></div>
+<div class="box"><h3>Tools we use</h3><ul class="tags"><li>MQL5</li><li>MQL4</li><li>MetaTrader 5</li><li>Strategy Tester</li><li>Pine Script</li><li>Python</li><li>MetaTrader5 package</li><li>Telegram API</li><li>Windows VPS</li></ul></div>
+<div class="box"><h3>Bot services</h3><ul><li><a href="bot-development.html">All bot development</a></li><li><a href="trading-bot-development.html">Trading bots: MT5 and TradingView</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="python-development.html">Python development</a></li></ul></div>
+<div class="box"><h3>Related reading</h3><ul><li><a href="blog-trading-bot-cost-2026.html">How much does a trading bot cost to build in 2026?</a></li></ul></div>
+</aside>
+</div>
+<section class="cta"><div class="wrap">
+<h2>Have a project that needs a reliable engineering team?</h2>
+<div><p>Tell us what you want to build. You will get a reply within one business day, with questions or a rough estimate.</p>
+<a class="btn btn-primary" href="contact.html">Start a project</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="whatsapp-chatbot-development.html">WhatsApp chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="bot-development.html">Bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 51 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="website-cost-calculator.html">Website cost calculator</a></li><li><a href="ai-chatbot-cost-calculator.html">AI chatbot cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="f-all"><h4>More services</h4><p><a href="mvp-development.html">MVP development</a><a href="ui-ux-design.html">UI/UX design</a><a href="business-automation.html">Business automation</a><a href="stripe-payment-integration.html">Stripe and payments</a><a href="web-scraping-services.html">Web scraping</a><a href="shopify-development.html">Shopify</a><a href="wordpress-development.html">WordPress</a><a href="bubble-development.html">Bubble.io</a><a href="chrome-extension-development.html">Chrome extensions</a><a href="desktop-app-development.html">Desktop apps</a><a href="drupal-development.html">Drupal</a><a href="unity-game-development.html">Unity and 3D</a><a href="blockchain-web3-development.html">Blockchain and Web3</a><a href="cloud-devops.html">Cloud and DevOps</a><a href="linux-server-administration.html">Linux servers</a><a href="qa-testing.html">QA and testing</a><a href="app-maintenance-support.html">App maintenance</a><a href="farm-management-software.html">Farm management software</a><a href="tree-service-estimating-app.html">Tree service estimating apps</a></p></div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261127arb" defer></script>
+</body>
+</html>

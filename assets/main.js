@@ -548,3 +548,34 @@ window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-G
   var fab = document.querySelector(".fab"), fb = fab && fab.querySelector(".fab-btn");
   if (fb) fab.insertBefore(a, fb); else document.body.appendChild(a);
 })();
+
+/* arbitrage spread check (arbitrage-bot-development.html) */
+(function () {
+  var f = document.getElementById("arb-form");
+  if (!f) return;
+  function $(id) { return document.getElementById(id); }
+  function v(id) { var n = parseFloat($(id).value); return isFinite(n) && n >= 0 ? n : 0; }
+  function usd(n) { var s = Math.abs(n) < 100 ? Math.abs(n).toFixed(2) : Math.round(Math.abs(n)).toLocaleString("en-US"); return (n < 0 ? "-$" : "$") + s; }
+  function pct(n) { return (Math.round(n * 1000) / 1000) + "%"; }
+  var used = false;
+  function calc() {
+    var buy = v("arb-buy"), sell = v("arb-sell"), size = v("arb-size"), xfer = v("arb-xfer");
+    var fa = v("arb-fa") / 100, fb = v("arb-fb") / 100, slip = v("arb-slip") / 100;
+    if (!buy || !size) { $("arb-net").textContent = "$0"; $("arb-verdict").textContent = "Enter a buy price and a trade size."; return; }
+    var units = size / buy, revenue = units * sell;
+    var costs = size * fa + revenue * fb + revenue * slip + xfer;
+    var net = revenue - size - costs;
+    var gross = (sell - buy) / buy * 100;
+    var be = (fa + fb + slip) * 100 + xfer / size * 100;
+    $("arb-net").textContent = usd(net);
+    $("arb-gross").textContent = pct(gross);
+    $("arb-cost").textContent = usd(costs);
+    $("arb-be").textContent = pct(be);
+    $("arb-pct").textContent = pct(net / size * 100);
+    $("arb-verdict").textContent = net > 0
+      ? "On these numbers the gap covers costs. Real fills often differ: check order-book depth and paper trade before risking money."
+      : "On these numbers the trade loses money after costs. The gap must be wider than the break-even figure, with a safety margin.";
+  }
+  f.addEventListener("input", function () { calc(); if (!used && window.gtag) { used = true; gtag("event", "calculator_used", { calculator: "arb-form" }); } });
+  calc();
+})();
