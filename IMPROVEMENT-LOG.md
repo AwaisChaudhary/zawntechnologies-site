@@ -164,3 +164,8 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - R3 verified done. E2/E3 marked done (already built). R1 (PoC vs prototype vs MVP) left for the blog task.
 - ?v=20261126fx2 on all pages. node --check OK. Rendered 4 pages at 1280/390: no errors, no overflow; AUD/PHP/MYR outputs checked ($19,500-35,000 -> A$29,500-53,000 / ₱1.24-2.23M / RM80,000-144,000). JSON-LD parses. Sitemap lastmod 2026-11-26.
 - IndexNow pending: ui-ux-design, app-cost-calculator, website-cost-calculator, ai-chatbot-cost-calculator.
+
+## 2026-11-26 23:10 PKT (main chat, owner request)
+- Removed Pakistan pricing: "App/Website/AI chatbot development cost in Pakistan" sections, their FAQs (visible + FAQPage JSON-LD) and the PKR currency option from app-cost-calculator, website-cost-calculator, ai-chatbot-cost-calculator; meta descriptions updated; currency FAQ reworded (GBP/EUR/AED/INR/AUD/PHP/MYR remain). Checked: JSON-LD parses, currency switch works, no overflow at 390px.
+- Location: "Bahria Town, Lahore" -> "Lahore, Pakistan" on 12 service pages (python, react-native, wordpress, shopify, ios, ui-ux, nodejs, nextjs-react, android, php-laravel, flutter, ai-chatbot-cost-calculator).
+- Queued BOT cluster B1-B9 at top of DEMAND.md with autocomplete evidence.
