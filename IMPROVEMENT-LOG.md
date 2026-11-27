@@ -225,3 +225,5 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - No CSS/JS change. seo_post.py (95 URLs, +1). JSON-LD parses, visible FAQs = JSON-LD FAQs, internal links resolve. Rendered 6 pages at 1280/390: no errors, no overflow.
 - Evidence: WebSearch 27 Nov 'freqtrade vs hummingbot vs custom trading bot' = dev.to, gainium, slashdot, pistack comparisons (no developer/agency view); 'robinhood trading bot api developer' = unofficial-API GitHub bots + Fiverr robinhood/webull bot gigs; 'Robinhood official API stocks 2026 agentic trading' = TechCrunch 27 May 2026 + Robinhood newsroom. Added B16, B17.
 - IndexNow pending: freqtrade-vs-hummingbot.html, trading-bot-development.html, crypto-trading-bot-development.html, bot-development.html, arbitrage-bot-development.html, blog-trading-bot-cost-2026.html
+
+- 27 Nov 11:30 PKT: IndexNow FLUSHED 95 URLs (200). Key file live and verified. First-ever ZAWN IndexNow submit (Bing/Yandex/Seznam etc.); Google still needs GSC for the 60 Discovered pages.
