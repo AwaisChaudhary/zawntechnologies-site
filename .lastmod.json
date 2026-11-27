@@ -32,7 +32,7 @@
 "2026-11-26"
 ],
 "api-integration.html": [
-"28f7fde9c1780afe",
+"298f02f70a2495a4",
 "2026-11-27"
 ],
 "app-cost-calculator.html": [
@@ -44,7 +44,7 @@
 "2026-11-24"
 ],
 "arbitrage-bot-development.html": [
-"9b1ed6094ee93248",
+"58d4f56eae203941",
 "2026-11-27"
 ],
 "blockchain-web3-development.html": [
@@ -70,6 +70,10 @@
 "blog-business-automation-ideas.html": [
 "614e56867ecac65f",
 "2026-11-23"
+],
+"blog-crypto-arbitrage-fees-slippage.html": [
+"91db226a15fef2b9",
+"2026-11-27"
 ],
 "blog-flutter-vs-react-native-2026.html": [
 "c0a1a4e51c0bc9d5",
@@ -132,11 +136,11 @@
 "2026-11-25"
 ],
 "blog.html": [
-"f714097343983712",
+"8a0f01861b1ebe49",
 "2026-11-27"
 ],
 "bot-cost-calculator.html": [
-"1a025bfda9a4b933",
+"1eea1b6c78e732cd",
 "2026-11-27"
 ],
 "bot-development.html": [
@@ -156,8 +160,8 @@
 "2026-11-23"
 ],
 "cloud-devops.html": [
-"bac2ccc20076aca6",
-"2026-11-24"
+"ae41bd3439b670d4",
+"2026-11-27"
 ],
 "computer-vision-development.html": [
 "d6b08e5a99177ab5",
@@ -168,7 +172,7 @@
 "2026-11-22"
 ],
 "crypto-trading-bot-development.html": [
-"7789c6b13698ee54",
+"722dbbe64f00e6f1",
 "2026-11-27"
 ],
 "custom-business-software.html": [
@@ -216,7 +220,7 @@
 "2026-11-27"
 ],
 "index.html": [
-"c7fbef6beb721e87",
+"3d8abf2ac442a40c",
 "2026-11-27"
 ],
 "ios-app-development.html": [
@@ -237,6 +241,10 @@
 ],
 "mcp-server-development.html": [
 "c09d21750e2bd560",
+"2026-11-27"
+],
+"microservices-development.html": [
+"2468d711be9b9190",
 "2026-11-27"
 ],
 "mobile-app-development.html": [
@@ -260,8 +268,8 @@
 "2026-11-27"
 ],
 "nodejs-development.html": [
-"ecc7fdd96e074ea3",
-"2026-11-26"
+"794b9cbcc3d8742f",
+"2026-11-27"
 ],
 "php-laravel-development.html": [
 "7fde8ffa6eef822c",
@@ -272,8 +280,8 @@
 "2026-11-27"
 ],
 "python-development.html": [
-"41d1b3fe03882985",
-"2026-11-26"
+"7e42d3c303ac323f",
+"2026-11-27"
 ],
 "qa-testing.html": [
 "c4c674b41a7b0ce3",
@@ -288,7 +296,7 @@
 "2026-11-26"
 ],
 "services.html": [
-"29b604adec4af91a",
+"7b1e082b7151d3bc",
 "2026-11-27"
 ],
 "shopify-development.html": [
