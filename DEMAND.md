@@ -1,5 +1,11 @@
 # ZAWN demand queue
 
+## EVENING RADAR 27 Nov 2026 (18:40 PKT)
+E1. OPEN: Trends 'software development' 1-d Breakouts: microservices architecture, docker containerization, node.js backend, frontend frameworks, computer vision projects, customized software development services. We have /nodejs-development and /computer-vision-development; consider a /microservices-development service page and /docker-kubernetes (or fold into /cloud-devops).
+E2. OPEN: autocomplete 'hire developers in pakistan' -> laravel, react, android, php, shopify developers. Pages like /hire-laravel-developers (US dollars only, $50/hr, Lahore, Pakistan; no PKR or Pakistan pricing).
+E3. OPEN: 'ai chatbot development' -> company in usa, services; 'app development cost' -> uk, australia: US-dollar cost pages for UK/Australia buyers only if we can source rates (2+ sources).
+
+
 ## DAILY RADAR 27 Nov 06:45 PKT (Google autocomplete US)
 - B10 DONE 27 Nov (night) https://www.zawntechnologies.com/trading-bot-development.html: H2s 'Stock trading bots and broker APIs (Robinhood, Alpaca, Interactive Brokers, Schwab)' table (official routes only; Robinhood Crypto API + Agentic Trading MCP beta May 2026, no stock REST API), 'Trading bot dashboard', 'Using Claude, GPT or other LLMs in a trading bot', +3 FAQs JSON-LD. Evidence 27 Nov SERP 'robinhood trading bot api developer' = GitHub unofficial-API bots, Fiverr 'robinhood/webull/thinkorswim bot' gigs, Robinhood Crypto API pages; 'Robinhood agentic trading' = TechCrunch 27 May 2026, robinhood.com newsroom, MCP reviews. Was OPEN 'trading bot for robinhood' / 'trading bot dashboard' / 'trading bot with claude' (autocomplete 'trading bot' #3,#6,#7): FAQs/H2s on trading-bot and crypto-trading-bot pages: which brokers have APIs (official only), a bot dashboard section, using LLMs in bots (no profit claims). Not Kalshi (no betting).
 
