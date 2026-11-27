@@ -267,3 +267,10 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - Why: a real service gap. Demand evidence 28 Nov SERP 'copy trading bot development service' = ~20 Fiverr/Upwork gigs for MT4/MT5/NinjaTrader/cTrader trade copiers, Telegram signal copiers and Binance/Bybit copy bots, and no agency service page answering it.
 - Checks: all JSON-LD parses; internal links resolve; Playwright 1280/390 on 8 pages: no errors, no overflow; calculator totals change for the new types. sitemap.xml: new URL + lastmod 2026-11-28 for 12 changed pages.
 - IndexNow pending https://www.zawntechnologies.com/trade-copier-development.html https://www.zawntechnologies.com/bot-cost-calculator.html https://www.zawntechnologies.com/bot-development.html https://www.zawntechnologies.com/services.html
+
+## AUDIT 2026-11-28 (daily technical SEO pass)
+- Found (seo_audit.py + extended checks, 101 pages): 0 issues. Titles <=60, descriptions 120-160, no duplicates, every page >=3 inbound links, breadcrumbs, valid JSON-LD with FAQ matching visible FAQs, images with alt/width/height, robots.txt + sitemap.xml valid.
+- Fixed: nothing needed.
+- Remaining (acceptable): .html URLs in canonicals/sitemap/links are consistent site-wide (as before).
+- Checked 390px render: /trade-copier-development.html, /bot-cost-calculator.html: no JS errors, no overflow.
+- IndexNow pending: none (no changes).
