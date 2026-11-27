@@ -1,5 +1,8 @@
 # ZAWN demand queue
 
+## DAILY RADAR 27 Nov 06:45 PKT (Google autocomplete US)
+- B10 OPEN 'trading bot for robinhood' / 'trading bot dashboard' / 'trading bot with claude' (autocomplete 'trading bot' #3,#6,#7): FAQs/H2s on trading-bot and crypto-trading-bot pages: which brokers have APIs (official only), a bot dashboard section, using LLMs in bots (no profit claims). Not Kalshi (no betting).
+
 ## OWNER RULES (Awais 26 Nov 22:55) — READ FIRST
 - US DOLLARS ONLY (Awais 26 Nov 23:02): every price on the site is in $ at $50/h. No currency switchers or other currencies (removed from all 3 calculators 26 Nov).
 - NO BETTING (Awais 26 Nov 23:03): "We don't do betting related jobs." Never add pages, sections, FAQs or blog posts about betting, sports betting, prediction markets (Polymarket, Kalshi) or gambling bots.
