@@ -8,7 +8,7 @@
 "2026-11-27"
 ],
 "ai-agent-development.html": [
-"d1191d7295d2f599",
+"2e10be4bf780a514",
 "2026-11-27"
 ],
 "ai-chatbot-cost-calculator.html": [
@@ -24,16 +24,16 @@
 "2026-11-27"
 ],
 "ai-llm-integration.html": [
-"d6e454327638de23",
-"2026-11-21"
+"afb5df7c08ebdc22",
+"2026-11-27"
 ],
 "android-app-development.html": [
 "94a7bacc0878bacb",
 "2026-11-26"
 ],
 "api-integration.html": [
-"eb2cfe0774522d83",
-"2026-11-18"
+"28f7fde9c1780afe",
+"2026-11-27"
 ],
 "app-cost-calculator.html": [
 "38b8dd7e38c51d76",
@@ -140,7 +140,7 @@
 "2026-11-27"
 ],
 "bot-development.html": [
-"90321a8178e586b0",
+"819f4d0ddaed3533",
 "2026-11-27"
 ],
 "bubble-development.html": [
@@ -216,7 +216,7 @@
 "2026-11-27"
 ],
 "index.html": [
-"2df492724b5045c6",
+"c5b21c9c18f01c73",
 "2026-11-27"
 ],
 "ios-app-development.html": [
@@ -234,6 +234,10 @@
 "machine-learning-development.html": [
 "b82ecfc6b4c00a6e",
 "2026-11-18"
+],
+"mcp-server-development.html": [
+"c09d21750e2bd560",
+"2026-11-27"
 ],
 "mobile-app-development.html": [
 "93c7bdfe70859509",
@@ -280,7 +284,7 @@
 "2026-11-26"
 ],
 "services.html": [
-"d83fb77370344034",
+"f3d5676e7f976a70",
 "2026-11-27"
 ],
 "shopify-development.html": [
