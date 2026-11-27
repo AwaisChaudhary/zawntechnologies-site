@@ -579,3 +579,48 @@ window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-G
   f.addEventListener("input", function () { calc(); if (!used && window.gtag) { used = true; gtag("event", "calculator_used", { calculator: "arb-form" }); } });
   calc();
 })();
+/* ---------- Bot development cost calculator (US dollars, $50/hour) ---------- */
+(function () {
+  var f = document.getElementById("bot-form");
+  if (!f) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var usd = function (n) { var step = n >= 2000 ? 100 : (n >= 200 ? 10 : 5); return "$" + (Math.round(n / step) * step).toLocaleString("en-US"); };
+  var host = { chat: [5, 40], shop: [10, 40], trade: [20, 80] };
+  var maint = { chat: [1, 3], shop: [2, 5], trade: [3, 8] };
+  function calc() {
+    var lo = 0, hi = 0, picked = [];
+    var t = f.querySelector('input[name="bottype"]:checked');
+    var kind = t ? t.dataset.kind : "trade";
+    if (t) { lo += +t.dataset.lo; hi += +t.dataset.hi; picked.push(t.nextElementSibling.textContent); }
+    var dash = false, multi = false;
+    Array.prototype.forEach.call(f.querySelectorAll('input[name="botadd"]'), function (c) {
+      var off = c.dataset.only && c.dataset.only !== kind;
+      c.disabled = !!off;
+      c.closest(".opt-card").style.opacity = off ? ".45" : "";
+      if (off || !c.checked) return;
+      lo += +c.dataset.lo; hi += +c.dataset.hi; picked.push(c.nextElementSibling.textContent);
+      if (c.value === "dash") dash = true;
+      if (c.value === "multi") multi = true;
+    });
+    var n = Math.max(0, Math.min(10, parseInt($("bot-ext").value, 10) || 0));
+    lo += n * 20; hi += n * 50;
+    var m = parseFloat($("bot-rules").value) || 1;
+    lo = Math.round(lo * m); hi = Math.round(hi * m);
+    if (lo >= 100) { lo = Math.round(lo / 10) * 10; hi = Math.round(hi / 10) * 10; }
+    $("bot-hours").textContent = lo.toLocaleString("en-US") + " to " + hi.toLocaleString("en-US");
+    $("bot-cost").textContent = usd(lo * 50) + " to " + usd(hi * 50);
+    var wlo = Math.max(1, Math.round(lo / 30)), whi = Math.max(wlo + 1, Math.round(hi / 30));
+    $("bot-weeks").textContent = wlo + " to " + whi + " weeks";
+    var h = host[kind] || host.trade, hlo = h[0] + (dash ? 5 : 0) + (multi ? 20 : 0), hhi = h[1] + (dash ? 20 : 0) + (multi ? 80 : 0);
+    $("bot-host").textContent = usd(hlo) + " to " + usd(hhi);
+    var mh = maint[kind] || maint.trade;
+    $("bot-maint").textContent = usd(mh[0] * 50) + " to " + usd(mh[1] * 50);
+    $("bot-note").textContent = kind === "trade" ? "Trading bots follow the strategy you define and carry real risk of loss; this estimate says nothing about returns." + (multi ? " Offering a trading bot to other users usually needs legal advice in your country." : "") : "";
+    var summary = "Bot cost calculator estimate: " + $("bot-hours").textContent + " hours (" + $("bot-cost").textContent + "), " + $("bot-weeks").textContent +
+      ".\nBot and extras: " + picked.join(", ") + (n ? ". Extra platforms: " + n : "") + ".\n\nAbout my bot: ";
+    try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
+  }
+  f.addEventListener("input", calc); f.addEventListener("change", calc);
+  f.addEventListener("change", function once() { f.removeEventListener("change", once); if (window.gtag) gtag("event", "calculator_used", { calculator: "bot-form" }); });
+  calc();
+})();
