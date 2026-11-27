@@ -214,3 +214,6 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - main.js: bot calculator IIFE (guarded by #bot-form); ?v=20261127botcalc on all pages. node --check OK. seo_post.py (93 URLs, +1). JSON-LD parses on all pages; all internal links resolve. Rendered 6 pages at 1280/390: no errors, no overflow. Tool tested: default $1,500-$3,000; FAQ bot $400-$1,000 (backtest disabled); arbitrage + dashboard + 2 platforms $11,500-$24,000; unclear rules $14,500-$30,000.
 - Evidence: WebSearch 27 Nov 'trading bot development cost calculator' = articles only, no calculator; 'AI agent framework comparison LangGraph CrewAI OpenAI Agents SDK 2026' = ~20 comparison posts. Added B14, B15.
 - IndexNow pending: bot-cost-calculator.html, ai-agent-development.html, bot-development.html, crypto-trading-bot-development.html, arbitrage-bot-development.html, mt5-expert-advisor-development.html, telegram-discord-bot-development.html, ecommerce-automation-bots.html, trading-bot-development.html, blog-trading-bot-cost-2026.html
+
+## IndexNow key (27 Nov 2026)
+- Key file: https://www.zawntechnologies.com/2c008b68f93f32762830bf3fb05cba9e.txt (key 2c008b68f93f32762830bf3fb05cba9e). Submit new/changed URLs via api.indexnow.org same-origin POST {host:"www.zawntechnologies.com", key, keyLocation, urlList}. Never delete this file.
