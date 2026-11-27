@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>Freqtrade vs Hummingbot vs Custom Trading Bot | ZAWN</title>
+<meta name="description" content="Freqtrade vs Hummingbot vs a custom crypto bot: what each is built for, licences, backtesting, exchanges, setup costs at $50/hour, and how to choose honestly.">
+<link rel="canonical" href="https://www.zawntechnologies.com/freqtrade-vs-hummingbot.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Freqtrade vs Hummingbot vs Custom Trading Bot | ZAWN">
+<meta property="og:description" content="Freqtrade vs Hummingbot vs a custom crypto bot: what each is built for, licences, backtesting, exchanges, setup costs at $50/hour, and how to choose honestly.">
+<meta property="og:url" content="https://www.zawntechnologies.com/freqtrade-vs-hummingbot.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="assets/style.css?v=20261127botcalc">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Lancaster University"}, {"@type": "CollegeOrUniversity", "name": "COMSATS Institute of Information Technology"}], "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry"]}, "numberOfEmployees": {"@type": "QuantitativeValue", "value": 25}, "knowsAbout": ["Artificial intelligence", "AI chatbots", "Computer vision", "Mobile app development", "Flutter", "Web development", "SaaS", "IoT", "Embedded systems", "Unity"], "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://clutch.co/profile/zawn-technologies", "https://www.goodfirms.co/company/zawn-technologies", "https://contra.com/awais_karamat_nfj1a6m1", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zawntechnologies.com/services.html"}, {"@type": "ListItem", "position": 3, "name": "Bot development", "item": "https://www.zawntechnologies.com/bot-development.html"}, {"@type": "ListItem", "position": 4, "name": "Freqtrade vs Hummingbot vs custom", "item": "https://www.zawntechnologies.com/freqtrade-vs-hummingbot.html"}]}, {"@type": "TechArticle", "headline": "Freqtrade vs Hummingbot vs a custom trading bot", "description": "Freqtrade vs Hummingbot vs a custom crypto bot: what each is built for, licences, backtesting, exchanges, setup costs at $50/hour, and how to choose honestly.", "url": "https://www.zawntechnologies.com/freqtrade-vs-hummingbot.html", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "en", "author": {"@id": "https://www.zawntechnologies.com/#org"}, "publisher": {"@id": "https://www.zawntechnologies.com/#org"}, "about": ["Freqtrade", "Hummingbot", "Crypto trading bot development"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Freqtrade or Hummingbot better?", "acceptedAnswer": {"@type": "Answer", "text": "Neither is better overall. Freqtrade is stronger for indicator strategies on candles and for backtesting; Hummingbot is stronger for market making and arbitrage on order books. Choose the one whose model matches your strategy."}}, {"@type": "Question", "name": "Is a free open-source bot good enough, or do I need a custom one?", "acceptedAnswer": {"@type": "Answer", "text": "For many single-exchange indicator strategies, Freqtrade is good enough and much cheaper than a custom build. A custom bot makes sense for unusual order logic, many accounts, broker APIs, your own dashboard or a product for other users."}}, {"@type": "Question", "name": "Can you write my strategy for Freqtrade or Hummingbot?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Send the rules in plain words. We write them back as a precise spec, code the strategy, backtest it with fees, and run it in dry-run or paper mode before you decide to go live. A strategy for an existing setup is usually 20 to 60 hours ($1,000 to $3,000)."}}, {"@type": "Question", "name": "Can I move from Freqtrade to a custom bot later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The strategy rules and backtest results carry over; the execution and risk code is rewritten. Many clients start on Freqtrade to validate an idea cheaply and move to custom code only if they outgrow it."}}, {"@type": "Question", "name": "Will any of these bots make money?", "acceptedAnswer": {"@type": "Answer", "text": "No one can promise that. Each one only automates the strategy you define. We backtest and paper trade so you can judge the strategy first, but crypto trading carries a real risk of loss."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFZRL758B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8QFZRL758B');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html" aria-current=page>Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / <a href="bot-development.html">Bot development</a> / Freqtrade vs Hummingbot vs custom</nav>
+<h1>Freqtrade vs Hummingbot vs a custom trading bot</h1><p class="lede">An engineer's comparison of the two best-known open-source crypto bot frameworks and a bot written from scratch: what each is built for, where each gets in the way, what it costs to set up at $50/hour, and how to choose.</p></div></section>
+<div class="wrap content">
+<article class="prose">
+<h2>The short answer</h2>
+<p>Pick the tool that matches the shape of your strategy, not the one with the most GitHub stars.</p>
+<ul>
+<li><strong>Freqtrade</strong> suits candle-based strategies: indicators on 5-minute, 1-hour or daily candles that decide when to enter and exit. It has the strongest backtesting and optimisation tools of the three.</li>
+<li><strong>Hummingbot</strong> suits order-book strategies: market making, cross-exchange and spot-perpetual arbitrage, and liquidity provision, including some decentralised exchanges.</li>
+<li><strong>A custom bot</strong> suits everything that fits neither: unusual order logic, several accounts or exchanges managed together, your own dashboard, or a product other people will log in to.</li>
+</ul>
+<p>Whichever you choose, the bot only automates the strategy you define. None of these tools finds profit on its own, and crypto trading carries a real risk of loss.</p>
+
+<h2>Side-by-side comparison</h2>
+<table><thead><tr><th></th><th>Freqtrade</th><th>Hummingbot</th><th>Custom bot</th></tr></thead><tbody>
+<tr><td>Built for</td><td>Candle and indicator strategies</td><td>Market making and arbitrage</td><td>Whatever your rules need</td></tr>
+<tr><td>Language</td><td>Python (strategies are Python classes on pandas dataframes)</td><td>Python, with Cython in the core; scripts and V2 controllers in Python</td><td>Usually Python or Node.js, often with the ccxt library</td></tr>
+<tr><td>Licence</td><td>GPL-3.0</td><td>Apache 2.0</td><td>Yours: the code belongs to you</td></tr>
+<tr><td>Exchanges</td><td>Many centralised exchanges through ccxt; spot and some futures</td><td>Its own connectors for centralised exchanges, plus DEX support through its Gateway</td><td>Any exchange or broker with an official API</td></tr>
+<tr><td>Backtesting</td><td>Strong: backtesting, hyperparameter optimisation, lookahead and recursive-analysis checks</td><td>More limited; mainly for V2 controllers through its dashboard</td><td>Built to fit your strategy (extra hours)</td></tr>
+<tr><td>Control and UI</td><td>Telegram commands, FreqUI web interface, REST API</td><td>Command-line client, dashboard and API</td><td>Exactly what you specify</td></tr>
+<tr><td>Machine learning</td><td>FreqAI module for model-based strategies</td><td>Not a focus</td><td>Any model or AI step you choose</td></tr>
+<tr><td>Weak spot</td><td>Not designed for order-book speed or market making</td><td>Less suited to indicator strategies on candles</td><td>Every part is built and tested from zero, so it costs more</td></tr>
+<tr><td>Upgrades</td><td>Frequent releases; strategy code may need small changes</td><td>Frequent releases; V1 to V2 strategy changes needed rework</td><td>You decide when anything changes</td></tr>
+</tbody></table>
+<p class="small">Feature details change with each release. Check the project's current documentation before you commit to one.</p>
+
+<h2>How the choice usually goes</h2>
+<ol class="flow" style="--n:4" aria-label="Choosing between Freqtrade, Hummingbot and a custom bot, in four questions">
+<li><b>Rules on candles?</b>Indicators decide entries and exits on a timeframe: start with Freqtrade</li>
+<li><b>Quoting the book?</b>Market making, spreads or arbitrage across venues: start with Hummingbot</li>
+<li class="hot"><b>Neither fits?</b>Odd order types, many accounts, broker APIs or your own UI: custom bot</li>
+<li><b>Selling it?</b>Other users, subscriptions or copy trading: custom platform plus legal advice</li>
+</ol>
+<p class="flow-note">Most clients who bring a simple indicator strategy are best served by Freqtrade. We recommend a custom build only when a framework would need more workarounds than it saves.</p>
+
+<h2>When Freqtrade is the right base</h2>
+<ul>
+<li>Your strategy is a set of indicator rules (RSI, moving averages, Bollinger Bands, your own signals) on a fixed timeframe.</li>
+<li>You want to backtest over years of candles, optimise parameters and check for look-ahead bias before risking money.</li>
+<li>You want dry-run (paper trading) mode, Telegram control and a ready web interface without paying to build them.</li>
+<li>You trade on exchanges Freqtrade already supports.</li>
+</ul>
+<p>Typical work for us: writing the strategy class from your rules, custom stop-loss and position-sizing logic, protections (cooldowns, maximum drawdown locks), a FreqAI model if you want one, and deployment on your own server with monitoring.</p>
+
+<h2>When Hummingbot is the right base</h2>
+<ul>
+<li>Your strategy places and refreshes orders on both sides of the order book, with inventory and spread limits.</li>
+<li>You want cross-exchange or spot-perpetual arbitrage logic that the framework already models.</li>
+<li>You need a decentralised exchange that Hummingbot's Gateway already connects to.</li>
+</ul>
+<p>Typical work for us: V2 controllers and scripts from your rules, a connector for an exchange that is not yet supported, risk limits, and a monitoring dashboard. For arbitrage, run the numbers first with the spread check on our <a href="arbitrage-bot-development.html">arbitrage bot page</a>: most visible gaps disappear after fees and slippage.</p>
+
+<h2>When a custom bot is worth the extra cost</h2>
+<ul>
+<li>The order logic does not map onto either framework (layered take-profits across accounts, unusual hedging, custom order types).</li>
+<li>You trade stocks, forex or futures through a broker API, or MetaTrader (see <a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a>).</li>
+<li>Several strategies, exchanges and accounts must share one risk engine and one dashboard.</li>
+<li>Other people will use it: accounts, subscriptions or copy trading. Freqtrade's GPL-3.0 licence also has obligations if you distribute modified code, so ask a lawyer before you sell a product built on it.</li>
+<li>You want full ownership of the code with no dependence on a framework's release cycle.</li>
+</ul>
+
+<h2>Cost: planning ranges at $50/hour</h2>
+<table><thead><tr><th>Project</th><th>Typical hours</th><th>Typical cost</th></tr></thead><tbody>
+<tr><td>Strategy for an existing Freqtrade or Hummingbot setup</td><td>20&ndash;60 h</td><td>$1,000&ndash;$3,000</td></tr>
+<tr><td>New Freqtrade or Hummingbot install on your server, one strategy, alerts and monitoring</td><td>30&ndash;80 h</td><td>$1,500&ndash;$4,000</td></tr>
+<tr><td>New Hummingbot connector for an unsupported exchange</td><td>40&ndash;100 h</td><td>$2,000&ndash;$5,000</td></tr>
+<tr><td>Custom signal or webhook bot, one exchange</td><td>30&ndash;60 h</td><td>$1,500&ndash;$3,000</td></tr>
+<tr><td>Custom grid or DCA bot with settings panel and Telegram alerts</td><td>60&ndash;120 h</td><td>$3,000&ndash;$6,000</td></tr>
+<tr><td>Custom multi-strategy bot with backtesting and dashboard</td><td>120&ndash;250 h</td><td>$6,000&ndash;$12,500</td></tr>
+</tbody></table>
+<p>These match the ranges on our <a href="crypto-trading-bot-development.html">crypto trading bot page</a>. For your own mix of features, use the <a href="bot-cost-calculator.html">bot cost calculator</a>. Running costs for any of the three are usually a small cloud server ($5 to $40 per month) plus any paid data.</p>
+
+<h2>Risks that apply to all three</h2>
+<ul>
+<li>A good backtest is not a forecast. Fees, slippage, outages and changing markets all show up live; paper trade before going live.</li>
+<li>Use exchange API keys with trading only, withdrawals disabled and IP restrictions where the exchange allows it.</li>
+<li>Open-source code is only as safe as the version you run: pin versions, read release notes and do not install strategies or plugins from unknown sources.</li>
+<li>You are responsible for following your exchange's terms and the laws where you live, including tax.</li>
+</ul>
+
+<h2>Questions clients ask</h2><div class="faq">
+<details><summary>Is Freqtrade or Hummingbot better?</summary><p>Neither is better overall. Freqtrade is stronger for indicator strategies on candles and for backtesting; Hummingbot is stronger for market making and arbitrage on order books. Choose the one whose model matches your strategy.</p></details>
+<details><summary>Is a free open-source bot good enough, or do I need a custom one?</summary><p>For many single-exchange indicator strategies, Freqtrade is good enough and much cheaper than a custom build. A custom bot makes sense for unusual order logic, many accounts, broker APIs, your own dashboard or a product for other users.</p></details>
+<details><summary>Can you write my strategy for Freqtrade or Hummingbot?</summary><p>Yes. Send the rules in plain words. We write them back as a precise spec, code the strategy, backtest it with fees, and run it in dry-run or paper mode before you decide to go live. A strategy for an existing setup is usually 20 to 60 hours ($1,000 to $3,000).</p></details>
+<details><summary>Can I move from Freqtrade to a custom bot later?</summary><p>Yes. The strategy rules and backtest results carry over; the execution and risk code is rewritten. Many clients start on Freqtrade to validate an idea cheaply and move to custom code only if they outgrow it.</p></details>
+<details><summary>Will any of these bots make money?</summary><p>No one can promise that. Each one only automates the strategy you define. We backtest and paper trade so you can judge the strategy first, but crypto trading carries a real risk of loss.</p></details>
+</div>
+</article>
+<aside class="aside">
+<div class="box"><h3>Talk to an engineer</h3><p class="small">Send your strategy rules and tell us which framework you use, if any. Reply within one business day.</p><a class="btn btn-primary" href="contact.html">Start a project</a><p class="small c-note">Want a number first? Try the <a href="bot-cost-calculator.html">bot cost calculator</a>.</p></div>
+<div class="box"><h3>Tools compared</h3><ul class="tags"><li>Freqtrade</li><li>FreqAI</li><li>Hummingbot</li><li>ccxt</li><li>Python</li><li>Node.js</li><li>PostgreSQL</li><li>Docker</li></ul></div>
+<div class="box"><h3>Bot services</h3><ul><li><a href="bot-development.html">All bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bot development</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="trading-bot-development.html">Trading bots: stocks, MT5 and TradingView</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="ai-agent-development.html">AI agent development</a></li></ul></div>
+<div class="box"><h3>Related reading</h3><ul><li><a href="blog-trading-bot-cost-2026.html">How much does a trading bot cost to build in 2026?</a></li><li><a href="blog-python-vs-nodejs-backend.html">Python vs Node.js for the backend</a></li></ul></div>
+</aside>
+</div>
+<section class="cta"><div class="wrap">
+<h2>Have a project that needs a reliable engineering team?</h2>
+<div><p>Tell us what you want to build. You will get a reply within one business day, with questions or a rough estimate.</p>
+<a class="btn btn-primary" href="contact.html">Start a project</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="whatsapp-chatbot-development.html">WhatsApp chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="bot-development.html">Bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="ecommerce-automation-bots.html">Ecommerce automation bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 52 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="website-cost-calculator.html">Website cost calculator</a></li><li><a href="ai-chatbot-cost-calculator.html">AI chatbot cost calculator</a></li><li><a href="bot-cost-calculator.html">Bot cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="f-all"><h4>More services</h4><p><a href="mvp-development.html">MVP development</a><a href="ui-ux-design.html">UI/UX design</a><a href="business-automation.html">Business automation</a><a href="stripe-payment-integration.html">Stripe and payments</a><a href="web-scraping-services.html">Web scraping</a><a href="shopify-development.html">Shopify</a><a href="wordpress-development.html">WordPress</a><a href="bubble-development.html">Bubble.io</a><a href="chrome-extension-development.html">Chrome extensions</a><a href="desktop-app-development.html">Desktop apps</a><a href="drupal-development.html">Drupal</a><a href="unity-game-development.html">Unity and 3D</a><a href="blockchain-web3-development.html">Blockchain and Web3</a><a href="cloud-devops.html">Cloud and DevOps</a><a href="linux-server-administration.html">Linux servers</a><a href="qa-testing.html">QA and testing</a><a href="app-maintenance-support.html">App maintenance</a><a href="farm-management-software.html">Farm management software</a><a href="tree-service-estimating-app.html">Tree service estimating apps</a></p></div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261127botcalc" defer></script>
+</body>
+</html>
