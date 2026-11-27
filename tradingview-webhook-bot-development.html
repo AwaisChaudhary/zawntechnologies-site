@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>TradingView Webhook Bot Development | ZAWN</title>
+<meta name="description" content="TradingView webhook bot development: Pine Script alerts turned into orders on crypto exchanges, Alpaca, Interactive Brokers or MT5, with risk limits. $50/hour.">
+<link rel="canonical" href="https://www.zawntechnologies.com/tradingview-webhook-bot-development.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TradingView Webhook Bot Development | ZAWN">
+<meta property="og:description" content="TradingView webhook bot development: Pine Script alerts turned into orders on crypto exchanges, Alpaca, Interactive Brokers or MT5, with risk limits. $50/hour.">
+<meta property="og:url" content="https://www.zawntechnologies.com/tradingview-webhook-bot-development.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="assets/style.css?v=20261127botcalc">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Lancaster University"}, {"@type": "CollegeOrUniversity", "name": "COMSATS Institute of Information Technology"}], "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry"]}, "numberOfEmployees": {"@type": "QuantitativeValue", "value": 25}, "knowsAbout": ["Artificial intelligence", "AI chatbots", "Computer vision", "Mobile app development", "Flutter", "Web development", "SaaS", "IoT", "Embedded systems", "Unity"], "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://clutch.co/profile/zawn-technologies", "https://www.goodfirms.co/company/zawn-technologies", "https://contra.com/awais_karamat_nfj1a6m1", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zawntechnologies.com/services.html"}, {"@type": "ListItem", "position": 3, "name": "Bot development", "item": "https://www.zawntechnologies.com/bot-development.html"}, {"@type": "ListItem", "position": 4, "name": "TradingView webhook bots", "item": "https://www.zawntechnologies.com/tradingview-webhook-bot-development.html"}]}, {"@type": "Service", "name": "TradingView webhook bot development", "serviceType": "Trading bot development", "description": "TradingView webhook bot development: Pine Script alerts turned into orders on crypto exchanges, Alpaca, Interactive Brokers or MT5, with risk limits. $50/hour.", "provider": {"@id": "https://www.zawntechnologies.com/#org"}, "areaServed": "Worldwide", "url": "https://www.zawntechnologies.com/tradingview-webhook-bot-development.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a TradingView webhook bot cost?", "acceptedAnswer": {"@type": "Answer", "text": "At $50 per hour, a webhook bot that turns your alerts into orders on one crypto exchange or broker is usually 30 to 60 hours ($1,500 to $3,000). A TradingView to MT5 bridge with a receiver and an Expert Advisor is about 40 to 80 hours ($2,000 to $4,000). Writing or fixing a Pine Script strategy on its own is often 10 to 30 hours ($500 to $1,500)."}}, {"@type": "Question", "name": "Do I need a paid TradingView plan for webhooks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes in practice. Webhook alerts are not available on the free Basic plan, and TradingView only sends webhooks from accounts with two-factor authentication turned on. Alert limits and how long alerts stay active depend on your plan, so check TradingView's current plans before we start."}}, {"@type": "Question", "name": "Can TradingView alerts place trades in MetaTrader 5?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. TradingView posts the alert to a web address, and MT5 has no web address of its own. We build a small receiver on a server that checks and queues each signal, and an Expert Advisor in MT5 that collects the signal and places the order with your risk limits."}}, {"@type": "Question", "name": "What happens if a webhook is missed or sent twice?", "acceptedAnswer": {"@type": "Answer", "text": "TradingView says webhooks can occasionally fail to arrive, and alerts can repeat. The receiver gives every signal an ID, ignores duplicates, checks the position the broker actually holds before each order, and alerts you on Telegram when a signal fails or the bot and the broker disagree."}}, {"@type": "Question", "name": "Is it safe to put my exchange API key in the alert message?", "acceptedAnswer": {"@type": "Answer", "text": "No. TradingView itself warns against putting credentials in the alert body. Your exchange or broker keys stay on the server, with trading-only permissions and no withdrawals. The alert carries only a random token that lets the receiver accept it, plus an allowlist of TradingView's published sending IP addresses."}}, {"@type": "Question", "name": "Will the bot make my strategy profitable?", "acceptedAnswer": {"@type": "Answer", "text": "No bot can promise that. The bot places the trades your alerts describe, with limits you set. Whether that makes money depends on your strategy and the market, and live results often differ from the TradingView Strategy Tester because of fees, slippage and repainting indicators."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFZRL758B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8QFZRL758B');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html" aria-current=page>Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / <a href="bot-development.html">Bot development</a> / TradingView webhook bots</nav>
+<h1>TradingView webhook bot development</h1><p class="lede">We turn your TradingView alerts into real orders: a secure receiver checks each Pine Script signal, applies your risk limits and places the trade on your crypto exchange, Alpaca, Interactive Brokers or MetaTrader 5, then logs it and tells you on Telegram.</p></div></section>
+<div class="wrap content">
+<article class="prose">
+<h2>What a TradingView webhook bot does</h2>
+<p>TradingView can send an alert to a web address (a webhook) when your indicator or strategy fires. It cannot place orders at most brokers by itself. A webhook bot is the missing piece: a small program on a server that receives the alert, checks that it is genuine and sensible, and sends the order to your exchange or broker through its official API. The bot follows the rules in your alerts and the limits you set. It does not decide what to trade, and it cannot make a strategy profitable. Trading carries a real risk of loss.</p>
+
+<h2>What we build</h2>
+<ul>
+<li><strong>Webhook receivers</strong> for crypto exchanges such as Binance, Bybit, Coinbase, Kraken and OKX, using their official APIs.</li>
+<li><strong>Stock and options routing</strong> to brokers with official APIs, such as Alpaca, Interactive Brokers and Schwab. More on brokers is on <a href="trading-bot-development.html">trading bot development</a>.</li>
+<li><strong>TradingView to MT4/MT5 bridges</strong>: a receiver plus an Expert Advisor that collects each signal and trades it with lot, loss and hours limits. See <a href="mt5-expert-advisor-development.html">MT5 Expert Advisor development</a>.</li>
+<li><strong>Pine Script work</strong>: writing or fixing indicators and strategies, and building clean alert messages in JSON so the bot gets every value it needs.</li>
+<li><strong>Telegram signal bots</strong> that post each alert to you or a private channel, with or without placing orders. See <a href="telegram-discord-bot-development.html">Telegram and Discord bots</a>.</li>
+<li><strong>Dashboards</strong> showing received alerts, orders, fills, open positions and errors, with a pause switch.</li>
+</ul>
+
+<h2>How a TradingView webhook bot works</h2>
+<ol class="flow" style="--n:5" aria-label="TradingView webhook bot structure, in five parts">
+<li><b>TradingView alert</b>Your Pine Script fires and posts a JSON message</li>
+<li><b>Receiver</b>Checks the token and source IP, replies fast, queues the signal</li>
+<li class="hot"><b>Risk check</b>Duplicates, position size, daily loss cap, trading hours</li>
+<li><b>Order router</b>Exchange, broker API or MT5 Expert Advisor</li>
+<li><b>Log and alerts</b>Every signal, order and fill, with Telegram messages</li>
+</ol>
+<p class="flow-note">The receiver answers TradingView within a second and does the trading work afterwards, because TradingView cancels a webhook request that takes longer than three seconds.</p>
+
+<h2>TradingView webhook rules your bot must respect</h2>
+<table><thead><tr><th>Rule (from TradingView's help pages)</th><th>What it means for the bot</th></tr></thead><tbody>
+<tr><td>Webhooks need two-factor authentication on the account, and are not on the free plan</td><td>You need a paid plan with 2FA turned on before testing can start</td></tr>
+<tr><td>Only ports 80 and 443 are accepted, and IPv6 is not supported</td><td>The receiver runs on a normal HTTPS address on an IPv4 server</td></tr>
+<tr><td>Requests taking longer than three seconds are cancelled</td><td>Reply first, then process the signal from a queue</td></tr>
+<tr><td>Valid JSON is sent as application/json, anything else as text/plain</td><td>We design a fixed JSON alert format and reject anything that does not match</td></tr>
+<tr><td>Alerts come from four published IP addresses</td><td>The server can allowlist those addresses and refuse the rest</td></tr>
+<tr><td>Webhooks can occasionally fail to arrive</td><td>The bot reconciles with the broker's real positions and alerts you when a signal is missing</td></tr>
+</tbody></table>
+<p>Alert counts and how long alerts stay active also depend on your TradingView plan, and TradingView can change these rules, so we check them again at the start of each project.</p>
+
+<h2>Common problems we fix</h2>
+<ul>
+<li><strong>Repainting.</strong> Some indicators change past signals once a bar closes, so the backtest looks better than live trading. We check the script, fire alerts on bar close where it matters, and compare live alerts with the chart.</li>
+<li><strong>Duplicate or out-of-order alerts.</strong> Every signal gets an ID; repeats are ignored and an exit never runs before its entry.</li>
+<li><strong>Position drift.</strong> If a fill is partial or an order is rejected, the bot reads the actual position from the broker instead of trusting its own memory.</li>
+<li><strong>Tester versus live.</strong> Fees, spread, slippage and minimum order sizes are added so you can see how far live results may differ from the Strategy Tester.</li>
+</ul>
+
+<h2>Features we include as standard</h2>
+<ul><li>A per-bot secret token in the alert, never your exchange or broker keys</li><li>API keys on the server with trading-only permissions and withdrawals turned off</li><li>Maximum position size, maximum orders per day and a daily loss cap that stop the bot</li><li>Paper or demo trading first, then a small live size</li><li>A kill switch in Telegram or the dashboard that cancels open orders and pauses trading</li><li>Logs of every alert received and every order sent, kept for review</li></ul>
+
+<h2>Tech stack</h2>
+<p>Pine Script v6 for alerts and strategies; Python (FastAPI) or Node.js for the receiver; ccxt and exchange SDKs for crypto; Alpaca, Interactive Brokers (TWS API or IB Gateway) and Schwab Trader APIs for stocks; MQL5 for MT5 Expert Advisors; Redis or PostgreSQL for the signal queue and logs; Telegram Bot API for alerts; Docker on a small cloud server or VPS close to the exchange or broker.</p>
+
+<h2>Webhook bot or ready-made connector?</h2>
+<p>Hosted services that forward TradingView alerts to brokers are fine for simple setups and cost a monthly fee. A custom bot makes sense when you need your own risk rules, a broker or exchange the service does not support, MT5 with prop-firm limits, several strategies on one account, or full control of your keys and logs. For crypto, open-source frameworks are another route; we compare them in <a href="freqtrade-vs-hummingbot.html">Freqtrade vs Hummingbot vs a custom bot</a>.</p>
+
+<h2>TradingView bot cost: planning ranges at $50/hour</h2>
+<table><thead><tr><th>Project</th><th>Typical hours</th><th>Typical cost</th></tr></thead><tbody>
+<tr><td>Pine Script indicator or strategy, with alert messages</td><td>10&ndash;30 h</td><td>$500&ndash;$1,500</td></tr>
+<tr><td>Webhook bot, one crypto exchange or broker</td><td>30&ndash;60 h</td><td>$1,500&ndash;$3,000</td></tr>
+<tr><td>TradingView to MT5 bridge (receiver plus Expert Advisor)</td><td>40&ndash;80 h</td><td>$2,000&ndash;$4,000</td></tr>
+<tr><td>Webhook bot with dashboard and Telegram commands</td><td>60&ndash;110 h</td><td>$3,000&ndash;$5,500</td></tr>
+<tr><td>Several strategies and accounts, with per-account limits</td><td>80&ndash;160 h</td><td>$4,000&ndash;$8,000</td></tr>
+</tbody></table>
+<p>Running costs are usually a TradingView paid plan, plus a server at roughly $10 to $40 a month. Try your own mix in the <a href="bot-cost-calculator.html">bot cost calculator</a>.</p>
+
+<h2>How we work</h2>
+<ol><li><strong>Alert spec.</strong> We agree the exact JSON your alerts send and what the bot does with each field.</li><li><strong>Build on paper or demo.</strong> The bot trades a paper, testnet or demo account first.</li><li><strong>Side-by-side check.</strong> We compare alerts on the chart with orders the bot placed for at least a week.</li><li><strong>Small live start.</strong> Live trading begins with small sizes and tight limits that you raise yourself.</li><li><strong>Handover.</strong> Source code in your repository, deployment on your server, a setup guide, and optional support.</li></ol>
+
+<h2>Risks and compliance</h2>
+<ul><li>Automated trading can lose money fast, especially with leverage. Limits reduce damage but cannot remove risk, and we never promise returns.</li><li>You are responsible for TradingView's terms, your exchange's or broker's terms, any prop-firm rules and the laws where you live. Selling signals or managing other people's money may need a licence.</li><li>We do not build bots that copy trades across prop-firm accounts against the firm's rules, exploit latency, or get around platform limits.</li></ul>
+
+<h2>Hire a TradingView bot developer</h2>
+<p>You work directly with our engineers in Lahore, Pakistan, building software for clients worldwide since 2014. Send your Pine Script or strategy rules through the <a href="contact.html">contact form</a>, or hire us on <a href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank">Freelancer.com</a>, where we are a Preferred Freelancer with a 4.9 average from 356 reviews. Every bot we offer is listed on the <a href="bot-development.html">bot development</a> page.</p>
+<h2>Questions clients ask</h2><div class="faq">
+<details><summary>How much does a TradingView webhook bot cost?</summary><p>At $50 per hour, a webhook bot that turns your alerts into orders on one crypto exchange or broker is usually 30 to 60 hours ($1,500 to $3,000). A TradingView to MT5 bridge with a receiver and an Expert Advisor is about 40 to 80 hours ($2,000 to $4,000). Writing or fixing a Pine Script strategy on its own is often 10 to 30 hours ($500 to $1,500).</p></details>
+<details><summary>Do I need a paid TradingView plan for webhooks?</summary><p>Yes in practice. Webhook alerts are not available on the free Basic plan, and TradingView only sends webhooks from accounts with two-factor authentication turned on. Alert limits and how long alerts stay active depend on your plan, so check TradingView's current plans before we start.</p></details>
+<details><summary>Can TradingView alerts place trades in MetaTrader 5?</summary><p>Not directly. TradingView posts the alert to a web address, and MT5 has no web address of its own. We build a small receiver on a server that checks and queues each signal, and an Expert Advisor in MT5 that collects the signal and places the order with your risk limits.</p></details>
+<details><summary>What happens if a webhook is missed or sent twice?</summary><p>TradingView says webhooks can occasionally fail to arrive, and alerts can repeat. The receiver gives every signal an ID, ignores duplicates, checks the position the broker actually holds before each order, and alerts you on Telegram when a signal fails or the bot and the broker disagree.</p></details>
+<details><summary>Is it safe to put my exchange API key in the alert message?</summary><p>No. TradingView itself warns against putting credentials in the alert body. Your exchange or broker keys stay on the server, with trading-only permissions and no withdrawals. The alert carries only a random token that lets the receiver accept it, plus an allowlist of TradingView's published sending IP addresses.</p></details>
+<details><summary>Will the bot make my strategy profitable?</summary><p>No bot can promise that. The bot places the trades your alerts describe, with limits you set. Whether that makes money depends on your strategy and the market, and live results often differ from the TradingView Strategy Tester because of fees, slippage and repainting indicators.</p></details>
+</div>
+</article>
+<aside class="aside">
+<div class="box"><h3>Talk to an engineer</h3><p class="small">Send your Pine Script or alert, your exchange or broker, and the limits you want. Reply within one business day.</p><a class="btn btn-primary" href="contact.html">Start a project</a><p class="small c-note">Want a number first? Try the <a href="bot-cost-calculator.html">bot cost calculator</a>.</p></div>
+<div class="box"><h3>Tools we use</h3><ul class="tags"><li>Pine Script</li><li>Python</li><li>FastAPI</li><li>Node.js</li><li>ccxt</li><li>MQL5</li><li>Alpaca API</li><li>IB Gateway</li><li>Redis</li><li>Telegram API</li><li>Docker</li></ul></div>
+<div class="box"><h3>Bot services</h3><ul><li><a href="bot-development.html">All bot development</a></li><li><a href="trading-bot-development.html">Trading bots: stocks, MT5 and TradingView</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="ecommerce-automation-bots.html">Ecommerce automation bots</a></li><li><a href="ai-agent-development.html">AI agent development</a></li></ul></div>
+<div class="box"><h3>Related reading</h3><ul><li><a href="freqtrade-vs-hummingbot.html">Freqtrade vs Hummingbot vs a custom bot</a></li><li><a href="blog-trading-bot-cost-2026.html">How much does a trading bot cost to build in 2026?</a></li><li><a href="blog-mt5-ea-prop-firm-rules.html">MT5 Expert Advisors for prop firm challenges</a></li></ul></div>
+</aside>
+</div>
+<section class="cta"><div class="wrap">
+<h2>Have a project that needs a reliable engineering team?</h2>
+<div><p>Tell us what you want to build. You will get a reply within one business day, with questions or a rough estimate.</p>
+<a class="btn btn-primary" href="contact.html">Start a project</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="mcp-server-development.html">MCP server development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="whatsapp-chatbot-development.html">WhatsApp chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="bot-development.html">Bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="ecommerce-automation-bots.html">Ecommerce automation bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 53 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="website-cost-calculator.html">Website cost calculator</a></li><li><a href="ai-chatbot-cost-calculator.html">AI chatbot cost calculator</a></li><li><a href="bot-cost-calculator.html">Bot cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="f-all"><h4>More services</h4><p><a href="mvp-development.html">MVP development</a><a href="ui-ux-design.html">UI/UX design</a><a href="business-automation.html">Business automation</a><a href="stripe-payment-integration.html">Stripe and payments</a><a href="web-scraping-services.html">Web scraping</a><a href="shopify-development.html">Shopify</a><a href="wordpress-development.html">WordPress</a><a href="bubble-development.html">Bubble.io</a><a href="chrome-extension-development.html">Chrome extensions</a><a href="desktop-app-development.html">Desktop apps</a><a href="drupal-development.html">Drupal</a><a href="unity-game-development.html">Unity and 3D</a><a href="blockchain-web3-development.html">Blockchain and Web3</a><a href="cloud-devops.html">Cloud and DevOps</a><a href="linux-server-administration.html">Linux servers</a><a href="qa-testing.html">QA and testing</a><a href="app-maintenance-support.html">App maintenance</a><a href="farm-management-software.html">Farm management software</a><a href="tree-service-estimating-app.html">Tree service estimating apps</a></p></div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261127botcalc" defer></script>
+</body>
+</html>
