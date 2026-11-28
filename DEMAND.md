@@ -124,3 +124,7 @@ Yesterday built from queues: NC 31, DOD 19, Pitchside 22, Padel 18, Purl 22, ZAW
 - [DONE 28 Nov run 4: /ai-trading-bot-with-claude.html] B11 "trading bot with claude" (autocomplete): case-study style page on AI-assisted bot builds for stocks/crypto. SKIP "trading bot for kalshi" (prediction market, owner rule).
 - [DONE 28 Nov run 5: /ai-agent-development.html lifecycle + scope template] B12 AI agent development lifecycle + proposal template (autocomplete ranks 5-7), CTA to $50/hr quote.
 - [DONE 28 Nov run 5] GSC: "ai chatbot cost" queries pos 5.7-7.9 -> ai-chatbot-cost-calculator: tighten title/Quick answer in USD.
+
+## EVENING RADAR 2026-11-28 (18:40 PKT)
+- [OPEN] E-R1 Trends 1-d 'software development': "embedded software development services" BREAKOUT. /embedded-firmware-development exists; tighten its title to "Embedded Software Development Services" + FAQ in USD.
+- [OPEN] E-R2 "hire react / laravel / android / shopify developers" (autocomplete): one /hire-developers hub with role pages in USD ($50/hr, Lahore, Pakistan; no Pakistan pricing).
