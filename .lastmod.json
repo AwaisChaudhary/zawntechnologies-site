@@ -8,8 +8,8 @@
 "2026-11-27"
 ],
 "ai-agent-development.html": [
-"2e10be4bf780a514",
-"2026-11-27"
+"15961603311e2578",
+"2026-11-28"
 ],
 "ai-chatbot-cost-calculator.html": [
 "f93be7301838426d",
@@ -24,11 +24,15 @@
 "2026-11-27"
 ],
 "ai-llm-integration.html": [
-"afb5df7c08ebdc22",
-"2026-11-27"
+"e6ebc288c7ad0e9b",
+"2026-11-28"
+],
+"ai-trading-bot-with-claude.html": [
+"0673738a9311cb0a",
+"2026-11-28"
 ],
 "alpaca-vs-interactive-brokers-vs-schwab.html": [
-"66f135302e79c815",
+"7102e75ef5ceb145",
 "2026-11-28"
 ],
 "android-app-development.html": [
@@ -48,7 +52,7 @@
 "2026-11-24"
 ],
 "arbitrage-bot-development.html": [
-"fa6720f9f68db318",
+"07bcb6761cc3a6d9",
 "2026-11-28"
 ],
 "blockchain-web3-development.html": [
@@ -86,6 +90,10 @@
 "blog-generative-ai-app-development.html": [
 "bf1880f756a9e9c8",
 "2026-11-25"
+],
+"blog-grid-vs-dca-trading-bots.html": [
+"e895093586b6aea5",
+"2026-11-28"
 ],
 "blog-hire-software-developers-pakistan.html": [
 "7c3f1cd747aca32e",
@@ -140,15 +148,15 @@
 "2026-11-25"
 ],
 "blog.html": [
-"8a0f01861b1ebe49",
-"2026-11-27"
+"2767d30afcff2579",
+"2026-11-28"
 ],
 "bot-cost-calculator.html": [
-"a166b0e054a5650d",
+"dcfa1e44fcd8972f",
 "2026-11-28"
 ],
 "bot-development.html": [
-"d9449777f513fb4a",
+"cc622d596b63fda3",
 "2026-11-28"
 ],
 "bubble-development.html": [
@@ -176,7 +184,11 @@
 "2026-11-22"
 ],
 "crypto-trading-bot-development.html": [
-"5ba075e0600fb4c3",
+"49b54edfab0a2cd9",
+"2026-11-28"
+],
+"ctrader-cbot-development.html": [
+"cd8d544735a9cebc",
 "2026-11-28"
 ],
 "custom-business-software.html": [
@@ -196,8 +208,8 @@
 "2026-11-18"
 ],
 "ecommerce-automation-bots.html": [
-"14072d859d85e3bc",
-"2026-11-27"
+"2a54f3d8fdd11ee3",
+"2026-11-28"
 ],
 "embedded-firmware-development.html": [
 "e6841a53958e5f7f",
@@ -212,7 +224,7 @@
 "2026-11-26"
 ],
 "freqtrade-vs-hummingbot.html": [
-"e9f149ce40081a6b",
+"77d565e2b7c0bc17",
 "2026-11-28"
 ],
 "generative-ai-development.html": [
@@ -224,7 +236,7 @@
 "2026-11-27"
 ],
 "index.html": [
-"c22309b1ba9ace10",
+"a97512f923667615",
 "2026-11-28"
 ],
 "ios-app-development.html": [
@@ -256,7 +268,7 @@
 "2026-11-21"
 ],
 "mt5-expert-advisor-development.html": [
-"64d98545c8b33290",
+"0adfb210e3cfb673",
 "2026-11-28"
 ],
 "mvp-development.html": [
@@ -268,7 +280,7 @@
 "2026-11-26"
 ],
 "ninjatrader-strategy-development.html": [
-"12d12e4d6c97fd7a",
+"14eba36335a6d91f",
 "2026-11-28"
 ],
 "nodejs-development.html": [
@@ -300,7 +312,7 @@
 "2026-11-26"
 ],
 "services.html": [
-"50248a5410af40d0",
+"7040c98dc45afe4b",
 "2026-11-28"
 ],
 "shopify-development.html": [
@@ -320,7 +332,7 @@
 "2026-11-27"
 ],
 "telegram-discord-bot-development.html": [
-"940d36ac3dd0f5cf",
+"81d0fba4af663b33",
 "2026-11-28"
 ],
 "terms.html": [
@@ -328,15 +340,15 @@
 "2026-11-27"
 ],
 "trade-copier-development.html": [
-"0c43659113871f69",
+"55db79ce218f9ded",
 "2026-11-28"
 ],
 "trading-bot-development.html": [
-"b24b71dee1fb950b",
+"ce354711d45df0e3",
 "2026-11-28"
 ],
 "tradingview-webhook-bot-development.html": [
-"051d6407ce56aae0",
+"476c3da1d2c3e97f",
 "2026-11-28"
 ],
 "tree-service-estimating-app.html": [

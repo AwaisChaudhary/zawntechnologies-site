@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090D">
+<title>Trading Bot with Claude or ChatGPT: What Works | ZAWN</title>
+<meta name="description" content="Building a trading bot with Claude, Claude Code or ChatGPT: three ways to use an LLM, a safe design, testing traps, reviewing AI-written bots, costs at $50/h.">
+<link rel="canonical" href="https://www.zawntechnologies.com/ai-trading-bot-with-claude.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trading Bot with Claude or ChatGPT: What Works | ZAWN">
+<meta property="og:description" content="Building a trading bot with Claude, Claude Code or ChatGPT: three ways to use an LLM, a safe design, testing traps, reviewing AI-written bots, costs at $50/h.">
+<meta property="og:url" content="https://www.zawntechnologies.com/ai-trading-bot-with-claude.html">
+<meta property="og:site_name" content="ZAWN Technologies">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Crect width="32" height="32" rx="8" fill="%2308090D"/%3E%3Cpath d="M6 12V6h6M20 6h6v6M26 20v6h-6M12 26H6v-6" fill="none" stroke="%23F3F4F7" stroke-width="2.5"/%3E%3Ccircle cx="16" cy="16" r="4.5" fill="%23FF3D47"/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.zawntechnologies.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="assets/style.css?v=20261127botcalc">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zawntechnologies.com/#org", "name": "ZAWN Technologies", "url": "https://www.zawntechnologies.com/", "logo": "https://www.zawntechnologies.com/assets/logo.svg", "foundingDate": "2014", "email": "hello@zawntechnologies.com", "founder": {"@type": "Person", "name": "Awais Chaudhry", "jobTitle": "Founder and CEO", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Lancaster University"}, {"@type": "CollegeOrUniversity", "name": "COMSATS Institute of Information Technology"}], "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry"]}, "numberOfEmployees": {"@type": "QuantitativeValue", "value": 25}, "knowsAbout": ["Artificial intelligence", "AI chatbots", "Computer vision", "Mobile app development", "Flutter", "Web development", "SaaS", "IoT", "Embedded systems", "Unity"], "address": {"@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK"}, "sameAs": ["https://www.freelancer.com/u/AwaisChaudhry", "https://clutch.co/profile/zawn-technologies", "https://www.goodfirms.co/company/zawn-technologies", "https://contra.com/awais_karamat_nfj1a6m1", "https://www.upwork.com/agencies/1387448656505974784/", "https://www.upwork.com/freelancers/muhammadawaiskaramat", "https://www.fiverr.com/awaisch540"], "description": "Software engineering company building AI, computer vision, mobile, web, Unity and IoT software for clients worldwide since 2014."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zawntechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zawntechnologies.com/services.html"}, {"@type": "ListItem", "position": 3, "name": "Bot development", "item": "https://www.zawntechnologies.com/bot-development.html"}, {"@type": "ListItem", "position": 4, "name": "Trading bot with Claude", "item": "https://www.zawntechnologies.com/ai-trading-bot-with-claude.html"}]}, {"@type": "TechArticle", "headline": "Building a trading bot with Claude or ChatGPT: what works and what to avoid", "description": "Building a trading bot with Claude, Claude Code or ChatGPT: three ways to use an LLM, a safe design, testing traps, reviewing AI-written bots, costs at $50/h.", "url": "https://www.zawntechnologies.com/ai-trading-bot-with-claude.html", "datePublished": "2026-11-28", "dateModified": "2026-11-28", "inLanguage": "en", "author": {"@id": "https://www.zawntechnologies.com/#org"}, "publisher": {"@id": "https://www.zawntechnologies.com/#org"}, "about": ["Trading bot development", "Large language models", "AI agents"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Claude build a trading bot for me?", "acceptedAnswer": {"@type": "Answer", "text": "Claude and Claude Code can write a working first version quickly, especially for a simple strategy on one exchange. What they often miss are the parts that lose money in production: partial fills, rate limits, reconnects, order size rules, duplicate orders and state after a restart. Use AI to draft the code, then have an engineer review and test it before real money is involved."}}, {"@type": "Question", "name": "Can Claude or ChatGPT place trades on its own?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes, through an exchange API or a broker's MCP server, but we never let a model place unchecked orders. Every order a model proposes goes through a hard risk engine with position caps, a daily loss limit and a kill switch, and for agentic setups we use a separate account, small limits and confirmation for anything unusual."}}, {"@type": "Question", "name": "Will an AI trading bot make money?", "acceptedAnswer": {"@type": "Answer", "text": "No one can promise that. A language model does not know where prices go next, and adding one to a bot adds a step that must itself be tested. The bot automates a strategy you define, and trading carries a real risk of loss."}}, {"@type": "Question", "name": "Can you review or fix a trading bot I built with Claude Code?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We read the code, list what is missing or unsafe, and fix it: API key handling, order and position reconciliation, error handling, rate limits, logging, a kill switch and a paper-trading run. A review with a written report is usually 10 to 30 hours ($500 to $1,500) at $50 per hour."}}, {"@type": "Question", "name": "How much does it cost to run an LLM inside a trading bot?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on how often the model is called and how much text it reads each time. A bot that asks a model to classify a few news items per hour costs little; one that sends long prompts on every candle across many symbols can cost more than the server. We call the model only on events, cache results and use a smaller model where it is good enough, and we estimate the monthly API bill with you before building."}}, {"@type": "Question", "name": "Is Claude or GPT better for a trading bot?", "acceptedAnswer": {"@type": "Answer", "text": "For writing and reviewing code, both are strong, and the result depends more on how clearly the strategy is specified and tested than on the model. For an LLM step inside the bot, we test the candidate models on your own examples, fix the model version and prompt, and pick the one that is accurate enough at a cost you accept."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFZRL758B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8QFZRL758B');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<nav class="nav" aria-label="Main"><a href="services.html" aria-current=page>Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a class="btn btn-primary" href="contact.html">Start a project</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></details>
+</div></header>
+<main id="main">
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / <a href="bot-development.html">Bot development</a> / Trading bot with Claude</nav>
+<h1>Building a trading bot with Claude or ChatGPT: what works and what to avoid</h1><p class="lede">An engineer's guide to the three ways people use Claude, Claude Code, ChatGPT and other large language models (LLMs) in trading bots: where each helps, where each fails, how to keep a model away from unchecked orders, and what each costs at $50/hour.</p></div></section>
+<div class="wrap content">
+<article class="prose">
+<h2>The short answer</h2>
+<p>An LLM is a good assistant to a trading bot and a poor replacement for its rules.</p>
+<ul>
+<li><strong>As a coding assistant</strong> (Claude Code, ChatGPT, Cursor), it can write a first version of a bot in hours. The code still needs an engineer's review and testing before it handles real money.</li>
+<li><strong>As a step inside the bot</strong>, it can read text that rules cannot: news, filings, announcements, your own notes. It works best as a filter or a summary that your fixed rules then check.</li>
+<li><strong>As an agent with trading tools</strong>, it can place orders through an exchange API or a broker's MCP server. This needs the strictest limits: a separate account, small position caps, a daily loss limit and full logs.</li>
+</ul>
+<p>In every case the bot automates a strategy you define. A model does not know where prices go next, it can be confidently wrong, and trading carries a real risk of loss.</p>
+
+<h2>Three ways to use an LLM in a trading bot</h2>
+<table><thead><tr><th></th><th>Coding assistant</th><th>LLM step inside the bot</th><th>AI agent with trading tools</th></tr></thead><tbody>
+<tr><td>What it does</td><td>Writes, explains and refactors the bot's code</td><td>Classifies or summarises text into a signal or a flag</td><td>Decides and calls tools: quotes, positions, orders</td></tr>
+<tr><td>Typical tools</td><td>Claude Code, ChatGPT, Cursor</td><td>Claude, GPT or an open model through an API</td><td>Agent SDKs, broker or exchange MCP servers</td></tr>
+<tr><td>Good for</td><td>Fast prototypes, boilerplate, converting a strategy between languages</td><td>News and announcement filters, sentiment, reading reports, explaining trades</td><td>Questions about your portfolio, assisted rebalancing, research with confirmation</td></tr>
+<tr><td>Main risk</td><td>Code that runs but mishandles fills, errors and restarts</td><td>Inconsistent answers, cost, latency, injected instructions in text</td><td>A wrong decision executed at machine speed</td></tr>
+<tr><td>Needs before live money</td><td>Code review, tests, paper trading</td><td>Fixed model and prompt version, forward testing, logs</td><td>Separate account, hard limits, confirmations, kill switch</td></tr>
+</tbody></table>
+
+<h2>A safe design: the model advises, the rules decide</h2>
+<ol class="flow" style="--n:5" aria-label="Trading bot with an LLM step, in five parts">
+<li><b>Data</b>Prices, candles, order book and any text feeds, from official APIs</li>
+<li><b>Your rules</b>The strategy you defined, in plain code that gives the same answer every time</li>
+<li><b>LLM step</b>Optional: reads text and returns a short structured answer, such as a flag or a score</li>
+<li class="hot"><b>Risk engine</b>Hard limits the model cannot change: size caps, daily loss limit, allowed symbols, kill switch</li>
+<li><b>Broker or exchange</b>Orders through the official API, with every model input, output and order logged</li>
+</ol>
+<p class="flow-note">The model returns data in a fixed format (for example JSON with a label and a reason), never free text that the bot executes. If the model times out or returns something invalid, the bot falls back to its rules or does nothing.</p>
+
+<h2>If Claude Code or ChatGPT wrote your bot: what to check</h2>
+<p>We see more AI-written bots each month. Most run in a demo and then fail in the same places. Before you trade real money, check that the bot:</p>
+<ul>
+<li>keeps API keys out of the code and the repository, uses trade-only keys with withdrawals disabled, and restricts them by IP where the exchange allows it;</li>
+<li>handles partial fills, rejected orders and orders that time out but were actually placed (no duplicate orders after a retry);</li>
+<li>reads the exchange's rules for minimum order size, price and quantity steps, and rate limits, instead of guessing them;</li>
+<li>rebuilds its position and open orders from the exchange after a restart, instead of trusting its own memory;</li>
+<li>reconnects cleanly when a websocket drops, and alerts you when it cannot;</li>
+<li>has a daily loss limit and a kill switch that work even when the strategy code has a bug;</li>
+<li>was backtested with fees and slippage, without using future data, and then paper traded for long enough to see real fills.</li>
+</ul>
+<p>If several of these are missing, a review is cheaper than learning about them with real money. We fix the issues in your code; we do not need to start again.</p>
+
+<h2>Testing an LLM signal honestly</h2>
+<ul>
+<li><strong>Backtests can flatter a model.</strong> A model trained on data up to a certain date may already have seen the news and the price moves in your backtest period, so it can look smarter than it is. Judge an LLM step mainly on forward tests: paper trading on data that is newer than the model.</li>
+<li><strong>Fix the version.</strong> Pin the exact model version and prompt, set randomness low, and re-test whenever either changes. A model update can change answers without warning.</li>
+<li><strong>Measure it like any other rule.</strong> Compare the strategy with and without the LLM step over the same period. If it does not clearly help after costs, remove it.</li>
+<li><strong>Watch latency and cost.</strong> A model call takes from under a second to several seconds, so LLM steps suit decisions on minutes or hours, not order-book speed.</li>
+</ul>
+
+<h2>Prompt injection and other AI-specific risks</h2>
+<ul>
+<li>Text the bot reads (news, posts, web pages, token descriptions) can contain instructions aimed at the model. The model's tools must not allow anything that the risk engine would block, whatever the text says.</li>
+<li>Never give a model tools for withdrawals, transfers, changing API keys or editing its own limits.</li>
+<li>Log every prompt, response and resulting action, so you can see why the bot did what it did.</li>
+<li>Keep a person in the loop for anything outside normal size or outside the allowed symbol list.</li>
+</ul>
+<p>For broker MCP servers and agentic trading accounts, see the agentic trading section on our <a href="ai-agent-development.html">AI agent development</a> page.</p>
+
+<h2>Cost: planning ranges at $50/hour</h2>
+<table><thead><tr><th>Project</th><th>Typical hours</th><th>Typical cost</th></tr></thead><tbody>
+<tr><td>Review of an AI-written bot with a written report of issues</td><td>10&ndash;30 h</td><td>$500&ndash;$1,500</td></tr>
+<tr><td>Hardening an AI-written bot: fixes, risk limits, logging, paper-trading run</td><td>30&ndash;80 h</td><td>$1,500&ndash;$4,000</td></tr>
+<tr><td>Adding an LLM news or announcement filter to an existing bot</td><td>30&ndash;60 h</td><td>$1,500&ndash;$3,000</td></tr>
+<tr><td>Chat assistant over your bot in Telegram or Slack ("what is my exposure?")</td><td>25&ndash;50 h</td><td>$1,250&ndash;$2,500</td></tr>
+<tr><td>Agentic trading setup with MCP tools, limits, confirmations and logs</td><td>40&ndash;100 h</td><td>$2,000&ndash;$5,000</td></tr>
+<tr><td>New bot with rules, LLM step, risk engine, backtest and dashboard</td><td>100&ndash;200 h</td><td>$5,000&ndash;$10,000</td></tr>
+</tbody></table>
+<p>Model API usage is billed by the provider on top of hosting. For your own mix of features, use the <a href="bot-cost-calculator.html">bot cost calculator</a>; for bots without an AI step, see <a href="trading-bot-development.html">trading bot development</a> and <a href="crypto-trading-bot-development.html">crypto trading bot development</a>.</p>
+
+<h2>How we work</h2>
+<ol>
+<li>You describe the strategy in plain words, or send the code you already have.</li>
+<li>We write it back as a precise spec and say where an LLM step helps and where plain rules are better.</li>
+<li>We build or fix the bot, with the risk engine and logging first.</li>
+<li>Backtest with fees, then paper trade; you decide whether to go live.</li>
+<li>Code, keys and servers stay in your accounts. We sign an NDA on request.</li>
+</ol>
+
+<h2>What we do not build</h2>
+<ul>
+<li>Bots for betting, sports betting or prediction markets.</li>
+<li>Meme-coin sniper bots, or bots that copy wallets to front-run launches.</li>
+<li>Bots sold with promised returns, or "AI that predicts the market" claims.</li>
+<li>Setups that give a model unlimited order or withdrawal access.</li>
+</ul>
+<p>You are responsible for following your exchange's or broker's terms and the laws where you live, including tax and any licence needed to manage other people's money.</p>
+
+<h2>Questions clients ask</h2><div class="faq">
+<details><summary>Can Claude build a trading bot for me?</summary><p>Claude and Claude Code can write a working first version quickly, especially for a simple strategy on one exchange. What they often miss are the parts that lose money in production: partial fills, rate limits, reconnects, order size rules, duplicate orders and state after a restart. Use AI to draft the code, then have an engineer review and test it before real money is involved.</p></details>
+<details><summary>Can Claude or ChatGPT place trades on its own?</summary><p>Technically yes, through an exchange API or a broker's MCP server, but we never let a model place unchecked orders. Every order a model proposes goes through a hard risk engine with position caps, a daily loss limit and a kill switch, and for agentic setups we use a separate account, small limits and confirmation for anything unusual.</p></details>
+<details><summary>Will an AI trading bot make money?</summary><p>No one can promise that. A language model does not know where prices go next, and adding one to a bot adds a step that must itself be tested. The bot automates a strategy you define, and trading carries a real risk of loss.</p></details>
+<details><summary>Can you review or fix a trading bot I built with Claude Code?</summary><p>Yes. We read the code, list what is missing or unsafe, and fix it: API key handling, order and position reconciliation, error handling, rate limits, logging, a kill switch and a paper-trading run. A review with a written report is usually 10 to 30 hours ($500 to $1,500) at $50 per hour.</p></details>
+<details><summary>How much does it cost to run an LLM inside a trading bot?</summary><p>It depends on how often the model is called and how much text it reads each time. A bot that asks a model to classify a few news items per hour costs little; one that sends long prompts on every candle across many symbols can cost more than the server. We call the model only on events, cache results and use a smaller model where it is good enough, and we estimate the monthly API bill with you before building.</p></details>
+<details><summary>Is Claude or GPT better for a trading bot?</summary><p>For writing and reviewing code, both are strong, and the result depends more on how clearly the strategy is specified and tested than on the model. For an LLM step inside the bot, we test the candidate models on your own examples, fix the model version and prompt, and pick the one that is accurate enough at a cost you accept.</p></details>
+</div>
+</article>
+<aside class="aside">
+<div class="box"><h3>Talk to an engineer</h3><p class="small">Send your strategy, or the bot code Claude or ChatGPT wrote, and get a reply within one business day.</p><a class="btn btn-primary" href="contact.html">Start a project</a><p class="small c-note">Want a number first? Try the <a href="bot-cost-calculator.html">bot cost calculator</a>.</p></div>
+<div class="box"><h3>Tools we use</h3><ul class="tags"><li>Claude API</li><li>OpenAI API</li><li>Claude Code</li><li>MCP</li><li>Python</li><li>ccxt</li><li>PostgreSQL</li><li>Docker</li></ul></div>
+<div class="box"><h3>Bot services</h3><ul><li><a href="bot-development.html">All bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bot development</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="mcp-server-development.html">MCP server development</a></li><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="tradingview-webhook-bot-development.html">TradingView webhook bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="telegram-discord-bot-development.html">Telegram, Discord, Slack and Teams bots</a></li></ul></div>
+<div class="box"><h3>Related reading</h3><ul><li><a href="freqtrade-vs-hummingbot.html">Freqtrade vs Hummingbot vs a custom trading bot</a></li><li><a href="alpaca-vs-interactive-brokers-vs-schwab.html">Alpaca vs Interactive Brokers vs Schwab API for trading bots</a></li><li><a href="blog-trading-bot-cost-2026.html">How much does a trading bot cost to build in 2026?</a></li><li><a href="blog-grid-vs-dca-trading-bots.html">Grid vs DCA trading bots</a></li></ul></div>
+</aside>
+</div>
+<section class="cta"><div class="wrap">
+<h2>Have a project that needs a reliable engineering team?</h2>
+<div><p>Tell us what you want to build. You will get a reply within one business day, with questions or a rough estimate.</p>
+<a class="btn btn-primary" href="contact.html">Start a project</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="cols">
+<div class="f-brand"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 11V3h8M21 3h8v8M29 21v8h-8M11 29H3v-8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="5" fill="#FF3D47"/></svg>ZAWN Technologies</a>
+<p>Software engineering for AI, mobile, web, games and IoT. Building for clients worldwide since 2014, from Pakistan.</p>
+<p><a href="mailto:hello@zawntechnologies.com">hello@zawntechnologies.com</a></p>
+<div class="f-hire"><h4>Hire us on</h4>
+<a class="f-fl" href="https://www.freelancer.com/affiliates/email/11081971/" rel="noopener" target="_blank"><b>Freelancer.com</b><small>Preferred Freelancer &middot; 4.9 from 356 reviews</small></a>
+<div class="f-more"><a href="https://www.upwork.com/agencies/1387448656505974784/" rel="noopener" target="_blank">Upwork agency</a><a href="https://www.upwork.com/freelancers/muhammadawaiskaramat" rel="noopener" target="_blank">Upwork profile</a><a href="https://www.fiverr.com/awaisch540" rel="noopener" target="_blank">Fiverr</a></div></div></div>
+<div><h4>AI and vision</h4><ul><li><a href="ai-llm-integration.html">AI and LLM integration</a></li><li><a href="ai-agent-development.html">AI agent development</a></li><li><a href="mcp-server-development.html">MCP server development</a></li><li><a href="ai-chatbot-development.html">AI chatbot development</a></li><li><a href="whatsapp-chatbot-development.html">WhatsApp chatbot development</a></li><li><a href="generative-ai-development.html">Generative AI development</a></li><li><a href="machine-learning-development.html">Machine learning development</a></li><li><a href="computer-vision-development.html">Computer vision development</a></li><li><a href="sports-analytics-app-development.html">Sports analytics and motion analysis</a></li><li><a href="voice-ai-development.html">Voice AI and speech apps</a></li></ul></div>
+<div><h4>Apps and software</h4><ul><li><a href="mobile-app-development.html">Mobile app development</a></li><li><a href="ios-app-development.html">iOS app development</a></li><li><a href="android-app-development.html">Android app development</a></li><li><a href="flutter-app-development.html">Flutter app development</a></li><li><a href="react-native-development.html">React Native development</a></li><li><a href="web-saas-development.html">Web and SaaS development</a></li><li><a href="nextjs-react-development.html">React and Next.js development</a></li><li><a href="website-development.html">Website design and development</a></li><li><a href="custom-business-software.html">Custom business software</a></li><li><a href="dashboard-development.html">Dashboards and business intelligence</a></li></ul></div>
+<div><h4>Engineering and automation</h4><ul><li><a href="python-development.html">Python development</a></li><li><a href="nodejs-development.html">Node.js development</a></li><li><a href="php-laravel-development.html">PHP and Laravel development</a></li><li><a href="api-integration.html">API development and integration</a></li><li><a href="microservices-development.html">Microservices development</a></li><li><a href="bot-development.html">Bot development</a></li><li><a href="trading-bot-development.html">Trading bot development</a></li><li><a href="crypto-trading-bot-development.html">Crypto trading bots</a></li><li><a href="arbitrage-bot-development.html">Crypto arbitrage bots</a></li><li><a href="mt5-expert-advisor-development.html">MT5 Expert Advisors</a></li><li><a href="telegram-discord-bot-development.html">Telegram and Discord bots</a></li><li><a href="ecommerce-automation-bots.html">Ecommerce automation bots</a></li><li><a href="iot-embedded-development.html">IoT and embedded systems</a></li><li><a href="embedded-firmware-development.html">Embedded firmware development</a></li><li><a href="raspberry-pi-development.html">Raspberry Pi and hardware prototyping</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">All 54 services</a></li><li><a href="app-cost-calculator.html">App cost calculator</a></li><li><a href="website-cost-calculator.html">Website cost calculator</a></li><li><a href="ai-chatbot-cost-calculator.html">AI chatbot cost calculator</a></li><li><a href="bot-cost-calculator.html">Bot cost calculator</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#reviews">Client reviews</a></li></ul></div>
+</div>
+<div class="f-all"><h4>More services</h4><p><a href="mvp-development.html">MVP development</a><a href="ui-ux-design.html">UI/UX design</a><a href="business-automation.html">Business automation</a><a href="stripe-payment-integration.html">Stripe and payments</a><a href="web-scraping-services.html">Web scraping</a><a href="shopify-development.html">Shopify</a><a href="wordpress-development.html">WordPress</a><a href="bubble-development.html">Bubble.io</a><a href="chrome-extension-development.html">Chrome extensions</a><a href="desktop-app-development.html">Desktop apps</a><a href="drupal-development.html">Drupal</a><a href="unity-game-development.html">Unity and 3D</a><a href="blockchain-web3-development.html">Blockchain and Web3</a><a href="cloud-devops.html">Cloud and DevOps</a><a href="linux-server-administration.html">Linux servers</a><a href="qa-testing.html">QA and testing</a><a href="app-maintenance-support.html">App maintenance</a><a href="farm-management-software.html">Farm management software</a><a href="tree-service-estimating-app.html">Tree service estimating apps</a></p></div>
+<div class="base"><span>&copy; 2014&ndash;2026 ZAWN Technologies</span><span><a href="privacy.html">Privacy policy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+</div></footer>
+<script src="assets/main.js?v=20261127botcalc" defer></script>
+</body>
+</html>
