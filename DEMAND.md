@@ -94,3 +94,9 @@ Z12. Evidence 26 Nov: 'AI chatbot development cost in Pakistan PKR' SERP = 6 Clu
 Z13. DONE 26 Nov (night): /ui-ux-design.html 'Hire UI/UX designers in Pakistan' H2 + 2 FAQs (JSON-LD). Re-checked SERP 26 Nov: Upwork /hire/ui-designers/pk/ + lahore/gilgit/multan pages, Dribbble, Twine only. Was OPEN: 'hire UI UX designer pakistan' SERP = Upwork /pk/ (ui, ux, app, web designers, per city), Dribbble, Twine, Toptal. -> Hire H2 + 2 FAQs on /ui-ux-design.html next run.
 
 - 27 Nov: GSC Page indexing for ZAWN: 5 indexed; not indexed = 60 Discovered-currently-not-indexed, 7 Crawled-currently-not-indexed, 3 Page with redirect, 1 alternative canonical. Sitemaps OK (77 URLs, read 25 Nov). Action: IndexNow key added (Bing), focus on internal links from home/services to the strongest pages and on links from outside; do NOT judge new pages by Google traffic until they are crawled.
+
+## DAILY RADAR 2026-11-28 (06:40 PKT)
+Yesterday built from queues: NC 31, DOD 19, Pitchside 22, Padel 18, Purl 22, ZAWN 10 new pages. Revenue rule: at least half of new pages buying-intent.
+- [OPEN] B11 "trading bot with claude" (autocomplete): case-study style page on AI-assisted bot builds for stocks/crypto. SKIP "trading bot for kalshi" (prediction market, owner rule).
+- [OPEN] B12 AI agent development lifecycle + proposal template (autocomplete ranks 5-7), CTA to $50/hr quote.
+- [NOTE] GSC: "ai chatbot cost" queries pos 5.7-7.9 -> ai-chatbot-cost-calculator: tighten title/Quick answer in USD.
