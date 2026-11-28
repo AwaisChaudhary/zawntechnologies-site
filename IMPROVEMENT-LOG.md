@@ -305,3 +305,10 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - ai-chatbot-cost-calculator.html: title 'AI Chatbot Cost Calculator 2026 (US$) | ZAWN', meta description with the USD range (GSC queries 'ai chatbot cost' at pos 5.7-7.9).
 - sitemap lastmod 2026-11-28 for all three. Checks: JSON-LD parses, Playwright 1280/390 no errors, no overflow.
 - IndexNow pending https://www.zawntechnologies.com/ai-agent-development.html https://www.zawntechnologies.com/business-automation.html https://www.zawntechnologies.com/ai-chatbot-cost-calculator.html
+
+## 2026-11-28 run 6 (improvement run, demand-first): Hyperliquid bot section + AI voice agent hire section
+- crypto-trading-bot-development.html: new H2 'Hyperliquid trading bot development' (API wallets, nonces, bot types, testnet, hours at $50/h, jurisdiction restrictions incl. US persons), Hyperliquid cost row, +2 FAQs (visible + FAQPage JSON-LD), meta description mentions Hyperliquid. Why: ~15 Fiverr Hyperliquid bot gigs + Upwork Hyperliquid job in SERP 28 Nov; site had no Hyperliquid mention.
+- voice-ai-development.html (was thin): new H2 'Hire an AI voice agent developer: Vapi, Retell or custom' (hosted vs custom table, what every voice agent needs, cost table at $50/h, outbound consent / FCC 2024 TCPA ruling), +3 FAQs (visible + JSON-LD), title 'Voice AI & AI Voice Agent Development | ZAWN', new meta (159), tools tags Vapi/Retell/Twilio. Why: SERP 28 Nov = Upwork /hire/ai-voice-agent-developers, /hire/vapi-developers, /hire/retell-ai-developers + ~15 Fiverr gigs.
+- bot-development.html: crypto text names Hyperliquid; AI agents text links to voice agent section.
+- Checks: no CSS/JS change; seo_post.py (105 URLs); seo_audit.py clean; JSON-LD parses, visible FAQs = JSON-LD; links resolve; Playwright 1280/390 on 3 pages: no errors, no overflow.
+- IndexNow pending https://www.zawntechnologies.com/crypto-trading-bot-development.html https://www.zawntechnologies.com/voice-ai-development.html https://www.zawntechnologies.com/bot-development.html
