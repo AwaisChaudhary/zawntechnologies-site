@@ -312,3 +312,10 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - bot-development.html: crypto text names Hyperliquid; AI agents text links to voice agent section.
 - Checks: no CSS/JS change; seo_post.py (105 URLs); seo_audit.py clean; JSON-LD parses, visible FAQs = JSON-LD; links resolve; Playwright 1280/390 on 3 pages: no errors, no overflow.
 - IndexNow pending https://www.zawntechnologies.com/crypto-trading-bot-development.html https://www.zawntechnologies.com/voice-ai-development.html https://www.zawntechnologies.com/bot-development.html
+
+## 2026-11-28 run 7 (improvement run)
+- web-scraping-services.html: thin page (3 sections) rebuilt into a full scraper-bot service page: quick answer, expanded what-we-build (incl. Playwright browser automation bots), pipeline flow diagram, method comparison table, standard features, tech stack, cost table at $50/h, 'Hire a web scraping developer' H2, how we work, responsible-scraping rules, 6 FAQs (FAQPage JSON-LD), new title/meta, Related reading box. Why: heavy hire/gig demand for scraper and automation bots, and the page was the thinnest bot-adjacent page. Evidence: SERP 'hire web scraping bot developer' = ~17 Fiverr gigs + Upwork /hire/scrapy-developers; 'web scraping development cost 2026' = ~15 cost guides.
+- whatsapp-chatbot-development.html: 'Hire a WhatsApp Business API developer' H2 with what-to-check table, H3 on Meta's 15 Jan 2026 general-purpose AI chatbot rule, +2 FAQs (JSON-LD), Bot development link in aside. Evidence: SERP 'hire WhatsApp Business API developer' = ~20 Fiverr gigs; TechCrunch 18 Oct 2025 on the terms change.
+- bot-development.html: new h3 'Web scraping and browser automation bots' linking the scraping page.
+- sitemap lastmod 2026-11-28 for the 3 pages. No CSS/JS changes.
+- IndexNow pending https://www.zawntechnologies.com/web-scraping-services.html https://www.zawntechnologies.com/whatsapp-chatbot-development.html https://www.zawntechnologies.com/bot-development.html
