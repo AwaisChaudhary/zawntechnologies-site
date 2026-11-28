@@ -319,3 +319,9 @@ Main session: requests Google indexing for ~10 pages/day in Search Console (quot
 - bot-development.html: new h3 'Web scraping and browser automation bots' linking the scraping page.
 - sitemap lastmod 2026-11-28 for the 3 pages. No CSS/JS changes.
 - IndexNow pending https://www.zawntechnologies.com/web-scraping-services.html https://www.zawntechnologies.com/whatsapp-chatbot-development.html https://www.zawntechnologies.com/bot-development.html
+
+## 2026-11-28 run 8 (improvement run)
+- bot-cost-calculator.html: added 3 web scraper bot types (8-20 h, 20-50 h, 60-150 h at $50/h), scraper hosting/maintenance ranges and a responsible-scraping note in assets/main.js, 3 table rows, 1 FAQ (HTML + JSON-LD), link to web-scraping-services; meta now mentions scraper bots; last updated 28 Nov. web-scraping-services.html links to it. Why: 'web scraping cost calculator' SERP is full of API-credit calculators (proxidize, use-apify, costbench, firecrawl, agentcalc) but none for a custom-built scraper.
+- embedded-firmware-development.html: title 'Embedded Software Development Services | ZAWN' (Trends breakout 'embedded software development services'), new meta + H1, quick answer, what you get, cost table at $50/h, timeline, 'Hire an embedded software developer' H2, +3 FAQs (HTML + JSON-LD), Service JSON-LD name. services.html row renamed. Why: page was thin; SERP is hire/cost pages (Freelancer, Upwork, Flexiple, secondtalent $67-$171/hr).
+- CSS/JS version bumped to ?v=20261128scrape on all HTML pages. Sitemap lastmod 2026-11-28 for the 4 changed pages. Checks: node --check, JSON-LD parse, Playwright 1280/390 no errors or overflow, calculator numbers change with scraper types.
+- IndexNow pending https://www.zawntechnologies.com/bot-cost-calculator.html https://www.zawntechnologies.com/embedded-firmware-development.html https://www.zawntechnologies.com/web-scraping-services.html https://www.zawntechnologies.com/services.html

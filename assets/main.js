@@ -585,8 +585,8 @@ window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-G
   if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
   var usd = function (n) { var step = n >= 2000 ? 100 : (n >= 200 ? 10 : 5); return "$" + (Math.round(n / step) * step).toLocaleString("en-US"); };
-  var host = { chat: [5, 40], shop: [10, 40], trade: [20, 80] };
-  var maint = { chat: [1, 3], shop: [2, 5], trade: [3, 8] };
+  var host = { chat: [5, 40], shop: [10, 40], trade: [20, 80], scrape: [10, 50] };
+  var maint = { chat: [1, 3], shop: [2, 5], trade: [3, 8], scrape: [2, 5] };
   function calc() {
     var lo = 0, hi = 0, picked = [];
     var t = f.querySelector('input[name="bottype"]:checked');
@@ -615,7 +615,8 @@ window.ZAWN_FX = { USD: [1, "$", 500, "en-US"], GBP: [0.75, "\u00a3", 500, "en-G
     $("bot-host").textContent = usd(hlo) + " to " + usd(hhi);
     var mh = maint[kind] || maint.trade;
     $("bot-maint").textContent = usd(mh[0] * 50) + " to " + usd(mh[1] * 50);
-    $("bot-note").textContent = kind === "trade" ? "Trading bots follow the strategy you define and carry real risk of loss; this estimate says nothing about returns." + (multi ? " Offering a trading bot to other users usually needs legal advice in your country." : "") : "";
+    $("bot-note").textContent = kind === "trade" ? "Trading bots follow the strategy you define and carry real risk of loss; this estimate says nothing about returns." + (multi ? " Offering a trading bot to other users usually needs legal advice in your country." : "") : ""
+    if (kind === "scrape") $("bot-note").textContent = "Scrapers collect public data within the site's terms; we use official APIs where they exist and do not bypass logins, paywalls or CAPTCHAs. Proxies and data services are extra.";
     var summary = "Bot cost calculator estimate: " + $("bot-hours").textContent + " hours (" + $("bot-cost").textContent + "), " + $("bot-weeks").textContent +
       ".\nBot and extras: " + picked.join(", ") + (n ? ". Extra platforms: " + n : "") + ".\n\nAbout my bot: ";
     try { localStorage.setItem("zawn-estimate", summary); } catch (e) {}
