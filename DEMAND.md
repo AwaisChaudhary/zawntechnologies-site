@@ -72,8 +72,9 @@ E3. OPEN: 'ai chatbot development' -> company in usa, services; 'app development
 - R3 DONE 26 Nov (night): checked, all 4 pages (php-laravel, nextjs-react, android, shopify) have the Hire H2 + FAQ. Was OPEN 'hire laravel/react/android/php/shopify developers in pakistan' (all in autocomplete) — confirm each service page has its 'Hire X developers in Pakistan' H2+FAQ.
 
 ## NEW CATEGORY EXPANSION (Awais 26 Nov: when traffic plateaus, open new categories backed by Trends/searches; don't wait for input)
+- E4 OPEN (28 Nov growth strategist; new site) CATEGORY AI-assisted trading bots (stocks/crypto only; no prediction markets): 'trading bot with claude' guide + case-study page, linked to /trading-bot-development and /ai-llm-integration. Evidence: autocomplete 'trading bot' -> trading bot with claude, ai, github, for robinhood.
 Evidence = Google autocomplete 26 Nov 18:10 PKT. Each is a CATEGORY: build a hub page first, then 1-2 child pages per run. Skip if it already exists.
-- E1 OPEN AI agent development services section + 'AI agent framework' comparison guide ('ai agent development company|services|framework').
+- E1 DONE (exists: /ai-agent-development) AI agent development services section + 'AI agent framework' comparison guide ('ai agent development company|services|framework').
 - E2 DROPPED 26 Nov (owner: no Pakistan pricing; removed). Was DONE via Z7 (/website-cost-calculator.html PKR switch + 'Website development cost in Pakistan' table). Was OPEN Website development cost in Pakistan (PKR) calculator/guide ('website development cost in pakistan', 'website rate in pakistan').
 - E3 DONE (exists: /ai-chatbot-cost-calculator.html with PKR + other currencies). Was OPEN Chatbot development cost estimator (honest 0/h ranges).
 ## RADAR 25 Nov 06:45 PKT (Google autocomplete, US + Keyword Planner 25 Nov)
